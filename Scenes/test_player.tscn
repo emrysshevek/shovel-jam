@@ -9,7 +9,7 @@ gradient = SubResource("Gradient_l45s6")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l45s6"]
 
-[node name="TestPlayer" type="CharacterBody2D"]
+[node name="TestPlayer" type="CharacterBody2D" groups=["player"]]
 script = ExtResource("1_khaq0")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
