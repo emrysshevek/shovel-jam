@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=4 uid="uid://c7jqkthesq0lc"]
 
-[ext_resource type="PackedScene" uid="uid://bwh5gr7v566n0" path="res://Scenes/world_tile_map_layer.tscn" id="1_jotox"]
+[ext_resource type="PackedScene" uid="uid://bwh5gr7v566n0" path="res://Scenes/Tilemaps/world_tile_map_layer.tscn" id="1_jotox"]
 [ext_resource type="PackedScene" uid="uid://yowo6jwf5wvd" path="res://Entities/Player/Player.tscn" id="2_57ne3"]
 
 [node name="LevelOne" type="Node2D"]

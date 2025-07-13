@@ -1,16 +1,24 @@
-[gd_scene load_steps=4 format=3 uid="uid://7xefsikrycob"]
+[gd_scene load_steps=5 format=3 uid="uid://7xefsikrycob"]
 
-[ext_resource type="PackedScene" uid="uid://bwh5gr7v566n0" path="res://Scenes/world_tile_map_layer.tscn" id="1_l45s6"]
+[ext_resource type="PackedScene" uid="uid://bwh5gr7v566n0" path="res://Scenes/Tilemaps/world_tile_map_layer.tscn" id="1_l45s6"]
 [ext_resource type="PackedScene" uid="uid://dqjjq64rrq46r" path="res://Scenes/test_player.tscn" id="2_6s5ae"]
-[ext_resource type="PackedScene" uid="uid://ct63wneh81kl7" path="res://Scenes/globe.tscn" id="3_i8gr5"]
+[ext_resource type="PackedScene" uid="uid://dptwcqwe6odbs" path="res://Scenes/Tilemaps/platform.tscn" id="2_s368d"]
+[ext_resource type="PackedScene" uid="uid://b3xnahgbyyf0j" path="res://Scenes/globe.tscn" id="3_i8gr5"]
 
 [node name="Overworld" type="Node2D"]
 
 [node name="TileMapLayer" parent="." instance=ExtResource("1_l45s6")]
 scale = Vector2(6, 6)
 
-[node name="TestPlayer" parent="." instance=ExtResource("2_6s5ae")]
+[node name="PlatformLayer" parent="." instance=ExtResource("2_s368d")]
 z_index = 1
+texture_filter = 1
+position = Vector2(0, 32)
+scale = Vector2(6, 6)
+tile_map_data = PackedByteArray(0, 0, 11, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 12, 0, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+
+[node name="TestPlayer" parent="." instance=ExtResource("2_6s5ae")]
+z_index = 2
 position = Vector2(374, 337)
 
 [node name="Globe" parent="." instance=ExtResource("3_i8gr5")]

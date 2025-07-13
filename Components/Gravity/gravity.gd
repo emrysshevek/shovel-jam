@@ -1,7 +1,7 @@
 extends Node2D
 class_name Gravity
 
-@export var default := 5000.0
+@export var default := 2000.0
 @export var enabled := true
 
 var entity: Entity
