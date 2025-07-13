@@ -1,0 +1,52 @@
+[gd_scene load_steps=10 format=3 uid="uid://yowo6jwf5wvd"]
+
+[ext_resource type="Script" uid="uid://bwp2q0pswcepy" path="res://Entities/Player/player.gd" id="1_ww0jn"]
+[ext_resource type="Texture2D" uid="uid://tuaqgj6ocj86" path="res://icon.svg" id="2_vweq0"]
+[ext_resource type="Script" uid="uid://dxhyewa2uic4q" path="res://Components/Gravity/gravity.gd" id="3_vweq0"]
+[ext_resource type="Script" uid="uid://bm3g0rihj3ig6" path="res://Entities/Player/Behaviour/player_idle.gd" id="4_an6q6"]
+[ext_resource type="Script" uid="uid://dc1w34s0gvtk6" path="res://Components/State/state_machine.gd" id="4_t38ms"]
+[ext_resource type="Script" uid="uid://7gov16bxb76i" path="res://Entities/Player/Behaviour/player_jump.gd" id="5_t38ms"]
+[ext_resource type="Script" uid="uid://hvc563xuot3h" path="res://Entities/Player/Behaviour/player_walk.gd" id="6_hj1c0"]
+[ext_resource type="Script" uid="uid://cctam756um62a" path="res://Entities/Player/Behaviour/player_float.gd" id="8_x44r4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hj1c0"]
+size = Vector2(28, 28)
+
+[node name="Player" type="CharacterBody2D" groups=["player"]]
+collision_layer = 16
+collision_mask = 7
+platform_floor_layers = 4294967047
+script = ExtResource("1_ww0jn")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -14)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_vweq0")
+
+[node name="WorldCollision" type="CollisionShape2D" parent="."]
+position = Vector2(0, -14)
+rotation = -3.14159
+shape = SubResource("RectangleShape2D_hj1c0")
+
+[node name="Gravity" type="Node2D" parent="."]
+script = ExtResource("3_vweq0")
+metadata/_custom_type_script = "uid://dxhyewa2uic4q"
+
+[node name="Behaviour" type="Node" parent="."]
+script = ExtResource("4_t38ms")
+
+[node name="Idle" type="Node" parent="Behaviour"]
+script = ExtResource("4_an6q6")
+metadata/_custom_type_script = "uid://bm3g0rihj3ig6"
+
+[node name="Walk" type="Node" parent="Behaviour"]
+script = ExtResource("6_hj1c0")
+metadata/_custom_type_script = "uid://hvc563xuot3h"
+
+[node name="Jump" type="Node" parent="Behaviour"]
+script = ExtResource("5_t38ms")
+metadata/_custom_type_script = "uid://7gov16bxb76i"
+
+[node name="Float" type="Node" parent="Behaviour"]
+script = ExtResource("8_x44r4")
+metadata/_custom_type_script = "uid://cctam756um62a"
