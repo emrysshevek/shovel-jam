@@ -6,6 +6,8 @@
 radius = 48.8365
 
 [node name="Interactable" type="Area2D"]
+collision_layer = 17
+collision_mask = 17
 script = ExtResource("1_8s6bd")
 
 [node name="InteractionZone" type="CollisionShape2D" parent="."]
