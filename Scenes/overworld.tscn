@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://7xefsikrycob"]
+[gd_scene load_steps=5 format=3 uid="uid://7xefsikrycob"]
 
 [ext_resource type="PackedScene" uid="uid://bwh5gr7v566n0" path="res://Scenes/Tilemaps/world_tile_map_layer.tscn" id="1_l45s6"]
 [ext_resource type="PackedScene" uid="uid://dptwcqwe6odbs" path="res://Scenes/Tilemaps/platform.tscn" id="2_s368d"]
 [ext_resource type="PackedScene" uid="uid://ct63wneh81kl7" path="res://Scenes/globe.tscn" id="3_i8gr5"]
+[ext_resource type="PackedScene" uid="uid://yowo6jwf5wvd" path="res://Entities/Player/Player.tscn" id="4_s368d"]
 
 [node name="Overworld" type="Node2D"]
 
@@ -27,3 +28,6 @@ position = Vector2(700, 305)
 
 [node name="Globe4" parent="." instance=ExtResource("3_i8gr5")]
 position = Vector2(970, 305)
+
+[node name="Player" parent="." instance=ExtResource("4_s368d")]
+position = Vector2(286, 376)

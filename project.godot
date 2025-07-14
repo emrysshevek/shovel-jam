@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Shovel Jam"
-run/main_scene="uid://c7jqkthesq0lc"
+run/main_scene="uid://cnm5m75aadmkh"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
 
@@ -70,3 +70,8 @@ run={
 2d_physics/layer_4="entity"
 2d_physics/layer_5="player"
 2d_physics/layer_6="enemy"
+
+[rendering]
+
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"

@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Scenes/globe.gd" id="1_kc167"]
 [ext_resource type="Texture2D" uid="uid://dw7val11ynbrs" path="res://World/Layout/test_globe.png" id="1_ll7sj"]
 [ext_resource type="PackedScene" uid="uid://c7jqkthesq0lc" path="res://Scenes/Levels/Level_1/Level_One.tscn" id="2_gpk4l"]
-[ext_resource type="PackedScene" path="res://Scenes/interactable.tscn" id="3_p15m1"]
+[ext_resource type="PackedScene" uid="uid://cgdiok6brispc" path="res://Scenes/interactable.tscn" id="3_p15m1"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_6s5ae"]
 radius = 71.8471
