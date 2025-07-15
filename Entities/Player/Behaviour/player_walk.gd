@@ -4,6 +4,9 @@ extends PlayerState
 
 func physics_update(delta: float) -> void:
 	
+	if not player.is_on_floor():
+		finished.emit(FLOAT)
+		return
 	if Input.is_action_just_pressed(&"jump"):
 		finished.emit(JUMP)
 		return
@@ -11,8 +14,6 @@ func physics_update(delta: float) -> void:
 		finished.emit(IDLE)
 		return
 		
-	#if not player.is_on_floor():
-		#return
 	
 	var dir = Input.get_axis(&"move_left", &"move_right")
 	var speed = player.max_speed

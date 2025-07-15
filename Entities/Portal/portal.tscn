@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=4 uid="uid://bdykr4g01j8gf"]
+
+[ext_resource type="Script" uid="uid://pssh20rwi2ga" path="res://Entities/Portal/portal.gd" id="1_eqj4b"]
+[ext_resource type="PackedScene" uid="uid://bwh5gr7v566n0" path="res://Scenes/Tilemaps/world_tile_map_layer.tscn" id="2_dpogm"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_svxbp"]
+radius = 20.0
+
+[node name="Portal" type="Area2D"]
+collision_layer = 0
+collision_mask = 16
+script = ExtResource("1_eqj4b")
+
+[node name="Unlocked" parent="." instance=ExtResource("2_dpogm")]
+visible = false
+tile_map_data = PackedByteArray("AAAAAAAAAQABAAIAAAD//wAAAQABAAIAAAD/////AQABAAIAAAAAAP//AQABAAIAAAA=")
+collision_enabled = false
+
+[node name="Locked" parent="." instance=ExtResource("2_dpogm")]
+tile_map_data = PackedByteArray("AAABAAQAAQAAAAAAAAACAAQAAQAAAAAAAAADAAQAAQAAAAAAAAAEAAQAAQAAAAAAAAAFAAQAAQAAAAAAAAAGAAQAAQAAAAAAAAAHAAQAAQAAAAAAAAAIAAQAAQAAAAAAAAAJAAQAAQAAAAAAAAAKAAQAAQAAAAAAAAD/////AQAHAAIAAAAAAP//AQAHAAIAAAAAAAAAAQAHAAIAAAD//wAAAQAHAAIAAAA=")
+collision_enabled = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_svxbp")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

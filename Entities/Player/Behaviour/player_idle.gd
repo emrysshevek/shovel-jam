@@ -5,6 +5,9 @@ func physics_update(delta: float) -> void:
 	if player.velocity != Vector2.ZERO:
 		player.velocity = player.velocity.move_toward(Vector2.ZERO, player.ground_friction * delta)
 		
+	if player.gravity.enabled == false:
+		finished.emit(SWIM)
+		
 	if not player.is_on_floor():
 		finished.emit(FLOAT)
 		return

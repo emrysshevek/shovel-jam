@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://yowo6jwf5wvd"]
+[gd_scene load_steps=13 format=3 uid="uid://yowo6jwf5wvd"]
 
 [ext_resource type="Script" uid="uid://bwp2q0pswcepy" path="res://Entities/Player/player.gd" id="1_ww0jn"]
 [ext_resource type="Texture2D" uid="uid://tuaqgj6ocj86" path="res://icon.svg" id="2_vweq0"]
@@ -8,29 +8,46 @@
 [ext_resource type="Script" uid="uid://7gov16bxb76i" path="res://Entities/Player/Behaviour/player_jump.gd" id="5_t38ms"]
 [ext_resource type="Script" uid="uid://hvc563xuot3h" path="res://Entities/Player/Behaviour/player_walk.gd" id="6_hj1c0"]
 [ext_resource type="Script" uid="uid://cctam756um62a" path="res://Entities/Player/Behaviour/player_float.gd" id="8_x44r4"]
+[ext_resource type="Script" uid="uid://u3g1f78tacpp" path="res://Entities/Player/Behaviour/player_swim.gd" id="9_761t5"]
+[ext_resource type="Script" uid="uid://drj8g2jnwvaja" path="res://Entities/Player/Behaviour/player_wall_jump.gd" id="10_hacra"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hj1c0"]
-size = Vector2(28, 28)
+size = Vector2(14, 14)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hacra"]
+radius = 6.7082
 
 [node name="Player" type="CharacterBody2D" groups=["player"]]
 collision_layer = 16
 collision_mask = 7
 platform_floor_layers = 4294967047
 script = ExtResource("1_ww0jn")
+max_speed = 150.0
+ground_acceleration = 800.0
+jump_velocity = 300.0
+max_fall_speed = 300.0
+air_acceleration = 400.0
+air_friction = 400.0
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(0, -14)
-scale = Vector2(0.25, 0.25)
+scale = Vector2(0.125, 0.125)
 texture = ExtResource("2_vweq0")
 
-[node name="WorldCollision" type="CollisionShape2D" parent="."]
-position = Vector2(0, -14)
-rotation = -3.14159
+[node name="DefaultCollision" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_hj1c0")
+
+[node name="FloatingCollision" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_hacra")
+disabled = true
 
 [node name="Gravity" type="Node2D" parent="."]
 script = ExtResource("3_vweq0")
+default = 900.0
 metadata/_custom_type_script = "uid://dxhyewa2uic4q"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(4, 4)
+position_smoothing_enabled = true
 
 [node name="Behaviour" type="Node" parent="."]
 script = ExtResource("4_t38ms")
@@ -50,3 +67,11 @@ metadata/_custom_type_script = "uid://7gov16bxb76i"
 [node name="Float" type="Node" parent="Behaviour"]
 script = ExtResource("8_x44r4")
 metadata/_custom_type_script = "uid://cctam756um62a"
+
+[node name="Swim" type="Node" parent="Behaviour"]
+script = ExtResource("9_761t5")
+metadata/_custom_type_script = "uid://u3g1f78tacpp"
+
+[node name="WallJump" type="Node" parent="Behaviour"]
+script = ExtResource("10_hacra")
+metadata/_custom_type_script = "uid://drj8g2jnwvaja"
