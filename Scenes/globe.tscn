@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://8hrai0ih02vj" path="res://Scenes/globe.gd" id="1_kc167"]
 [ext_resource type="Texture2D" uid="uid://dw7val11ynbrs" path="res://World/Layout/test_globe.png" id="1_ll7sj"]
 [ext_resource type="PackedScene" uid="uid://c7jqkthesq0lc" path="res://Scenes/Levels/Level_1/Level_One.tscn" id="2_gpk4l"]
-[ext_resource type="PackedScene" uid="uid://vyr46jb5bxjk" path="res://Scenes/interactable.tscn" id="3_p15m1"]
+[ext_resource type="PackedScene" uid="uid://cgdiok6brispc" path="res://Components/Interactable/interactable.tscn" id="3_p15m1"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_6s5ae"]
 radius = 71.8471
@@ -21,6 +21,13 @@ texture = ExtResource("1_ll7sj")
 shape = SubResource("CircleShape2D_6s5ae")
 
 [node name="Interactable" parent="." instance=ExtResource("3_p15m1")]
+
+[node name="Label" type="Label" parent="."]
+offset_left = -28.0
+offset_top = -9.0
+offset_right = 27.0
+offset_bottom = 14.0
+text = "Locked"
 
 [connection signal="body_entered" from="Interactable" to="Interactable" method="_on_interaction_area_entered"]
 [connection signal="body_exited" from="Interactable" to="Interactable" method="_on_interaction_area_exited"]

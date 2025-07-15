@@ -4,9 +4,11 @@ extends State
 const IDLE := "Idle"
 const WALK := "Walk"
 const JUMP := "Jump"
+const WALLJUMP := "WallJump"
 const CROUCH := "Crouch"
 const LAND := "Land"
 const FLOAT := "Float"
+const SWIM := "Swim"
 const SPECIAL := "Special"
 
 var player: Player
