@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://c04sllgueisy5"]
+
+[ext_resource type="Texture2D" uid="uid://fu7esn4t2pdc" path="res://Hub (art)/mono_shelf.png" id="1_qf7wj"]
+
+[node name="Shelf" type="Node2D"]
+
+[node name="MonoShelf" type="Sprite2D" parent="."]
+position = Vector2(488, 448)
+texture = ExtResource("1_qf7wj")
+
+[node name="Body" type="StaticBody2D" parent="."]
+
+[node name="Hitbox" type="CollisionPolygon2D" parent="Body"]
+polygon = PackedVector2Array(-697, -7, -766, 20, -846, 53, -926, 107, -966, 161, -984, 236, -970, 305, -931, 365, -876, 409, -789, 452, -683, 480, -422, 480, -406, 672, -346, 728, -334, 888, -173, 890, -153, 732, -91, 666, -84, 480, 1059, 477, 1066, 652, 1129, 730, 1140, 888, 1307, 895, 1320, 726, 1382, 674, 1392, 485, 1680, 480, 1841, 417, 1937, 324, 1960, 220, 1916, 116, 1802, 44, 1644, -11)

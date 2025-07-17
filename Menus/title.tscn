@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://cnm5m75aadmkh"]
+[gd_scene load_steps=4 format=3 uid="uid://cnm5m75aadmkh"]
 
 [ext_resource type="Script" uid="uid://cf6871t5by3yi" path="res://Menus/title.gd" id="1_dc2yq"]
+[ext_resource type="PackedScene" uid="uid://xluslk5v3att" path="res://Audio/Music/scenes/main_menu_song.tscn" id="2_ouwbm"]
+[ext_resource type="AudioStream" uid="uid://ge7s2npvf6hw" path="res://Audio/SFX/menu_select_sfx.wav" id="3_i6cgr"]
 
 [node name="Title" type="Control"]
 layout_mode = 3
@@ -40,4 +42,12 @@ grow_vertical = 0
 theme_override_font_sizes/font_size = 46
 text = "Start"
 
+[node name="AudioStreamPlayer2D" parent="." instance=ExtResource("2_ouwbm")]
+
+[node name="MenuSelectSfx" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_i6cgr")
+volume_db = -7.0
+pitch_scale = 2.0
+
+[connection signal="mouse_entered" from="Start" to="." method="_on_start_mouse_entered"]
 [connection signal="pressed" from="Start" to="." method="_on_start_pressed"]
