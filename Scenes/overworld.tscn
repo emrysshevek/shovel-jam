@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://7xefsikrycob"]
+[gd_scene load_steps=9 format=3 uid="uid://7xefsikrycob"]
 
 [ext_resource type="PackedScene" uid="uid://bwh5gr7v566n0" path="res://Scenes/Tilemaps/world_tile_map_layer.tscn" id="1_l45s6"]
 [ext_resource type="PackedScene" uid="uid://c12624uqv2ra3" path="res://Scenes/Tilemaps/platform_tilemap.tscn" id="2_s368d"]
@@ -7,18 +7,23 @@
 [ext_resource type="PackedScene" uid="uid://yowo6jwf5wvd" path="res://Entities/Player/Player.tscn" id="4_s368d"]
 [ext_resource type="PackedScene" uid="uid://bxhcxil1fa8hi" path="res://Scenes/Levels/Level_3/Level_Three.tscn" id="5_2ngsa"]
 [ext_resource type="PackedScene" uid="uid://cmco374svbi3e" path="res://Scenes/Levels/Level_4/Level_Four.tscn" id="6_auytq"]
+[ext_resource type="PackedScene" uid="uid://c04sllgueisy5" path="res://Entities/shelf.tscn" id="8_2ngsa"]
 
 [node name="Overworld" type="Node2D"]
 
 [node name="TileMapLayer" parent="." instance=ExtResource("1_l45s6")]
+visible = false
 scale = Vector2(6, 6)
+enabled = false
 
 [node name="PlatformLayer" parent="." instance=ExtResource("2_s368d")]
+visible = false
 z_index = 1
 texture_filter = 1
 position = Vector2(0, 32)
 scale = Vector2(6, 6)
 tile_map_data = PackedByteArray(0, 0, 11, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 12, 0, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+enabled = false
 
 [node name="Levels" type="Node2D" parent="."]
 
@@ -43,3 +48,7 @@ level_scene = ExtResource("6_auytq")
 [node name="Player" parent="." instance=ExtResource("4_s368d")]
 position = Vector2(540, 362)
 scale = Vector2(3.28, 3.28)
+
+[node name="Shelf" parent="." instance=ExtResource("8_2ngsa")]
+position = Vector2(367, 394)
+scale = Vector2(0.5, 0.5)
