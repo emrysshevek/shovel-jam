@@ -1,21 +1,21 @@
 [gd_scene load_steps=3 format=3 uid="uid://8av8juttv6bs"]
 
 [ext_resource type="Script" uid="uid://dwl4u60dadg6w" path="res://Entities/Obstacles/Deadly/spike.gd" id="1_5p7j5"]
-[ext_resource type="Texture2D" uid="uid://gxp6wm3yem71" path="res://Entities/Obstacles/test_obstacle_spike1.png" id="1_obj4r"]
+[ext_resource type="Texture2D" uid="uid://dkyhhqufshn2s" path="res://Entities/Obstacles/spike.png" id="2_5p7j5"]
 
 [node name="Spike" type="Node2D"]
 script = ExtResource("1_5p7j5")
 
 [node name="Art" type="Sprite2D" parent="."]
 texture_filter = 1
-texture = ExtResource("1_obj4r")
+texture = ExtResource("2_5p7j5")
 
 [node name="Hitbox" type="Area2D" parent="."]
 collision_layer = 16
 collision_mask = 16
 
 [node name="HitboxShape" type="CollisionPolygon2D" parent="Hitbox"]
-polygon = PackedVector2Array(0, 0, -8, 8, 8, 8)
+polygon = PackedVector2Array(-8, 2, -8, 8, 8, 8, 7, 1, 4, -1, 0, 3, -4, -1, -6, 1, -7, 1)
 
 [connection signal="area_entered" from="Hitbox" to="." method="_on_hitbox_area_entered"]
 [connection signal="body_entered" from="Hitbox" to="." method="_on_hitbox_entered"]

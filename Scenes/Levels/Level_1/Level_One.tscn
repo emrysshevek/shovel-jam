@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=4 uid="uid://c7jqkthesq0lc"]
+[gd_scene load_steps=9 format=4 uid="uid://c7jqkthesq0lc"]
 
 [ext_resource type="PackedScene" uid="uid://bwh5gr7v566n0" path="res://Scenes/Tilemaps/world_tile_map_layer.tscn" id="1_jotox"]
 [ext_resource type="Script" uid="uid://boryfw5mwl0xv" path="res://Scenes/Levels/level.gd" id="1_ttiuf"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://c13io57eh7jwi" path="res://Entities/Friend/friend.tscn" id="4_n63id"]
 [ext_resource type="PackedScene" uid="uid://8av8juttv6bs" path="res://Entities/Obstacles/Deadly/spike.tscn" id="6_lslqw"]
 [ext_resource type="PackedScene" uid="uid://d2lg1k4rpl6i1" path="res://Entities/Obstacles/Accelerator/Accelerator.tscn" id="7_tlvwv"]
+[ext_resource type="PackedScene" uid="uid://bavkg4sriujeg" path="res://Entities/Obstacles/Fragile/falling_platform.tscn" id="8_g0mu7"]
 
 [node name="LevelOne" type="Node2D"]
 script = ExtResource("1_ttiuf")
@@ -27,4 +28,6 @@ position = Vector2(40, 56)
 [node name="Accelerator" parent="." instance=ExtResource("7_tlvwv")]
 position = Vector2(-24, 56)
 acceleration_amount = 500.0
-acceleration_direction = 5
+
+[node name="FallingPlatform" parent="." instance=ExtResource("8_g0mu7")]
+position = Vector2(-152, -144)
