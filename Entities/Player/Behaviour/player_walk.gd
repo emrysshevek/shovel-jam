@@ -1,6 +1,11 @@
 class_name PlayerWalkState
 extends PlayerState
+
+func enter(_previous_state_path: String, _data := {}) -> void:
+	player.ap.play("Walk")
 	
+func exit() -> void:
+	player.ap.stop()
 
 func physics_update(delta: float) -> void:
 	
@@ -14,7 +19,6 @@ func physics_update(delta: float) -> void:
 		finished.emit(IDLE)
 		return
 		
-	
 	var dir = Input.get_axis(&"move_left", &"move_right")
 	var speed = player.max_speed
 	if Input.is_action_pressed(&"run"):

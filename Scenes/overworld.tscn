@@ -14,10 +14,11 @@
 scale = Vector2(6, 6)
 
 [node name="PlatformLayer" parent="." instance=ExtResource("2_s368d")]
+visible = false
 z_index = 1
 texture_filter = 1
 position = Vector2(0, 32)
-scale = Vector2(6, 6)
+scale = Vector2(6.99, 6.99)
 tile_map_data = PackedByteArray(0, 0, 11, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 12, 0, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0)
 
 [node name="Levels" type="Node2D" parent="."]
@@ -41,5 +42,5 @@ level = 3
 level_scene = ExtResource("6_auytq")
 
 [node name="Player" parent="." instance=ExtResource("4_s368d")]
-position = Vector2(540, 362)
-scale = Vector2(3.28, 3.28)
+position = Vector2(300, 382)
+scale = Vector2(0.5, 0.5)

@@ -3,3 +3,4 @@ extends Entity
 
 @onready var default_collision: CollisionShape2D = $DefaultCollision
 @onready var floating_collision: CollisionShape2D = $FloatingCollision
+@onready var ap: AnimationPlayer = $PlayerSprite/AnimationPlayer
