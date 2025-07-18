@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dtnbb8t4n00ma"
+path="res://.godot/imported/ability sfx.wav-7a1379de68edbf0845e836b738013f9c.sample"
+
+[deps]
+
+source_file="res://Assets/SFX/ability sfx.wav"
+dest_files=["res://.godot/imported/ability sfx.wav-7a1379de68edbf0845e836b738013f9c.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

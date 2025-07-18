@@ -1,0 +1,15 @@
+AudioStreamPlayer
+CollisionShape2D
+TileMapLayer
+Area2D
+PlayerWallJumpState
+PlayerSwimState
+Camera2D
+Sprite2D
+Label
+Node2D
+Button
+MarginContainer
+PlayerFloatState
+PlayerWalkState
+PlayerJumpState

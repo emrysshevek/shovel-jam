@@ -1,0 +1,15 @@
+res://Components/Gravity/gravity.tscn::0937fda544860f9806583b05b51b3e51::1752512639::res://.godot/exported/206107301/export-8943e7605e82c1608ca7df88abb2470f-gravity.scn
+res://Entities/Player/Player.tscn::76b5b82eef019303b4508e4a382e4caa::1752512639::res://.godot/exported/206107301/export-dd45c2806886d3cc57d0a27bcb6f8b99-Player.scn
+res://Scenes/Levels/Level_1/Level_One.tscn::d0262d212d1101781ad0221bf43a016b::1752512639::res://.godot/exported/206107301/export-1398fca181a1152d45edbb6ddb58b311-Level_One.scn
+res://Scenes/Levels/Level_2/Level_Two.tscn::3cb736a34497f92cdeffaf5b7cea721c::1752365830::res://.godot/exported/206107301/export-be1f89a5cfdf63f3d8ea0d360ed2bc15-Level_Two.scn
+res://Scenes/Levels/Level_3/Level_Three.tscn::5b6acb3c9c0c39893da6d8717bdd1ab1::1752365830::res://.godot/exported/206107301/export-34b8a7a69a96444fa9ce37f3c6f6dacd-Level_Three.scn
+res://Scenes/Levels/Level_4/Level_Four.tscn::11e49d7d118047d2cce1ee5a4c3aa00e::1752365830::res://.godot/exported/206107301/export-390a1cd1011a1bdac2ce8a39ad204a1d-Level_Four.scn
+res://Scenes/Tilemaps/platform.tscn::5c06b325a4de653f80a7044ce61b5e38::1752365830::res://.godot/exported/206107301/export-2f5fdb3e6b8f67b7c14f3002a7f72b38-platform.scn
+res://Scenes/Tilemaps/platforms.png::4413093c8c5a127024a9b4930da694966b84ee2c1651e1abb12eb0eff891618d::1752365830::res://.godot/exported/206107301/export-9866d9a0c86825d95d8abb2c4d708da8-platforms.res
+res://Scenes/Tilemaps/world_tile_map_layer.tscn::c20a00179a5b28711b21dd33f6d0a24d::1752365830::res://.godot/exported/206107301/export-939bb6c675db9b7f610525af663e9946-world_tile_map_layer.scn
+res://Scenes/globe.tscn::390b34ce362735440647fbcb4cb2ff82::1752512639::res://.godot/exported/206107301/export-084f6420fde0b3ddcc6c1532a027b30f-globe.scn
+res://Scenes/interactable.tscn::d0b0b92b47265d6df2d2a637713ff5a6::1752355060::res://.godot/exported/206107301/export-e236f444146c5021b89ef4cdcde84529-interactable.scn
+res://Scenes/overworld.tscn::93750dec3932ce6cfbcae5334a14a6d8::1752512639::res://.godot/exported/206107301/export-61789bcfd875252d12b102a4463648ae-overworld.scn
+res://World/Layout/test_globe.png::ba405a263ffc7a61dc1b5fd787c2189916467f4217efa74ffed4e78bc855b8e0::1752355050::res://.godot/exported/206107301/export-39e437c569102fca24c321e3e4bf9708-test_globe.res
+res://World/Layout/world_tileset.png::a734921ab0f49083184b01c178d7c01c0ef060e93e554960587d7b7b3e9f5ee0::1752354704::res://.godot/exported/206107301/export-ab66f68260b2bf5958a3627211b626b7-world_tileset.res
+res://icon.svg::0eed98577cbbf02f0bdc0f5c9f70465bea9c9e31be3bf102093a2a3d34ca53eb::1752354704::res://.godot/exported/206107301/export-218a8f2b3041327d8a5756f3a245f83b-icon.res

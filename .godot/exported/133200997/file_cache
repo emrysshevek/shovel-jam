@@ -1,0 +1,17 @@
+res://Components/Gravity/gravity.tscn::0937fda544860f9806583b05b51b3e51::1752538187::res://.godot/exported/133200997/export-8943e7605e82c1608ca7df88abb2470f-gravity.scn
+res://Entities/Player/Player.tscn::3e3895f0c6f511f93143cc80e2312811::1752556054::res://.godot/exported/133200997/export-dd45c2806886d3cc57d0a27bcb6f8b99-Player.scn
+res://Scenes/Levels/Level_1/Level_One.tscn::93abef0657a54cf03c23354f6ad33fe0::1752556054::res://.godot/exported/133200997/export-1398fca181a1152d45edbb6ddb58b311-Level_One.scn
+res://Scenes/Levels/Level_2/Level_Two.tscn::764ded563efc72eaf1eb011495f8db51::1752556054::res://.godot/exported/133200997/export-be1f89a5cfdf63f3d8ea0d360ed2bc15-Level_Two.scn
+res://Scenes/Levels/Level_3/Level_Three.tscn::c7793dced83c02d0c3544311f19c48be::1752538187::res://.godot/exported/133200997/export-34b8a7a69a96444fa9ce37f3c6f6dacd-Level_Three.scn
+res://Scenes/Levels/Level_4/Level_Four.tscn::03a6076c3122cf34f1385971cf31e71f::1752538187::res://.godot/exported/133200997/export-390a1cd1011a1bdac2ce8a39ad204a1d-Level_Four.scn
+res://Scenes/Tilemaps/platform.tscn::5c06b325a4de653f80a7044ce61b5e38::1752556054::res://.godot/exported/133200997/export-2f5fdb3e6b8f67b7c14f3002a7f72b38-platform.scn
+res://Scenes/Tilemaps/world_tile_map_layer.tscn::c20a00179a5b28711b21dd33f6d0a24d::1752556054::res://.godot/exported/133200997/export-939bb6c675db9b7f610525af663e9946-world_tile_map_layer.scn
+res://Scenes/globe.tscn::dc227545fdf0127309dbf9e7f67ed1ca::1752556054::res://.godot/exported/133200997/export-084f6420fde0b3ddcc6c1532a027b30f-globe.scn
+res://Scenes/overworld.tscn::0a0157af6bc11a3c8791284117ade69c::1752556054::res://.godot/exported/133200997/export-61789bcfd875252d12b102a4463648ae-overworld.scn
+res://Components/Globals/Globals.tscn::7e93850dde38696b805e152f0336686a::1752538187::res://.godot/exported/133200997/export-078d67cce03d4747c46da4533bdb31e1-Globals.scn
+res://Components/Interactable/interactable.tscn::c8d0cca567a25cde1e1f49da5d053d49::1752538187::res://.godot/exported/133200997/export-f5bb4d10addf51a3fec8ec541824dbbc-interactable.scn
+res://Entities/Friend/friend.tscn::61f4492dca17272f5159fb1ffd34080a::1752556054::res://.godot/exported/133200997/export-2d3ad91f03d61c9aab488936d1ce1164-friend.scn
+res://Entities/Portal/portal.tscn::dbba01c03501420650acaf1390cf455e::1752556054::res://.godot/exported/133200997/export-862ab78c37fd59838b3592095f58f105-portal.scn
+res://Menus/title.tscn::fe534130ec14c0f3ca1adc712f9011a2::1752538187::res://.godot/exported/133200997/export-e30e935774d4a3f7634aed4ae71c5ec0-title.scn
+res://Scenes/Levels/level.tscn::e5b1b0c698f35eb3d1effa34d44999e8::1752538187::res://.godot/exported/133200997/export-f4906329942c7016c08b53e16ecee32a-level.scn
+res://Scenes/Tilemaps/platform_tilemap.tscn::07a04d315943a24891f9a557bd47ca6f::1752556054::res://.godot/exported/133200997/export-a6e7ba4712d55040d67fe98256c247b3-platform_tilemap.scn
