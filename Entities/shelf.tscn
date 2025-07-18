@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://c04sllgueisy5"]
+
+[ext_resource type="Texture2D" uid="uid://bgu0fse74th2o" path="res://Assets/Hub (art)/Shelf_border_L.png" id="2_1s2je"]
+[ext_resource type="Texture2D" uid="uid://ct7xdgqh4lpti" path="res://Assets/Hub (art)/Shelf_borderless.png" id="3_jxkjn"]
+
+[sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_i1ig5"]
+points = PackedVector2Array(5572.5, -242.5, 5785.5, -125.5, 5785.5, 135.5, 5582.5, 232.5, -5616.5, 235.5, -5821.5, 125.5, -5824.5, -121.5, -5576.5, -242.5)
+
+[node name="Shelf" type="StaticBody2D"]
+
+[node name="Sprites" type="Node2D" parent="."]
+
+[node name="Left" type="Sprite2D" parent="Sprites"]
+position = Vector2(-5145, 209)
+texture = ExtResource("2_1s2je")
+
+[node name="Middle" type="Sprite2D" parent="Sprites"]
+scale = Vector2(6, 1)
+texture = ExtResource("3_jxkjn")
+
+[node name="Right" type="Sprite2D" parent="Sprites"]
+position = Vector2(5119, 209)
+texture = ExtResource("2_1s2je")
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2.5, 2.5)
+shape = SubResource("ConvexPolygonShape2D_i1ig5")
