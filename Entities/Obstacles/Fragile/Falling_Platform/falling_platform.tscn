@@ -1,13 +1,12 @@
 [gd_scene load_steps=4 format=3 uid="uid://bavkg4sriujeg"]
 
-[ext_resource type="Script" uid="uid://8peduac5id5i" path="res://Entities/Obstacles/Fragile/falling_platform.gd" id="1_1kiro"]
-[ext_resource type="Texture2D" uid="uid://bqq2os3m4dn2l" path="res://Entities/Obstacles/Fragile/falling_platform.png" id="1_jljvg"]
+[ext_resource type="Script" uid="uid://8peduac5id5i" path="res://Entities/Obstacles/Fragile/Falling_Platform/falling_platform.gd" id="1_1kiro"]
+[ext_resource type="Texture2D" uid="uid://u5fh3auynvp5" path="res://Entities/Obstacles/Fragile/Falling_Platform/plat2.png" id="2_1kiro"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jljvg"]
-size = Vector2(48, 16)
+size = Vector2(1408, 344)
 
 [node name="FallingPlatform" type="Node2D"]
-scale = Vector2(20, 20)
 script = ExtResource("1_1kiro")
 
 [node name="Hitbox" type="RigidBody2D" parent="."]
@@ -16,16 +15,18 @@ collision_mask = 17
 gravity_scale = 0.0
 
 [node name="HitboxShape" type="CollisionShape2D" parent="Hitbox"]
+position = Vector2(0, -4)
 shape = SubResource("RectangleShape2D_jljvg")
 
 [node name="Art" type="Sprite2D" parent="Hitbox"]
 texture_filter = 1
-texture = ExtResource("1_jljvg")
+texture = ExtResource("2_1kiro")
 
 [node name="RayCast2D" type="RayCast2D" parent="Hitbox"]
-position = Vector2(-24, -9)
+position = Vector2(-704, -176)
 rotation = 1.5708
-target_position = Vector2(-1.90735e-06, -48)
+scale = Vector2(8, 1)
+target_position = Vector2(-0.00509644, -1408)
 collision_mask = 17
 
 [connection signal="body_exited" from="Hitbox" to="." method="_on_hitbox_exited"]

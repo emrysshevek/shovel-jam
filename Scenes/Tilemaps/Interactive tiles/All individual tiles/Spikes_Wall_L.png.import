@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bqq2os3m4dn2l"
-path="res://.godot/imported/falling_platform.png-531ad06751bd78c93bee6d295d245ef7.ctex"
+uid="uid://cs40bfm2vn8lh"
+path="res://.godot/imported/Spikes_Wall_L.png-6413b416a3f4f1fab6383cdadac37ee8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Entities/Obstacles/Fragile/falling_platform.png"
-dest_files=["res://.godot/imported/falling_platform.png-531ad06751bd78c93bee6d295d245ef7.ctex"]
+source_file="res://Scenes/Tilemaps/Interactive tiles/All individual tiles/Spikes_Wall_L.png"
+dest_files=["res://.godot/imported/Spikes_Wall_L.png-6413b416a3f4f1fab6383cdadac37ee8.ctex"]
 
 [params]
 

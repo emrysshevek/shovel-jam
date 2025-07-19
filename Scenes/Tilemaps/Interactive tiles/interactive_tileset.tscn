@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=3 uid="uid://dpphs6wijhe1l"]
+
+[ext_resource type="Texture2D" uid="uid://ccdd4mnb07qhv" path="res://Interactive_tiles_Tilset/Tileset_Interactive_tiles.png" id="1_d2tcf"]
+[ext_resource type="Script" uid="uid://cojcu0ovi8ur5" path="res://Interactive_tiles_Tilset/toggle_tile_block_states.gd" id="4_ny62x"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3iy6d"]
+texture = ExtResource("1_d2tcf")
+texture_region_size = Vector2i(704, 704)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-352, -352, 352, -352, 352, 352, -352, 352)
+1:0/0 = 0
+2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-352, -352, 352, -352, 352, 352, -352, 352)
+3:0/0 = 0
+3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-352, -309.137, 303.823, -307.366, 309.137, 309.137, -352, 309.137)
+4:0/0 = 0
+4:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(309.137, -352, 307.366, 303.823, -309.137, 309.137, -309.137, -352)
+0:1/0 = 0
+1:1/0 = 0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-352, -352, 352, -352, 352, 352, -352, 352)
+2:1/0 = 0
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-352, -352, 352, -352, 352, 352, -352, 352)
+3:1/0 = 0
+3:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-309.137, 352, -307.366, -303.823, 309.137, -309.137, 309.137, 352)
+4:1/0 = 0
+4:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(352, -309.137, -303.823, -307.366, -309.137, 309.137, 352, 309.137)
+
+[sub_resource type="TileSet" id="TileSet_e60ok"]
+tile_size = Vector2i(704, 704)
+physics_layer_0/collision_layer = 1
+sources/1 = SubResource("TileSetAtlasSource_3iy6d")
+
+[node name="InteractiveTileset" type="TileMapLayer"]
+tile_set = SubResource("TileSet_e60ok")
+script = ExtResource("4_ny62x")
