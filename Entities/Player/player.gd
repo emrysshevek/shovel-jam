@@ -34,7 +34,7 @@ func take_damage(amount: int):
 	print("Current Health: %d" % current_hearts)
 	if current_hearts <= 0:
 		MusicManager.play_sfx("res://Assets/Audio/SFX/crash_restart_level_sfx.wav")
-		get_tree().change_scene_to_file("res://Scenes/Hub/overworld.tscn")
+		get_tree().change_scene_to_file.call_deferred("res://Scenes/Hub/overworld.tscn")
 		
 func _process(_delta):
 	if Input.is_action_just_pressed("accel"):

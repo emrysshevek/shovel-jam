@@ -58,6 +58,8 @@ func crossfade_to(audio_stream: AudioStream, fade_duration:=.5) -> void:
 		_track_1.stream = audio_stream
 		_track_1.play()
 		return
+	elif _track_1.stream == audio_stream:
+		return
 	
 	var tween = create_tween()
 	tween.tween_property(_track_1, ^"volume_db", -80.0, fade_duration)
@@ -74,7 +76,7 @@ func _on_fade_out_finished(stream: AudioStream) -> void:
 
 func play_music(audio_stream: AudioStream):
 	_track_1.stop()
-	_track_2.stop()
+	_track_1.volume_db = 0.0
 	_track_1.stream = audio_stream
 	_track_1.play()
 
