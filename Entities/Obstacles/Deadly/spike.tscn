@@ -1,10 +1,9 @@
 [gd_scene load_steps=3 format=3 uid="uid://8av8juttv6bs"]
 
 [ext_resource type="Script" uid="uid://dwl4u60dadg6w" path="res://Entities/Obstacles/Deadly/spike.gd" id="1_5p7j5"]
-[ext_resource type="Texture2D" uid="uid://dkyhhqufshn2s" path="res://Entities/Obstacles/spike.png" id="2_5p7j5"]
+[ext_resource type="Texture2D" uid="uid://j0a65asdxl8g" path="res://Scenes/Tilemaps/Interactive tiles/All individual tiles/Spikes_Ground.png" id="2_5p7j5"]
 
 [node name="Spike" type="Node2D"]
-scale = Vector2(20, 20)
 script = ExtResource("1_5p7j5")
 
 [node name="Art" type="Sprite2D" parent="."]
@@ -15,8 +14,8 @@ texture = ExtResource("2_5p7j5")
 collision_layer = 16
 collision_mask = 16
 
-[node name="HitboxShape" type="CollisionPolygon2D" parent="Hitbox"]
-polygon = PackedVector2Array(-8, 2, -8, 8, 8, 8, 7, 1, 4, -1, 0, 3, -4, -1, -6, 1, -7, 1)
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Hitbox"]
+polygon = PackedVector2Array(-234.3, -300.75, -311.9, 348.6, -311.8, 352.5, 311.75, 352.1, 307.8, 316.1, 296.8, 311.05, 235.1, -304.7, 232.8, -304.25, 162.5, 315, 63.3, 311.65, 1.35, -308, -1.05, -304.75, -71.95, 315.45, -171.4, 309.45)
 
 [connection signal="area_entered" from="Hitbox" to="." method="_on_hitbox_area_entered"]
 [connection signal="body_entered" from="Hitbox" to="." method="_on_hitbox_entered"]
