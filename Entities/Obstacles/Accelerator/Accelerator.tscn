@@ -8,8 +8,9 @@
 size = Vector2(16, 16)
 
 [node name="Accelerator" type="Node2D"]
+scale = Vector2(20, 20)
 script = ExtResource("1_cocbk")
-acceleration_amount = 100.0
+acceleration_amount = 13000.0
 
 [node name="BaseBg" type="Sprite2D" parent="."]
 texture_filter = 1

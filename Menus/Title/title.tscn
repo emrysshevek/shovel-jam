@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://cnm5m75aadmkh"]
+[gd_scene load_steps=3 format=3 uid="uid://cnm5m75aadmkh"]
 
 [ext_resource type="Script" uid="uid://cf6871t5by3yi" path="res://Menus/Title/title.gd" id="1_dc2yq"]
+[ext_resource type="PackedScene" uid="uid://df033cyc1hybn" path="res://Menus/sound_button.tscn" id="2_ccn5l"]
 
 [node name="Title" type="Control"]
 layout_mode = 3
@@ -39,25 +40,20 @@ grow_horizontal = 2
 grow_vertical = 2
 metadata/_edit_group_ = true
 
-[node name="Continue" type="Button" parent="VBoxContainer"]
+[node name="ContinueButton" parent="VBoxContainer" instance=ExtResource("2_ccn5l")]
 layout_mode = 2
-theme_override_font_sizes/font_size = 50
-text = "Continue"
-flat = true
-icon_alignment = 1
-expand_icon = true
-
-[node name="New Game" type="Button" parent="VBoxContainer"]
-layout_mode = 2
-text = "New Game"
+text = "Start"
 flat = true
 
-[node name="Quit" type="Button" parent="VBoxContainer"]
+[node name="NewGameButton" parent="VBoxContainer" instance=ExtResource("2_ccn5l")]
+visible = false
 layout_mode = 2
-text = "Quit
-"
+
+[node name="QuitButton" parent="VBoxContainer" instance=ExtResource("2_ccn5l")]
+layout_mode = 2
+text = "Quit"
 flat = true
 
-[connection signal="pressed" from="VBoxContainer/Continue" to="." method="_on_start_pressed"]
-[connection signal="pressed" from="VBoxContainer/New Game" to="." method="_on_new_game_pressed"]
-[connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="VBoxContainer/ContinueButton" to="." method="_on_continue_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/NewGameButton" to="." method="_on_new_game_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]

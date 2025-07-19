@@ -1,27 +1,42 @@
-[gd_scene load_steps=5 format=3 uid="uid://c7jqkthesq0lc"]
+[gd_scene load_steps=10 format=4 uid="uid://c7jqkthesq0lc"]
 
 [ext_resource type="Script" uid="uid://boryfw5mwl0xv" path="res://Scenes/Levels/level.gd" id="1_ttiuf"]
 [ext_resource type="PackedScene" uid="uid://yowo6jwf5wvd" path="res://Entities/Player/Player.tscn" id="2_57ne3"]
+[ext_resource type="AudioStream" uid="uid://c8mn5ul26bfbj" path="res://Assets/Audio/Music/level_1_whimsical_forest.wav" id="2_svb3y"]
+[ext_resource type="TileSet" uid="uid://k453yfdt81mu" path="res://Scenes/Levels/Level_1/level1_tileset.tres" id="2_ten4b"]
 [ext_resource type="PackedScene" uid="uid://bdykr4g01j8gf" path="res://Entities/Portal/portal.tscn" id="3_ten4b"]
 [ext_resource type="PackedScene" uid="uid://c13io57eh7jwi" path="res://Entities/Friend/friend.tscn" id="4_n63id"]
+[ext_resource type="PackedScene" uid="uid://bavkg4sriujeg" path="res://Entities/Obstacles/Fragile/falling_platform.tscn" id="6_g0mu7"]
+[ext_resource type="PackedScene" uid="uid://d2lg1k4rpl6i1" path="res://Entities/Obstacles/Accelerator/Accelerator.tscn" id="7_svb3y"]
+[ext_resource type="PackedScene" uid="uid://8av8juttv6bs" path="res://Entities/Obstacles/Deadly/spike.tscn" id="8_4s46d"]
 
 [node name="LevelOne" type="Node2D"]
 script = ExtResource("1_ttiuf")
+music = ExtResource("2_svb3y")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray("AAABAP//AAABAAAAAAACAP//AAABAAAAAAADAP//AAABAAAAAAAEAP//AAABAAAAAAAFAP//AAABAAEAAAAGAP//AAABAAEAAAAHAP//AAABAAAAAAAIAP//AAABAAAAAAAJAP//AAABAAEAAAAKAP//AAABAAEAAAALAP//AAABAAAAAAAMAP//AAABAAAAAAANAP//AAABAAAAAAAOAP//AAABAAAAAAAPAP//AAABAAAAAAAQAP//AAABAAAAAAAAAP//AAABAAEAAAAAAP7/AAAEAAEAAAAAAP3/AAAEAAEAAAAAAPz/AAAEAAEAAAAAAPv/AAAEAAEAAAAAAPr/AAAEAAEAAAAAAPn/AAAEAAEAAAAAAPj/AAAEAAEAAAAAAPf/AAAEAAEAAAAAAPb/AAAEAAEAAAAFAP7/AAABAAAAAAAGAP7/AAABAAAAAAAJAP7/AAABAAEAAAAJAP3/AAABAAAAAAAKAP3/AAABAAAAAAAKAP7/AAABAAEAAAA=")
+tile_set = ExtResource("2_ten4b")
 
 [node name="Portal" parent="." instance=ExtResource("3_ten4b")]
-scale = Vector2(6, 6)
+position = Vector2(1476, -1428)
+scale = Vector2(37.705, 37.705)
 
 [node name="Player" parent="." instance=ExtResource("2_57ne3")]
-position = Vector2(5, 399)
-jump_height = 4000.0
-max_speed = 150.0
-ground_acceleration = 800.0
-ground_friction = 1000.0
-jump_velocity = 300.0
-max_fall_speed = 300.0
-air_acceleration = 400.0
-air_friction = 400.0
+position = Vector2(1527, -750)
 
 [node name="Friend" parent="." instance=ExtResource("4_n63id")]
-position = Vector2(1290, 289)
+position = Vector2(11475, -711)
 scale = Vector2(40.77, 40.77)
+
+[node name="FallingPlatform" parent="." instance=ExtResource("6_g0mu7")]
+position = Vector2(4269, -4088)
+
+[node name="FallingPlatform2" parent="." instance=ExtResource("6_g0mu7")]
+position = Vector2(6966, -5357)
+
+[node name="Accelerator" parent="." instance=ExtResource("7_svb3y")]
+position = Vector2(6148, -866.001)
+
+[node name="Spike" parent="." instance=ExtResource("8_4s46d")]
+position = Vector2(8294, -864)

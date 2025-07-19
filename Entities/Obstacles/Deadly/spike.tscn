@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dkyhhqufshn2s" path="res://Entities/Obstacles/spike.png" id="2_5p7j5"]
 
 [node name="Spike" type="Node2D"]
+scale = Vector2(20, 20)
 script = ExtResource("1_5p7j5")
 
 [node name="Art" type="Sprite2D" parent="."]

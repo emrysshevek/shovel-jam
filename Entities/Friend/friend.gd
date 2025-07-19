@@ -9,6 +9,7 @@ var free := false
 
 func _on_interactable_interaction_occured() -> void:
 	print("friend was interacted")
+	MusicManager.play_sfx("res://Assets/Audio/SFX/retrieve_friend_sfx.wav")
 	free = true
 	freed.emit()
 	
