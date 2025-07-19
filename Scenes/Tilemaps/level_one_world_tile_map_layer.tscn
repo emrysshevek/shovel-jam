@@ -1,0 +1,37 @@
+[gd_scene load_steps=5 format=4 uid="uid://li68t4vt156m"]
+
+[ext_resource type="Texture2D" uid="uid://d2dx5k5oxkol8" path="res://Scenes/Tilemaps/Tilemap_Level_A.png" id="2_qkdtm"]
+
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_eyunj"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4e1i7"]
+texture = ExtResource("2_qkdtm")
+texture_region_size = Vector2i(704, 704)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-352, -352, 352, -352, 352, 352, -352, 352)
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-352, -352, 352, -352, 352, 352, -352, 352)
+2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-352, -352, 352, -352, 352, 352, -352, 352)
+2:1/0 = 0
+1:1/0 = 0
+0:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+4:2/0 = 0
+4:1/0 = 0
+4:0/0 = 0
+4:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-352, -352, 352, -352, 352, 352, -352, 352)
+
+[sub_resource type="TileSet" id="TileSet_i8gr5"]
+tile_size = Vector2i(704, 704)
+physics_layer_0/collision_layer = 17
+physics_layer_0/collision_mask = 17
+sources/0 = SubResource("TileSetScenesCollectionSource_eyunj")
+sources/1 = SubResource("TileSetAtlasSource_4e1i7")
+
+[node name="TileMap" type="TileMapLayer"]
+texture_filter = 1
+tile_map_data = PackedByteArray("AAD9/wAAAQABAAAAAAD+/wAAAQABAAAAAAD//wAAAQABAAAAAAAAAAAAAQABAAAAAAABAAAAAQABAAAAAAACAAAAAQABAAAAAAADAAAAAQABAAAAAAADAAEAAQABAAEAAAAEAAEAAQABAAEAAAAEAAAAAQABAAAAAAAFAAAAAQABAAAAAAA=")
+tile_set = SubResource("TileSet_i8gr5")
