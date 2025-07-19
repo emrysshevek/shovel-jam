@@ -2,6 +2,7 @@ class_name Player
 extends Entity
 
 signal step()
+signal jump()
 
 @export var jump_height := 4000.0
 @export var jump_duration := .75
@@ -9,7 +10,6 @@ signal step()
 
 @onready var default_collision: CollisionPolygon2D = $DefaultCollision
 @onready var floating_collision: CollisionShape2D = $FloatingCollision
-@onready var ap: AnimationPlayer = $PlayerSprite/AnimationPlayer
 
 func _ready() -> void:
 	# h = v^2 / 2g

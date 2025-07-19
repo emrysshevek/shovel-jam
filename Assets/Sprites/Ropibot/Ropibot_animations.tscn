@@ -13,7 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://05v2lsa80nyr" path="res://Assets/Sprites/Ropibot/Bolder_jaw_connection.png" id="11_3a5vi"]
 
 [sub_resource type="Animation" id="Animation_vxj5p"]
-resource_name = "Jaw (opening & closing)"
+resource_name = "Bite"
 length = 0.5
 loop_mode = 2
 tracks/0/type = "value"
@@ -132,6 +132,58 @@ tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/path = NodePath("Character container/Body/Screws:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_xdm2t"]
+resource_name = "Land"
+length = 0.13
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Character container/Body/Screws:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.13),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 143), Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Character container/Body/Screws:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Character container/Body/Wheel:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.13),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(211, 354), Vector2(211, 211)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Character container/Body/Wheel:rotation")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -336,58 +388,6 @@ tracks/15/keys = {
 "values": [0.0]
 }
 
-[sub_resource type="Animation" id="Animation_xdm2t"]
-resource_name = "Revert jumping"
-length = 0.13
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Character container/Body/Screws:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.13),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(0, 143), Vector2(0, 0)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Character container/Body/Screws:rotation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Character container/Body/Wheel:position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.13),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(211, 354), Vector2(211, 211)]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Character container/Body/Wheel:rotation")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
-}
-
 [sub_resource type="Animation" id="Animation_pngsr"]
 resource_name = "Rolling"
 loop_mode = 1
@@ -466,16 +466,18 @@ tracks/5/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_vxj5p"]
 _data = {
-&"Jaw (opening & closing)": SubResource("Animation_vxj5p"),
+&"Bite": SubResource("Animation_vxj5p"),
 &"Jumping": SubResource("Animation_hin7x"),
+&"Land": SubResource("Animation_xdm2t"),
 &"RESET": SubResource("Animation_3a5vi"),
-&"Revert jumping": SubResource("Animation_xdm2t"),
 &"Rolling": SubResource("Animation_pngsr")
 }
 
 [node name="Animation" type="Node2D"]
 
 [node name="Character container" type="Node2D" parent="."]
+position = Vector2(-212, 0)
+metadata/_edit_group_ = true
 
 [node name="Body" type="Node2D" parent="Character container"]
 

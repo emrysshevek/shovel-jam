@@ -27,8 +27,8 @@ max_fall_speed = 6000.0
 air_acceleration = 1000.0
 air_friction = 0.0
 
-[node name="PlayerSprite" parent="." instance=ExtResource("11_jynvv")]
-position = Vector2(-276, -1414)
+[node name="Sprite" parent="." instance=ExtResource("11_jynvv")]
+position = Vector2(-3, -1414)
 
 [node name="DefaultCollision" type="CollisionPolygon2D" parent="."]
 position = Vector2(0, -664.5)
@@ -78,4 +78,4 @@ metadata/_custom_type_script = "uid://cctam756um62a"
 script = ExtResource("9_761t5")
 metadata/_custom_type_script = "uid://u3g1f78tacpp"
 
-[connection signal="step" from="PlayerSprite" to="." method="_on_player_sprite_step"]
+[connection signal="step" from="Sprite" to="." method="_on_player_sprite_step"]
