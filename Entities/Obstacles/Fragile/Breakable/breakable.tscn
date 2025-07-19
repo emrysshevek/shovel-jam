@@ -1,0 +1,37 @@
+[gd_scene load_steps=5 format=3 uid="uid://b5voxyvgujcyo"]
+
+[ext_resource type="Script" uid="uid://b4joxotrjf2fo" path="res://Entities/Obstacles/Fragile/Breakable/breakable.gd" id="1_ueq3n"]
+[ext_resource type="Texture2D" uid="uid://bcfwgfuf03q8q" path="res://Entities/Obstacles/Fragile/Breakable/Breakable.png" id="2_ueq3n"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jljvg"]
+size = Vector2(704, 696)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_opcna"]
+size = Vector2(720, 704)
+
+[node name="Breakable" type="Node2D"]
+script = ExtResource("1_ueq3n")
+
+[node name="Hitbox" type="RigidBody2D" parent="."]
+collision_layer = 17
+collision_mask = 17
+gravity_scale = 0.0
+
+[node name="HitboxShape" type="CollisionShape2D" parent="Hitbox"]
+position = Vector2(0, -4)
+shape = SubResource("RectangleShape2D_jljvg")
+
+[node name="Art" type="Sprite2D" parent="Hitbox"]
+texture_filter = 1
+texture = ExtResource("2_ueq3n")
+
+[node name="Area" type="Area2D" parent="Hitbox"]
+collision_layer = 17
+collision_mask = 17
+
+[node name="Detection_Area" type="CollisionShape2D" parent="Hitbox/Area"]
+position = Vector2(8, 0)
+shape = SubResource("RectangleShape2D_opcna")
+
+[connection signal="body_exited" from="Hitbox" to="." method="_on_hitbox_exited"]
+[connection signal="body_entered" from="Hitbox/Area" to="." method="_on_detection_area_body_entered"]

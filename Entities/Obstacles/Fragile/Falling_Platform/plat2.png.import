@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bqq2os3m4dn2l"
-path="res://.godot/imported/falling_platform.png-531ad06751bd78c93bee6d295d245ef7.ctex"
+uid="uid://u5fh3auynvp5"
+path="res://.godot/imported/plat2.png-931286cfec2df45d1dc975038ad910c8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Entities/Obstacles/Fragile/falling_platform.png"
-dest_files=["res://.godot/imported/falling_platform.png-531ad06751bd78c93bee6d295d245ef7.ctex"]
+source_file="res://Entities/Obstacles/Fragile/Falling_Platform/plat2.png"
+dest_files=["res://.godot/imported/plat2.png-931286cfec2df45d1dc975038ad910c8.ctex"]
 
 [params]
 
