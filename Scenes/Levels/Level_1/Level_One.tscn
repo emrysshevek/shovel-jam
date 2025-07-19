@@ -24,6 +24,7 @@ scale = Vector2(37.705, 37.705)
 
 [node name="Player" parent="." instance=ExtResource("2_57ne3")]
 position = Vector2(1527, -750)
+air_acceleration = 5000.0
 
 [node name="Friend" parent="." instance=ExtResource("4_n63id")]
 position = Vector2(11475, -711)
