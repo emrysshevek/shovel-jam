@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=4 uid="uid://bwh5gr7v566n0"]
+[gd_scene load_steps=7 format=4 uid="uid://bwh5gr7v566n0"]
 
 [ext_resource type="Texture2D" uid="uid://c7dwhlkq3i5gq" path="res://World/Layout/world_tileset.png" id="1_v7nhj"]
+[ext_resource type="Texture2D" uid="uid://d2dx5k5oxkol8" path="res://Scenes/Tilemaps/Tilemap_Level_A.png" id="2_swjv3"]
 
 [sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_eyunj"]
 
@@ -157,10 +158,27 @@ texture = ExtResource("1_v7nhj")
 2:4/size_in_atlas = Vector2i(3, 3)
 2:4/0 = 0
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4e1i7"]
+texture = ExtResource("2_swjv3")
+texture_region_size = Vector2i(704, 704)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+2:1/0 = 0
+1:1/0 = 0
+0:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+4:2/0 = 0
+4:1/0 = 0
+4:0/0 = 0
+
 [sub_resource type="TileSet" id="TileSet_i8gr5"]
 physics_layer_0/collision_layer = 1
 sources/1 = SubResource("TileSetAtlasSource_6s5ae")
 sources/0 = SubResource("TileSetScenesCollectionSource_eyunj")
+sources/2 = SubResource("TileSetAtlasSource_4e1i7")
 
 [node name="TileMap" type="TileMapLayer"]
 texture_filter = 1
