@@ -1,5 +1,8 @@
 class_name PlayerIdleState
 extends PlayerState
+
+func enter(_previous_state_path: String, _data := {}) -> void:
+	player.ap.play("Idle_1")
 	
 func physics_update(delta: float) -> void:
 	if player.velocity != Vector2.ZERO:

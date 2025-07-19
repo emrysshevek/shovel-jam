@@ -1,0 +1,39 @@
+[gd_scene load_steps=9 format=3 uid="uid://7xefsikrycob"]
+
+[ext_resource type="Script" uid="uid://c8cblrve0vnf2" path="res://Scenes/Hub/overworld.gd" id="1_4wr4y"]
+[ext_resource type="AudioStream" uid="uid://1gs0ygkt6a71" path="res://Assets/Audio/Music/main_menu.wav" id="2_f6am2"]
+[ext_resource type="PackedScene" uid="uid://b3xnahgbyyf0j" path="res://Scenes/Hub/globe.tscn" id="3_i8gr5"]
+[ext_resource type="PackedScene" uid="uid://6dl1k3tjs8t7" path="res://Scenes/Levels/Level_2/Level_Two.tscn" id="4_hf0oe"]
+[ext_resource type="PackedScene" uid="uid://yowo6jwf5wvd" path="res://Entities/Player/Player.tscn" id="4_s368d"]
+[ext_resource type="PackedScene" uid="uid://bxhcxil1fa8hi" path="res://Scenes/Levels/Level_3/Level_Three.tscn" id="5_2ngsa"]
+[ext_resource type="PackedScene" uid="uid://cmco374svbi3e" path="res://Scenes/Levels/Level_4/Level_Four.tscn" id="6_auytq"]
+[ext_resource type="PackedScene" uid="uid://c04sllgueisy5" path="res://Entities/shelf.tscn" id="8_2ngsa"]
+
+[node name="Overworld" type="Node2D"]
+script = ExtResource("1_4wr4y")
+music = ExtResource("2_f6am2")
+
+[node name="Shelf" parent="." instance=ExtResource("8_2ngsa")]
+
+[node name="Levels" type="Node2D" parent="."]
+
+[node name="Globe" parent="Levels" instance=ExtResource("3_i8gr5")]
+position = Vector2(-4334, -1411)
+
+[node name="Globe2" parent="Levels" instance=ExtResource("3_i8gr5")]
+position = Vector2(-1491, -1415)
+level_scene = ExtResource("4_hf0oe")
+level = 1
+
+[node name="Globe3" parent="Levels" instance=ExtResource("3_i8gr5")]
+position = Vector2(1413, -1426)
+level_scene = ExtResource("5_2ngsa")
+level = 2
+
+[node name="Globe4" parent="Levels" instance=ExtResource("3_i8gr5")]
+position = Vector2(4259, -1426)
+level_scene = ExtResource("6_auytq")
+level = 3
+
+[node name="Player" parent="." instance=ExtResource("4_s368d")]
+position = Vector2(-2951, -480)

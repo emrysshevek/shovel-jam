@@ -1,8 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://cnm5m75aadmkh"]
+[gd_scene load_steps=3 format=3 uid="uid://c76owtegjdy0v"]
 
-[ext_resource type="Script" uid="uid://cf6871t5by3yi" path="res://Menus/title.gd" id="1_dc2yq"]
-[ext_resource type="PackedScene" uid="uid://xluslk5v3att" path="res://Audio/Music/scenes/main_menu_song.tscn" id="2_ouwbm"]
-[ext_resource type="AudioStream" uid="uid://ge7s2npvf6hw" path="res://Audio/SFX/menu_select_sfx.wav" id="3_i6cgr"]
+[ext_resource type="Script" uid="uid://cf6871t5by3yi" path="res://Menus/Title/title.gd" id="1_dc2yq"]
+[ext_resource type="PackedScene" uid="uid://bsypaeplmafae" path="res://Menus/sound_button.tscn" id="2_ouwbm"]
 
 [node name="Title" type="Control"]
 layout_mode = 3
@@ -26,28 +25,26 @@ grow_horizontal = 2
 theme_override_font_sizes/font_size = 91
 text = "TITLE TBD"
 
-[node name="Start" type="Button" parent="."]
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
-anchors_preset = 7
+anchors_preset = 8
 anchor_left = 0.5
-anchor_top = 1.0
+anchor_top = 0.5
 anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -23.0
-offset_top = -95.0
-offset_right = 23.0
-offset_bottom = -64.0
+anchor_bottom = 0.5
+offset_left = -149.5
+offset_top = 81.0
+offset_right = 149.5
+offset_bottom = 239.0
 grow_horizontal = 2
-grow_vertical = 0
-theme_override_font_sizes/font_size = 46
-text = "Start"
+grow_vertical = 2
+metadata/_edit_group_ = true
 
-[node name="AudioStreamPlayer2D" parent="." instance=ExtResource("2_ouwbm")]
+[node name="StartButton" parent="VBoxContainer" instance=ExtResource("2_ouwbm")]
+layout_mode = 2
 
-[node name="MenuSelectSfx" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("3_i6cgr")
-volume_db = -7.0
-pitch_scale = 2.0
+[node name="QuitButton" parent="VBoxContainer" instance=ExtResource("2_ouwbm")]
+layout_mode = 2
 
-[connection signal="mouse_entered" from="Start" to="." method="_on_start_mouse_entered"]
-[connection signal="pressed" from="Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]

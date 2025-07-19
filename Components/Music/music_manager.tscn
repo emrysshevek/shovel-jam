@@ -1,0 +1,25 @@
+[gd_scene load_steps=12 format=3 uid="uid://c0ntqyy5mr7cc"]
+
+[ext_resource type="Script" uid="uid://bjsnst7mlk6kx" path="res://Components/Music/music_manager.gd" id="1_50hcr"]
+[ext_resource type="AudioStream" uid="uid://cy4f56w1cj7cs" path="res://Assets/Audio/SFX/ability_sfx.wav" id="2_1ekd1"]
+[ext_resource type="AudioStream" uid="uid://8gos61byoxt2" path="res://Assets/Audio/SFX/ability_sfx_2.wav" id="3_qa3bn"]
+[ext_resource type="AudioStream" uid="uid://b4y2li87ltucj" path="res://Assets/Audio/SFX/crash_restart_level_sfx.wav" id="4_03g3l"]
+[ext_resource type="AudioStream" uid="uid://cgqxk3af74svw" path="res://Assets/Audio/SFX/blipSelect.wav" id="4_cbhuf"]
+[ext_resource type="AudioStream" uid="uid://ge7s2npvf6hw" path="res://Assets/Audio/SFX/menu_select_sfx.wav" id="5_vxgj0"]
+[ext_resource type="AudioStream" uid="uid://4euf01ov4mvy" path="res://Assets/Audio/SFX/retrieve_friend_sfx.wav" id="6_h76y2"]
+[ext_resource type="AudioStream" uid="uid://b6xhsckpoo8bs" path="res://Assets/Audio/SFX/hitHurt.wav" id="7_a6kui"]
+[ext_resource type="AudioStream" uid="uid://be6i618hqvfim" path="res://Assets/Audio/SFX/click.wav" id="7_vxgj0"]
+[ext_resource type="AudioStream" uid="uid://bme87fdsi77sh" path="res://Assets/Audio/SFX/jump.wav" id="8_h76y2"]
+[ext_resource type="AudioStream" uid="uid://bp8ql3hpx7gp5" path="res://Assets/Audio/SFX/pickupCoin.wav" id="9_cbhuf"]
+
+[node name="MusicManager" type="Node"]
+script = ExtResource("1_50hcr")
+sfx_files = Array[AudioStream]([ExtResource("2_1ekd1"), ExtResource("3_qa3bn"), ExtResource("4_cbhuf"), ExtResource("7_vxgj0"), ExtResource("4_03g3l"), ExtResource("7_a6kui"), ExtResource("8_h76y2"), ExtResource("5_vxgj0"), ExtResource("9_cbhuf"), ExtResource("6_h76y2")])
+
+[node name="Track1" type="AudioStreamPlayer" parent="."]
+bus = &"Music"
+
+[node name="Track2" type="AudioStreamPlayer" parent="."]
+bus = &"Music"
+
+[node name="SFXPlayers" type="Node" parent="."]
