@@ -3,6 +3,9 @@ extends PlayerState
 
 @export var fall_speed_influence = .5
 
+func enter(_previous_state_path: String, _data := {}) -> void:
+	player.ap.play("Idle_2")
+
 func physics_update(delta: float) -> void:
 	if player.is_on_floor():
 		finished.emit(IDLE)
