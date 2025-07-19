@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://c8mn5ul26bfbj"
-path="res://.godot/imported/level_1_whimsical_forest.wav-a8df7f901872c45bb5e5422154a2a05e.sample"
+path="res://.godot/imported/level_1_whimsical_forest.wav-5fdbe927356ae39cc46e8e639efa861f.sample"
 
 [deps]
 
-source_file="res://Audio/Music/level_1_whimsical_forest.wav"
-dest_files=["res://.godot/imported/level_1_whimsical_forest.wav-a8df7f901872c45bb5e5422154a2a05e.sample"]
+source_file="res://Assets/Audio/Music/level_1_whimsical_forest.wav"
+dest_files=["res://.godot/imported/level_1_whimsical_forest.wav-5fdbe927356ae39cc46e8e639efa861f.sample"]
 
 [params]
 

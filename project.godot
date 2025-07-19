@@ -18,6 +18,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 Globals="*res://Components/Globals/Globals.tscn"
+MusicManager="*res://Components/Music/music_manager.tscn"
 
 [display]
 

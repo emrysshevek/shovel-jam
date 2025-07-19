@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dqk7jlym1r4j3"
+path="res://.godot/imported/level 1 - whimsical forest - ogg version.ogg-d740e33c28e369d16625f14b491f75ad.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/Audio/Music/level 1 - whimsical forest - ogg version.ogg"
+dest_files=["res://.godot/imported/level 1 - whimsical forest - ogg version.ogg-d740e33c28e369d16625f14b491f75ad.oggvorbisstr"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

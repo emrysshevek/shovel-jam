@@ -375,55 +375,55 @@ _data = {
 [node name="Arm_L" type="Node2D" parent="Character container/Body"]
 
 [node name="Arm_L" type="Sprite2D" parent="Character container/Body/Arm_L"]
-position = Vector2(279, 682)
+position = Vector2(279, 667)
 texture = ExtResource("5_dpkdn")
 offset = Vector2(23, 45)
 
 [node name="Forearm_L" type="Sprite2D" parent="Character container/Body/Arm_L"]
-position = Vector2(279, 815)
+position = Vector2(279, 800)
 texture = ExtResource("6_7eunu")
 offset = Vector2(23, -88)
 
 [node name="Hand_L" type="Sprite2D" parent="Character container/Body/Arm_L"]
-position = Vector2(279, 979)
+position = Vector2(279, 964)
 texture = ExtResource("7_805am")
 offset = Vector2(23, -252)
 
 [node name="Leg_L" type="Node2D" parent="Character container/Body"]
 
 [node name="Thigh_L" type="Sprite2D" parent="Character container/Body/Leg_L"]
-position = Vector2(272, 913)
+position = Vector2(265, 905)
 rotation = 0.537525
 scale = Vector2(0.999998, 0.999998)
 texture = ExtResource("13_pref4")
 offset = Vector2(37, -193)
 
 [node name="Calf_L" type="Sprite2D" parent="Character container/Body/Leg_L"]
-position = Vector2(160.648, 1133.01)
+position = Vector2(153.648, 1125.01)
 rotation = 0.537525
 scale = Vector2(0.999998, 0.999998)
 texture = ExtResource("13_dn08s")
 offset = Vector2(20, -439)
 
 [node name="Foot_L" type="Sprite2D" parent="Character container/Body/Leg_L"]
-position = Vector2(58.8554, 1278.4)
+position = Vector2(51.8554, 1270.4)
 rotation = 0.382384
 scale = Vector2(0.999997, 0.999997)
 texture = ExtResource("14_pref4")
 offset = Vector2(33, -616)
 
 [node name="Torso" type="Sprite2D" parent="Character container/Body"]
-position = Vector2(275, 901)
+position = Vector2(275, 886)
 texture = ExtResource("4_dfmkv")
 offset = Vector2(27, -174)
 
 [node name="Neck" type="Sprite2D" parent="Character container/Body"]
-position = Vector2(275, 653)
+position = Vector2(275, 638)
 texture = ExtResource("1_epwxf")
 offset = Vector2(27, 74)
 
 [node name="Head" type="Sprite2D" parent="Character container/Body"]
-position = Vector2(275, 574)
+position = Vector2(275, 559)
 texture = ExtResource("2_11sss")
 offset = Vector2(27, 153)
 
@@ -444,33 +444,33 @@ texture = ExtResource("11_dn08s")
 offset = Vector2(27, 153)
 
 [node name="Hair_back" type="Sprite2D" parent="Character container/Body"]
-position = Vector2(107, 320)
+position = Vector2(107, 305)
 texture = ExtResource("9_yey1n")
 offset = Vector2(195, 407)
 
 [node name="Bangs" type="Sprite2D" parent="Character container/Body"]
-position = Vector2(400, 145)
+position = Vector2(400, 130)
 texture = ExtResource("10_l74hn")
 offset = Vector2(-98, 582)
 
 [node name="Leg_R" type="Node2D" parent="Character container/Body"]
 
 [node name="Thigh_R" type="Sprite2D" parent="Character container/Body/Leg_R"]
-position = Vector2(265, 912)
+position = Vector2(265, 905)
 rotation = -0.491684
 scale = Vector2(0.999965, 0.999965)
 texture = ExtResource("13_pref4")
 offset = Vector2(37, -193)
 
 [node name="Calf_R" type="Sprite2D" parent="Character container/Body/Leg_R"]
-position = Vector2(396.136, 1120.85)
+position = Vector2(396.136, 1113.85)
 rotation = -0.491684
 scale = Vector2(0.999965, 0.999965)
 texture = ExtResource("13_dn08s")
 offset = Vector2(20, -439)
 
 [node name="Foot_R" type="Sprite2D" parent="Character container/Body/Leg_R"]
-position = Vector2(468.238, 1283.01)
+position = Vector2(468.237, 1276.01)
 rotation = -0.491684
 scale = Vector2(0.999963, 0.999963)
 texture = ExtResource("14_pref4")
@@ -479,17 +479,17 @@ offset = Vector2(33, -616)
 [node name="Arm_R" type="Node2D" parent="Character container/Body"]
 
 [node name="Arm_R" type="Sprite2D" parent="Character container/Body/Arm_R"]
-position = Vector2(279, 682)
+position = Vector2(279, 667)
 texture = ExtResource("5_dpkdn")
 offset = Vector2(23, 45)
 
 [node name="Forearm_R" type="Sprite2D" parent="Character container/Body/Arm_R"]
-position = Vector2(279, 815)
+position = Vector2(279, 800)
 texture = ExtResource("6_7eunu")
 offset = Vector2(23, -88)
 
 [node name="Hand_R" type="Sprite2D" parent="Character container/Body/Arm_R"]
-position = Vector2(279, 979)
+position = Vector2(279, 964)
 texture = ExtResource("7_805am")
 offset = Vector2(23, -252)
 

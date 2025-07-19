@@ -11,6 +11,7 @@ signal completed(score: float)
 @onready var portal: Portal = $Portal
 
 func _ready() -> void:
+	MusicManager.crossfade_to(load("res://Assets/Audio/Music/level 1 - whimsical forest - ogg version.ogg"))
 	friend.freed.connect(_on_friend_freed)
 	portal.exited.connect(_on_portal_entered)
 	

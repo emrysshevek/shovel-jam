@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://7xefsikrycob"]
 
-[ext_resource type="PackedScene" uid="uid://b3xnahgbyyf0j" path="res://Scenes/globe.tscn" id="3_i8gr5"]
+[ext_resource type="PackedScene" uid="uid://b3xnahgbyyf0j" path="res://Scenes/Hub/globe.tscn" id="3_i8gr5"]
 [ext_resource type="PackedScene" uid="uid://6dl1k3tjs8t7" path="res://Scenes/Levels/Level_2/Level_Two.tscn" id="4_hf0oe"]
 [ext_resource type="PackedScene" uid="uid://yowo6jwf5wvd" path="res://Entities/Player/Player.tscn" id="4_s368d"]
 [ext_resource type="PackedScene" uid="uid://bxhcxil1fa8hi" path="res://Scenes/Levels/Level_3/Level_Three.tscn" id="5_2ngsa"]
@@ -14,20 +14,20 @@
 [node name="Levels" type="Node2D" parent="."]
 
 [node name="Globe" parent="Levels" instance=ExtResource("3_i8gr5")]
-position = Vector2(-4377, -1541)
+position = Vector2(-4334, -1411)
 
 [node name="Globe2" parent="Levels" instance=ExtResource("3_i8gr5")]
-position = Vector2(-1534, -1545)
+position = Vector2(-1491, -1415)
 level = 1
 level_scene = ExtResource("4_hf0oe")
 
 [node name="Globe3" parent="Levels" instance=ExtResource("3_i8gr5")]
-position = Vector2(1370, -1556)
+position = Vector2(1413, -1426)
 level = 2
 level_scene = ExtResource("5_2ngsa")
 
 [node name="Globe4" parent="Levels" instance=ExtResource("3_i8gr5")]
-position = Vector2(4216, -1556)
+position = Vector2(4259, -1426)
 level = 3
 level_scene = ExtResource("6_auytq")
 
