@@ -3,8 +3,11 @@ extends PlayerState
 
 @export var fall_speed_influence = .5
 
+var speed := 0.0
+
 func enter(_previous_state_path: String, _data := {}) -> void:
 	player.ap.play("Idle_2")
+	speed = abs(player.velocity.x)
 
 func physics_update(delta: float) -> void:
 	if player.is_on_floor():
@@ -16,11 +19,9 @@ func physics_update(delta: float) -> void:
 		return
 		
 	var dir = Input.get_axis(&"move_left", &"move_right")
-	if dir == 0:
-		player.velocity.x = move_toward(player.velocity.x, 0, player.air_friction * delta)
-	else:
-		player.velocity.x = move_toward(player.velocity.x, player.max_speed * dir, player.air_acceleration * delta)
-		
+	if dir != 0:
+		player.velocity.x = move_toward(player.velocity.x, speed * dir, player.air_acceleration * delta)
+
 	if Input.is_action_pressed("jump"):
 		player.gravity.set_gravity(player.gravity.default * .7)
 	elif Input.is_action_pressed("crouch"):
