@@ -12,11 +12,24 @@ class_name Entity
 @export var air_acceleration := 800.0
 @export var air_friction := 200.0
 
+var flipped = false
+var velocity_buffer = Vector2.ZERO
+
 @onready var gravity: Gravity = find_children("*", "Gravity")[0]
 
 func _ready():
 	#current_hearts = max_hearts
 	pass
+	
+func flip() -> void:
+	transform *= Transform2D.FLIP_X;
+	flipped = !flipped
 
 func _physics_process(delta: float) -> void:
+	_check_flip()
 	move_and_slide()
+	
+func _check_flip() -> void:
+	var dir = sign(velocity.x)
+	if (dir == -1 and not flipped) or (dir == 1 and flipped):
+		flip()

@@ -1928,34 +1928,36 @@ _data = {
 [node name="Animations" type="Node2D"]
 
 [node name="Character container" type="Node2D" parent="."]
+metadata/_edit_group_ = true
 
 [node name="Body" type="Node2D" parent="Character container"]
 
 [node name="Arm_L" type="Node2D" parent="Character container/Body"]
 
 [node name="Arm_L" type="Sprite2D" parent="Character container/Body/Arm_L"]
-position = Vector2(274.063, 667)
-rotation = 0.16513
+position = Vector2(297, 667)
+rotation = -0.602139
 scale = Vector2(0.999999, 0.999999)
 texture = ExtResource("5_dpkdn")
 offset = Vector2(23, 45)
 
 [node name="Forearm_L" type="Sprite2D" parent="Character container/Body/Arm_L"]
-position = Vector2(251.287, 798.844)
-rotation = -0.131658
+position = Vector2(372, 777)
+rotation = -1.53123
 scale = Vector2(0.999999, 0.999999)
 texture = ExtResource("6_7eunu")
 offset = Vector2(23, -88)
 
 [node name="Hand_L" type="Sprite2D" parent="Character container/Body/Arm_L"]
-position = Vector2(272.816, 961.424)
-rotation = -0.131658
+position = Vector2(535.871, 783.487)
+rotation = -1.53123
 scale = Vector2(0.999999, 0.999999)
 texture = ExtResource("7_805am")
 offset = Vector2(23, -252)
 
 [node name="Hand_L hitbox" type="CharacterBody2D" parent="Character container/Body/Arm_L/Hand_L"]
 position = Vector2(-1.52588e-05, 0.000117779)
+collision_layer = 16
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Character container/Body/Arm_L/Hand_L/Hand_L hitbox"]
 position = Vector2(1, 42.501)
@@ -1964,40 +1966,43 @@ shape = SubResource("RectangleShape2D_s7w0y")
 [node name="Leg_L" type="Node2D" parent="Character container/Body"]
 
 [node name="Thigh_L" type="Sprite2D" parent="Character container/Body/Leg_L"]
-position = Vector2(265, 904.556)
-rotation = -0.0272961
+position = Vector2(265, 905)
+rotation = 0.136446
 scale = Vector2(0.999998, 0.999998)
 texture = ExtResource("13_pref4")
 offset = Vector2(37, -193)
 
 [node name="Thigh_L hurtbox" type="CharacterBody2D" parent="Character container/Body/Leg_L/Thigh_L"]
+collision_layer = 16
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Character container/Body/Leg_L/Thigh_L/Thigh_L hurtbox"]
 position = Vector2(5.86694, 181.543)
 shape = SubResource("RectangleShape2D_fjoly")
 
 [node name="Calf_L" type="Sprite2D" parent="Character container/Body/Leg_L"]
-position = Vector2(287.592, 1149.88)
-rotation = -0.00218215
+position = Vector2(254, 1151.01)
+rotation = -0.000619964
 scale = Vector2(0.999998, 0.999998)
 texture = ExtResource("13_dn08s")
 offset = Vector2(20, -439)
 
 [node name="Calf_L hurtbox" type="CharacterBody2D" parent="Character container/Body/Leg_L/Calf_L"]
+collision_layer = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Character container/Body/Leg_L/Calf_L/Calf_L hurtbox"]
 position = Vector2(-1.70425, 90.0305)
 shape = SubResource("RectangleShape2D_vaj8v")
 
 [node name="Foot_L" type="Sprite2D" parent="Character container/Body/Leg_L"]
-position = Vector2(275.152, 1328.14)
-rotation = -0.00218215
+position = Vector2(241.109, 1328.02)
+rotation = -0.000619964
 scale = Vector2(0.999998, 0.999998)
 texture = ExtResource("14_pref4")
 offset = Vector2(33, -616)
 
 [node name="Foot_L hurtbox" type="CharacterBody2D" parent="Character container/Body/Leg_L/Foot_L"]
 position = Vector2(-269.001, -1328)
+collision_layer = 16
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Character container/Body/Leg_L/Foot_L/Foot_L hurtbox"]
 position = Vector2(328, 1377)
@@ -2011,6 +2016,7 @@ texture = ExtResource("4_dfmkv")
 offset = Vector2(27, -174)
 
 [node name="Torso hurtbox" type="CharacterBody2D" parent="Character container/Body/Torso"]
+collision_layer = 16
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Character container/Body/Torso/Torso hurtbox"]
 position = Vector2(-5.00001, -79.0001)
@@ -2024,7 +2030,7 @@ offset = Vector2(27, 74)
 
 [node name="Head" type="Sprite2D" parent="Character container/Body"]
 position = Vector2(275, 559)
-rotation = 0.0112925
+rotation = -0.0928392
 scale = Vector2(0.999999, 0.999999)
 texture = ExtResource("2_11sss")
 offset = Vector2(27, 153)
@@ -2047,21 +2053,23 @@ offset = Vector2(27, 153)
 
 [node name="Head hurtbox" type="CharacterBody2D" parent="Character container/Body/Head"]
 position = Vector2(55.0001, -238.001)
+collision_layer = 16
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Character container/Body/Head/Head hurtbox"]
 position = Vector2(-23, -20)
 shape = SubResource("CircleShape2D_s7w0y")
+metadata/_edit_group_ = true
 
 [node name="Hair_back" type="Sprite2D" parent="Character container/Body"]
-position = Vector2(109.879, 303.12)
-rotation = 0.0195474
+position = Vector2(83.0002, 325)
+rotation = -0.0115747
 scale = Vector2(0.999999, 0.999999)
 texture = ExtResource("9_yey1n")
 offset = Vector2(195, 407)
 
 [node name="Bangs" type="Sprite2D" parent="Character container/Body"]
-position = Vector2(404.836, 131.44)
-rotation = 0.00711947
+position = Vector2(359.691, 120.26)
+rotation = -0.0362035
 scale = Vector2(0.999998, 0.999998)
 texture = ExtResource("10_l74hn")
 offset = Vector2(-98, 582)
@@ -2069,39 +2077,42 @@ offset = Vector2(-98, 582)
 [node name="Leg_R" type="Node2D" parent="Character container/Body"]
 
 [node name="Thigh_R" type="Sprite2D" parent="Character container/Body/Leg_R"]
-position = Vector2(265, 905)
-rotation = 0.0297096
+position = Vector2(265, 903)
+rotation = -0.123009
 scale = Vector2(0.999962, 0.999962)
 texture = ExtResource("13_pref4")
 offset = Vector2(37, -193)
 
 [node name="Thigh_R hurtbox" type="CharacterBody2D" parent="Character container/Body/Leg_R/Thigh_R"]
+collision_layer = 16
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Character container/Body/Leg_R/Thigh_R/Thigh_R hurtbox"]
 position = Vector2(5.86694, 181.543)
 shape = SubResource("RectangleShape2D_fjoly")
 
 [node name="Calf_R" type="Sprite2D" parent="Character container/Body/Leg_R"]
-position = Vector2(275.927, 1151.27)
-rotation = -0.000705851
+position = Vector2(307, 1145)
+rotation = -0.000914982
 scale = Vector2(0.999961, 0.999961)
 texture = ExtResource("13_dn08s")
 offset = Vector2(20, -439)
 
 [node name="Calf_R hurtbox" type="CharacterBody2D" parent="Character container/Body/Leg_R/Calf_R"]
+collision_layer = 16
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Character container/Body/Leg_R/Calf_R/Calf_R hurtbox"]
 position = Vector2(-1.70425, 90.0306)
 shape = SubResource("RectangleShape2D_vaj8v")
 
 [node name="Foot_R" type="Sprite2D" parent="Character container/Body/Leg_R"]
-position = Vector2(263.052, 1328.27)
-rotation = -0.000705851
+position = Vector2(295, 1328)
+rotation = -0.000914982
 scale = Vector2(0.999961, 0.999961)
 texture = ExtResource("14_pref4")
 offset = Vector2(33, -616)
 
 [node name="Foot_R hurtbox" type="CharacterBody2D" parent="Character container/Body/Leg_R/Foot_R"]
+collision_layer = 16
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Character container/Body/Leg_R/Foot_R/Foot_R hurtbox"]
 position = Vector2(58.6537, 49.0382)
@@ -2111,33 +2122,35 @@ shape = SubResource("CapsuleShape2D_fjoly")
 [node name="Arm_R" type="Node2D" parent="Character container/Body"]
 
 [node name="Arm_R" type="Sprite2D" parent="Character container/Body/Arm_R"]
-position = Vector2(283.937, 667)
-rotation = -0.165149
+position = Vector2(261, 667)
+rotation = 0.60212
 scale = Vector2(0.999997, 0.999997)
 texture = ExtResource("5_dpkdn")
 offset = Vector2(23, 45)
 
 [node name="Forearm_R" type="Sprite2D" parent="Character container/Body/Arm_R"]
-position = Vector2(305.053, 799.148)
-rotation = -0.653044
+position = Vector2(185.67, 776.61)
+rotation = 0.60212
 scale = Vector2(0.999997, 0.999997)
 texture = ExtResource("6_7eunu")
 offset = Vector2(23, -88)
 
 [node name="Hand_R" type="Sprite2D" parent="Character container/Body/Arm_R"]
-position = Vector2(404.7, 929.403)
-rotation = -0.653044
+position = Vector2(92.7825, 911.768)
+rotation = 0.60212
 scale = Vector2(0.999997, 0.999997)
 texture = ExtResource("7_805am")
 offset = Vector2(23, -252)
 
 [node name="Hand_R hitbox" type="CharacterBody2D" parent="Character container/Body/Arm_R/Hand_R"]
+collision_layer = 16
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Character container/Body/Arm_R/Hand_R/Hand_R hitbox"]
 position = Vector2(1, 42.501)
 shape = SubResource("RectangleShape2D_s7w0y")
 
 [node name="Ground contact hurtbox" type="CharacterBody2D" parent="Character container/Body"]
+collision_layer = 16
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Character container/Body/Ground contact hurtbox"]
 position = Vector2(270, 1306)

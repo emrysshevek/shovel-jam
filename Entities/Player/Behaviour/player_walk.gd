@@ -6,6 +6,7 @@ func enter(_previous_state_path: String, _data := {}) -> void:
 	
 func exit() -> void:
 	player.ap.stop()
+	player.ap.speed_scale = 1
 
 func physics_update(delta: float) -> void:
 	
@@ -24,3 +25,4 @@ func physics_update(delta: float) -> void:
 	if Input.is_action_pressed(&"run"):
 		speed *= 2
 	player.velocity.x = move_toward(player.velocity.x, speed * dir, player.ground_acceleration * delta)
+	player.ap.speed_scale = abs(player.velocity.x) / player.max_speed
