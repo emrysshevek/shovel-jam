@@ -1,0 +1,9 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://ciee6sultpoi3"]
+
+[sub_resource type="SystemFont" id="SystemFont_gdfvn"]
+font_names = PackedStringArray("Comic Sans MS")
+
+[resource]
+font = SubResource("SystemFont_gdfvn")
+font_size = 75
+font_color = Color(0, 0, 0, 1)

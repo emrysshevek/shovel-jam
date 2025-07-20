@@ -21,7 +21,7 @@ rough = true
 size = Vector2(410, 414)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wni3b"]
-size = Vector2(386, 390)
+size = Vector2(340, 336)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_5ubga"]
 radius = 3975.01
@@ -42,11 +42,12 @@ max_fall_speed = 4000.0
 shape = SubResource("CircleShape2D_wd8jo")
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="."]
-remote_path = NodePath("../Platform")
+remote_path = NodePath("../Hitbox")
 update_rotation = false
 update_scale = false
 
 [node name="Platform" type="AnimatableBody2D" parent="."]
+modulate = Color(0.6, 0, 1, 1)
 top_level = true
 collision_layer = 4
 collision_mask = 0
@@ -56,7 +57,13 @@ physics_material_override = SubResource("PhysicsMaterial_gv5ux")
 shape = SubResource("RectangleShape2D_gv5ux")
 one_way_collision = true
 
+[node name="RemoteTransform2D2" type="RemoteTransform2D" parent="."]
+remote_path = NodePath("../Platform")
+update_rotation = false
+update_scale = false
+
 [node name="Hitbox" type="Area2D" parent="."]
+top_level = true
 collision_layer = 0
 collision_mask = 16
 

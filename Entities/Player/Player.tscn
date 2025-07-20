@@ -22,8 +22,8 @@ collision_mask = 7
 platform_floor_layers = 4294967047
 script = ExtResource("1_ww0jn")
 jump_height = 720.0
-max_speed = 1000.0
-ground_acceleration = 5000.0
+max_speed = 1500.0
+ground_acceleration = 8000.0
 ground_friction = 10000.0
 jump_velocity = 6000.0
 max_fall_speed = 6000.0
@@ -46,17 +46,6 @@ disabled = true
 script = ExtResource("3_vweq0")
 default = 10000.0
 metadata/_custom_type_script = "uid://dxhyewa2uic4q"
-
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(-17, -2223)
-zoom = Vector2(0.1, 0.1)
-drag_horizontal_enabled = true
-drag_vertical_enabled = true
-drag_left_margin = 0.36
-drag_top_margin = 0.58
-drag_right_margin = 0.36
-drag_bottom_margin = 0.29
-editor_draw_drag_margin = true
 
 [node name="Behaviour" type="Node" parent="."]
 script = ExtResource("4_t38ms")

@@ -1,0 +1,406 @@
+[gd_scene load_steps=21 format=3 uid="uid://cfuyy2yu6j6lp"]
+
+[ext_resource type="Script" uid="uid://8dkvi7hkrnwv" path="res://Menus/Pause UI/pause_ui.gd" id="1_jl541"]
+[ext_resource type="Texture2D" uid="uid://b4hga1vitv474" path="res://Menus/Pause UI/Background.png" id="2_3p770"]
+[ext_resource type="Texture2D" uid="uid://b2ncvcq8dcbkd" path="res://Menus/Pause UI/ArrowLeft.png" id="2_kee6w"]
+[ext_resource type="Texture2D" uid="uid://cr8uvurihq262" path="res://Menus/Pause UI/InfoLine.png" id="3_7020t"]
+[ext_resource type="Texture2D" uid="uid://b4lc8obo41hrs" path="res://Menus/Pause UI/PageNumber.png" id="3_uhss5"]
+[ext_resource type="Script" uid="uid://bmjww61w35s1" path="res://Menus/Pause UI/current_page.gd" id="4_d6y3p"]
+[ext_resource type="Texture2D" uid="uid://dlf64qan11muy" path="res://Menus/Pause UI/CloseButton.png" id="4_m8moj"]
+[ext_resource type="Texture2D" uid="uid://rnyh4atvg1rk" path="res://Menus/Pause UI/QuitButton.png" id="5_v7d62"]
+[ext_resource type="LabelSettings" uid="uid://ciee6sultpoi3" path="res://Menus/Pause UI/labelSettings.tres" id="6_3p3ci"]
+[ext_resource type="Script" uid="uid://b2fw4028vwtle" path="res://Menus/Pause UI/arrow_left.gd" id="6_l7cax"]
+[ext_resource type="Script" uid="uid://3g6pktqytnvx" path="res://Menus/Pause UI/arrow_right.gd" id="7_gdfvn"]
+[ext_resource type="Script" uid="uid://bxfnck1e1a08m" path="res://Menus/Pause UI/quit_button.gd" id="7_yleqo"]
+[ext_resource type="Texture2D" uid="uid://q5hd0oxv44l7" path="res://Menus/Pause UI/ContectualMenu.png" id="8_4tpd5"]
+[ext_resource type="Script" uid="uid://6ficoclmem6l" path="res://Menus/Pause UI/close_button.gd" id="8_y1qy4"]
+
+[sub_resource type="SystemFont" id="SystemFont_gdfvn"]
+font_names = PackedStringArray("Comic Sans MS")
+
+[sub_resource type="LabelSettings" id="LabelSettings_enlrs"]
+font = SubResource("SystemFont_gdfvn")
+font_size = 75
+outline_size = 20
+outline_color = Color(0.0470588, 0.498039, 0.788235, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_exbe0"]
+font = SubResource("SystemFont_gdfvn")
+font_size = 50
+font_color = Color(0.0470588, 0.498039, 0.788235, 1)
+outline_size = 15
+
+[sub_resource type="LabelSettings" id="LabelSettings_l552e"]
+font = SubResource("SystemFont_gdfvn")
+font_size = 50
+font_color = Color(0.937255, 0.811765, 0.211765, 1)
+outline_size = 15
+outline_color = Color(0.564706, 0.364706, 0.278431, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3p3ci"]
+bg_color = Color(0.564706, 0.364706, 0.278431, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_bottom = 10
+border_color = Color(0.564706, 0.364706, 0.278431, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+shadow_color = Color(0, 0, 0, 0.439216)
+shadow_size = 10
+shadow_offset = Vector2(0.095, 4.055)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o56uy"]
+bg_color = Color(0.937255, 0.811765, 0.211765, 1)
+corner_detail = 20
+
+[node name="Pause_UI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_jl541")
+
+[node name="Decoration" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_lock_ = true
+metadata/_edit_group_ = true
+
+[node name="Background" type="TextureRect" parent="Decoration"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_3p770")
+expand_mode = 1
+
+[node name="ContectualMenu" type="TextureRect" parent="Decoration"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 114.01
+grow_horizontal = 2
+texture = ExtResource("8_4tpd5")
+expand_mode = 5
+
+[node name="Lines" type="Control" parent="Decoration"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 167.0
+offset_top = -1.0
+offset_right = -149.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_group_ = true
+
+[node name="InfoLine1" type="TextureRect" parent="Decoration/Lines"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 6.0
+offset_top = -123.0
+offset_right = -12.0
+offset_bottom = -163.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_7020t")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="InfoLine2" type="TextureRect" parent="Decoration/Lines"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 6.0
+offset_top = -52.0
+offset_right = -12.0
+offset_bottom = -92.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_7020t")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="InfoLine3" type="TextureRect" parent="Decoration/Lines"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 6.0
+offset_top = 21.0
+offset_right = -12.0
+offset_bottom = -19.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_7020t")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="InfoLine4" type="TextureRect" parent="Decoration/Lines"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 6.0
+offset_top = 94.0
+offset_right = -12.0
+offset_bottom = 54.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_7020t")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="InfoLine5" type="TextureRect" parent="Decoration/Lines"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 6.0
+offset_top = 169.0
+offset_right = -12.0
+offset_bottom = 129.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_7020t")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="PageNumber" type="TextureRect" parent="Decoration"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -94.0
+offset_top = -148.0
+offset_right = 94.0
+offset_bottom = -27.0
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("3_uhss5")
+expand_mode = 1
+metadata/_edit_group_ = true
+
+[node name="CurrentPage" type="Label" parent="Decoration/PageNumber"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -188.0
+offset_top = -131.5
+offset_right = 188.0
+offset_bottom = 131.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "1/4"
+label_settings = ExtResource("6_3p3ci")
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("4_d6y3p")
+
+[node name="ArrowLeft" type="TextureRect" parent="Decoration"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 46.0
+offset_top = -62.0
+offset_right = 108.0
+offset_bottom = 62.0
+grow_vertical = 2
+texture = ExtResource("2_kee6w")
+expand_mode = 1
+stretch_mode = 5
+script = ExtResource("6_l7cax")
+metadata/_edit_group_ = true
+
+[node name="ButtonL" type="Button" parent="Decoration/ArrowLeft"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ArrowRight" type="TextureRect" parent="Decoration"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -118.0
+offset_top = -62.0
+offset_right = -56.0
+offset_bottom = 62.0
+grow_horizontal = 0
+grow_vertical = 2
+texture = ExtResource("2_kee6w")
+expand_mode = 1
+stretch_mode = 5
+flip_h = true
+script = ExtResource("7_gdfvn")
+metadata/_edit_group_ = true
+
+[node name="ButtonR" type="Button" parent="Decoration/ArrowRight"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="QuitButton" type="TextureRect" parent="Decoration"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -159.0
+offset_right = 290.0
+grow_vertical = 0
+texture = ExtResource("5_v7d62")
+expand_mode = 1
+stretch_mode = 5
+script = ExtResource("7_yleqo")
+metadata/_edit_group_ = true
+
+[node name="QuitButton" type="Button" parent="Decoration/QuitButton"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 13.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CloseButton" type="TextureRect" parent="Decoration"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -290.0
+offset_top = -159.0
+grow_horizontal = 0
+grow_vertical = 0
+texture = ExtResource("4_m8moj")
+expand_mode = 1
+stretch_mode = 5
+script = ExtResource("8_y1qy4")
+
+[node name="CloseButton" type="Button" parent="Decoration/CloseButton"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Info" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SectionTitle" type="Label" parent="Info"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -526.0
+offset_bottom = 105.0
+grow_horizontal = 0
+text = "Audio"
+label_settings = SubResource("LabelSettings_enlrs")
+horizontal_alignment = 1
+
+[node name="ContextInfo" type="Label" parent="Info"]
+layout_mode = 1
+offset_right = 734.0
+offset_bottom = 113.0
+text = "Placeholder"
+label_settings = SubResource("LabelSettings_exbe0")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="AudioSection" type="Control" parent="Info"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_lock_ = true
+
+[node name="Music" type="Control" parent="Info/AudioSection"]
+anchors_preset = 0
+offset_left = 175.0
+offset_top = 158.0
+offset_right = 1118.0
+offset_bottom = 209.0
+
+[node name="Label" type="Label" parent="Info/AudioSection/Music"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -11.5
+offset_right = 40.0
+offset_bottom = 11.5
+grow_vertical = 2
+text = "Music"
+label_settings = SubResource("LabelSettings_l552e")
+
+[node name="HSlider" type="HSlider" parent="Info/AudioSection/Music"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -653.0
+offset_top = -7.5
+offset_bottom = 21.5
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_styles/slider = SubResource("StyleBoxFlat_3p3ci")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_o56uy")
+
+[connection signal="button_down" from="Decoration/ArrowLeft/ButtonL" to="Decoration/ArrowLeft" method="_on_button_l_button_down"]
+[connection signal="button_up" from="Decoration/ArrowLeft/ButtonL" to="Decoration/PageNumber/CurrentPage" method="_on_button_l_button_up"]
+[connection signal="button_up" from="Decoration/ArrowLeft/ButtonL" to="Decoration/ArrowLeft" method="_on_button_l_button_up"]
+[connection signal="button_down" from="Decoration/ArrowRight/ButtonR" to="Decoration/ArrowRight" method="_on_button_r_button_down"]
+[connection signal="button_up" from="Decoration/ArrowRight/ButtonR" to="Decoration/PageNumber/CurrentPage" method="_on_button_r_button_up"]
+[connection signal="button_up" from="Decoration/ArrowRight/ButtonR" to="Decoration/ArrowRight" method="_on_button_r_button_up"]
+[connection signal="button_down" from="Decoration/QuitButton/QuitButton" to="Decoration/QuitButton" method="_on_quit_button_button_down"]
+[connection signal="button_up" from="Decoration/QuitButton/QuitButton" to="Decoration/QuitButton" method="_on_quit_button_button_up"]
+[connection signal="pressed" from="Decoration/QuitButton/QuitButton" to="." method="_on_quit_button_pressed"]
+[connection signal="button_down" from="Decoration/CloseButton/CloseButton" to="Decoration/CloseButton" method="_on_close_button_button_down"]
+[connection signal="button_up" from="Decoration/CloseButton/CloseButton" to="Decoration/CloseButton" method="_on_close_button_button_up"]
+[connection signal="pressed" from="Decoration/CloseButton/CloseButton" to="." method="_on_close_button_pressed"]

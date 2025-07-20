@@ -16,10 +16,6 @@ func physics_update(delta: float) -> void:
 		finished.emit(IDLE)
 		return
 		
-	if Input.is_action_just_pressed(&"jump") and player.is_on_wall_only():
-		finished.emit(WALLJUMP)
-		return
-		
 	var dir = Input.get_axis(&"move_left", &"move_right")
 	if dir != 0:
 		player.velocity.x = move_toward(player.velocity.x, speed * dir, player.air_acceleration * delta)

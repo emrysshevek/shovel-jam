@@ -1,7 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://d2lg1k4rpl6i1"]
+[gd_scene load_steps=4 format=3 uid="uid://d2lg1k4rpl6i1"]
 
 [ext_resource type="Script" uid="uid://dppmljht78kcc" path="res://Entities/Obstacles/Accelerator/accelerator.gd" id="1_cocbk"]
-[ext_resource type="Texture2D" uid="uid://dnr4jd2wnhkg2" path="res://Entities/Obstacles/test_obstacle_2.png" id="1_ljtb3"]
 [ext_resource type="Texture2D" uid="uid://souu4gw3hdy1" path="res://Entities/Obstacles/accelerator_reg.png" id="4_qyrev"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cocbk"]
@@ -14,7 +13,6 @@ acceleration_amount = 13000.0
 
 [node name="BaseBg" type="Sprite2D" parent="."]
 texture_filter = 1
-texture = ExtResource("1_ljtb3")
 
 [node name="Arrow" type="Sprite2D" parent="."]
 texture_filter = 1
