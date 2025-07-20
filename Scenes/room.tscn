@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://dunu5dnsfjut"]
+
+[ext_resource type="Script" uid="uid://bgnepcana5poi" path="res://Scenes/room.gd" id="1_mbine"]
+
+[node name="Room" type="Area2D"]
+collision_layer = 0
+collision_mask = 16
+script = ExtResource("1_mbine")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

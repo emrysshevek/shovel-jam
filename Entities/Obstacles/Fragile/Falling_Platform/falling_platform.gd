@@ -12,7 +12,7 @@ func _process(_delta):
 		var collider = raycast.get_collider()
 		if collider is Player:
 			reduce_strength()
-			print("Current Structure %d" % structure)
+			#print("Current Structure %d" % structure)
 	pass
 
 func reduce_strength():

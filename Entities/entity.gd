@@ -16,13 +16,15 @@ var flipped = false
 var velocity_buffer = Vector2.ZERO
 
 @onready var gravity: Gravity = find_children("*", "Gravity")[0]
+@onready var sprite: Node2D = $Sprite
+@onready var ap: AnimationPlayer = $Sprite/AnimationPlayer
 
 func _ready():
 	#current_hearts = max_hearts
 	pass
 	
 func flip() -> void:
-	transform *= Transform2D.FLIP_X;
+	sprite.transform *= Transform2D.FLIP_X;
 	flipped = !flipped
 
 func _physics_process(delta: float) -> void:

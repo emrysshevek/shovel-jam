@@ -22,18 +22,22 @@ position = Vector2(-4334, -1411)
 
 [node name="Globe2" parent="Levels" instance=ExtResource("3_i8gr5")]
 position = Vector2(-1491, -1415)
-level_scene = ExtResource("4_hf0oe")
 level = 1
+level_scene = ExtResource("4_hf0oe")
 
 [node name="Globe3" parent="Levels" instance=ExtResource("3_i8gr5")]
 position = Vector2(1413, -1426)
-level_scene = ExtResource("5_2ngsa")
 level = 2
+level_scene = ExtResource("5_2ngsa")
 
 [node name="Globe4" parent="Levels" instance=ExtResource("3_i8gr5")]
 position = Vector2(4259, -1426)
-level_scene = ExtResource("6_auytq")
 level = 3
+level_scene = ExtResource("6_auytq")
 
 [node name="Player" parent="." instance=ExtResource("4_s368d")]
 position = Vector2(-2951, -480)
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+position = Vector2(0, -1687)
+zoom = Vector2(0.1, 0.1)

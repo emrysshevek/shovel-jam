@@ -1,5 +1,7 @@
 extends Node
 
+@export var gravity := 5000.0
+
 const num_stages := 4
 var stage_data := []
 

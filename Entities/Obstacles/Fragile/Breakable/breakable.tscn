@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://b5voxyvgujcyo"]
 
 [ext_resource type="Script" uid="uid://b4joxotrjf2fo" path="res://Entities/Obstacles/Fragile/Breakable/breakable.gd" id="1_ueq3n"]
-[ext_resource type="Texture2D" uid="uid://bcfwgfuf03q8q" path="res://Entities/Obstacles/Fragile/Breakable/Breakable.png" id="2_ueq3n"]
+[ext_resource type="Texture2D" uid="uid://bg536ejxv642b" path="res://Scenes/Tilemaps/Interactive tiles/All individual tiles/Breakable_brick.png" id="2_ueq3n"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jljvg"]
 size = Vector2(704, 696)
