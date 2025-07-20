@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://7xefsikrycob"]
+[gd_scene load_steps=19 format=3 uid="uid://7xefsikrycob"]
 
 [ext_resource type="Script" uid="uid://c8cblrve0vnf2" path="res://Scenes/Hub/overworld.gd" id="1_4wr4y"]
 [ext_resource type="AudioStream" uid="uid://1gs0ygkt6a71" path="res://Assets/Audio/Music/main_menu.wav" id="2_f6am2"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://c04sllgueisy5" path="res://Entities/shelf.tscn" id="8_2ngsa"]
 [ext_resource type="Shader" uid="uid://2jdtapac2i6e" path="res://Scenes/Hub/RippleEffect.gdshader" id="9_1hqoh"]
 [ext_resource type="PackedScene" uid="uid://cnm5m75aadmkh" path="res://Menus/Title/title.tscn" id="9_f6am2"]
+[ext_resource type="PackedScene" uid="uid://cfuyy2yu6j6lp" path="res://Menus/Pause UI/Pause_ui.tscn" id="12_yrf1l"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_yrf1l"]
 shader = ExtResource("3_yvx84")
@@ -348,6 +349,11 @@ metadata/_edit_lock_ = true
 [node name="Title2" parent="CanvasLayer" instance=ExtResource("9_f6am2")]
 pivot_offset = Vector2(640, 360)
 metadata/_edit_lock_ = true
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+
+[node name="Pause_UI" parent="CanvasLayer2" instance=ExtResource("12_yrf1l")]
+visible = false
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

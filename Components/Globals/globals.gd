@@ -1,6 +1,7 @@
 extends Node
 
 @export var gravity := 5000.0
+@export var damage_enabled = true
 
 const num_stages := 4
 var stage_data := []

@@ -31,7 +31,7 @@ func _ready() -> void:
 	Globals.gravity = gravity.default
 	
 func take_damage(amount: int):
-	if invincible:
+	if not Globals.damage_enabled or  invincible:
 		return
 	MusicManager.play_sfx("res://Assets/Audio/SFX/hitHurt.wav")
 	current_hearts -= amount

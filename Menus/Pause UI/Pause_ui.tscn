@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://cfuyy2yu6j6lp"]
+[gd_scene load_steps=23 format=3 uid="uid://cfuyy2yu6j6lp"]
 
 [ext_resource type="Script" uid="uid://8dkvi7hkrnwv" path="res://Menus/Pause UI/pause_ui.gd" id="1_jl541"]
 [ext_resource type="Texture2D" uid="uid://b4hga1vitv474" path="res://Menus/Pause UI/Background.png" id="2_3p770"]
@@ -37,6 +37,8 @@ font_color = Color(0.937255, 0.811765, 0.211765, 1)
 outline_size = 15
 outline_color = Color(0.564706, 0.364706, 0.278431, 1)
 
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_3p3ci"]
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3p3ci"]
 bg_color = Color(0.564706, 0.364706, 0.278431, 1)
 border_width_left = 10
@@ -55,7 +57,17 @@ shadow_offset = Vector2(0.095, 4.055)
 bg_color = Color(0.937255, 0.811765, 0.211765, 1)
 corner_detail = 20
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_enlrs"]
+bg_color = Color(0.564706, 0.364706, 0.278431, 1)
+border_color = Color(0.564706, 0.364706, 0.278431, 1)
+border_blend = true
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+
 [node name="Pause_UI" type="Control"]
+process_mode = 2
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -181,6 +193,7 @@ expand_mode = 1
 stretch_mode = 5
 
 [node name="PageNumber" type="TextureRect" parent="Decoration"]
+visible = false
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -217,6 +230,7 @@ vertical_alignment = 1
 script = ExtResource("4_d6y3p")
 
 [node name="ArrowLeft" type="TextureRect" parent="Decoration"]
+visible = false
 layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
@@ -242,6 +256,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="ArrowRight" type="TextureRect" parent="Decoration"]
+visible = false
 layout_mode = 1
 anchors_preset = 6
 anchor_left = 1.0
@@ -326,6 +341,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 
 [node name="SectionTitle" type="Label" parent="Info"]
 layout_mode = 1
@@ -335,7 +351,7 @@ anchor_right = 1.0
 offset_left = -526.0
 offset_bottom = 105.0
 grow_horizontal = 0
-text = "Audio"
+text = "Settings"
 label_settings = SubResource("LabelSettings_enlrs")
 horizontal_alignment = 1
 
@@ -343,7 +359,6 @@ horizontal_alignment = 1
 layout_mode = 1
 offset_right = 734.0
 offset_bottom = 113.0
-text = "Placeholder"
 label_settings = SubResource("LabelSettings_exbe0")
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -356,6 +371,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 metadata/_edit_lock_ = true
 
 [node name="Music" type="Control" parent="Info/AudioSection"]
@@ -364,6 +380,7 @@ offset_left = 175.0
 offset_top = 158.0
 offset_right = 1118.0
 offset_bottom = 209.0
+metadata/_edit_group_ = true
 
 [node name="Label" type="Label" parent="Info/AudioSection/Music"]
 layout_mode = 1
@@ -377,7 +394,7 @@ grow_vertical = 2
 text = "Music"
 label_settings = SubResource("LabelSettings_l552e")
 
-[node name="HSlider" type="HSlider" parent="Info/AudioSection/Music"]
+[node name="MusicSlider" type="HSlider" parent="Info/AudioSection/Music"]
 layout_mode = 1
 anchors_preset = 6
 anchor_left = 1.0
@@ -389,8 +406,123 @@ offset_top = -7.5
 offset_bottom = 21.5
 grow_horizontal = 0
 grow_vertical = 2
+theme_override_icons/grabber = SubResource("PlaceholderTexture2D_3p3ci")
 theme_override_styles/slider = SubResource("StyleBoxFlat_3p3ci")
 theme_override_styles/grabber_area = SubResource("StyleBoxFlat_o56uy")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_o56uy")
+value = 100.0
+
+[node name="SFX" type="Control" parent="Info/AudioSection"]
+anchors_preset = 0
+offset_left = 175.0
+offset_top = 228.0
+offset_right = 1118.0
+offset_bottom = 279.0
+metadata/_edit_group_ = true
+
+[node name="Label" type="Label" parent="Info/AudioSection/SFX"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -11.5
+offset_right = 40.0
+offset_bottom = 11.5
+grow_vertical = 2
+text = "SFX"
+label_settings = SubResource("LabelSettings_l552e")
+
+[node name="SFXSlider" type="HSlider" parent="Info/AudioSection/SFX"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -653.0
+offset_top = -7.5
+offset_bottom = 21.5
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_icons/grabber = SubResource("PlaceholderTexture2D_3p3ci")
+theme_override_styles/slider = SubResource("StyleBoxFlat_3p3ci")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_o56uy")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_o56uy")
+value = 100.0
+
+[node name="Master" type="Control" parent="Info/AudioSection"]
+anchors_preset = 0
+offset_left = 175.0
+offset_top = 298.0
+offset_right = 1118.0
+offset_bottom = 349.0
+metadata/_edit_group_ = true
+
+[node name="Label" type="Label" parent="Info/AudioSection/Master"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -11.5
+offset_right = 40.0
+offset_bottom = 11.5
+grow_vertical = 2
+text = "Master"
+label_settings = SubResource("LabelSettings_l552e")
+
+[node name="MasterSlider" type="HSlider" parent="Info/AudioSection/Master"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -653.0
+offset_top = -7.5
+offset_bottom = 21.5
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_icons/grabber = SubResource("PlaceholderTexture2D_3p3ci")
+theme_override_styles/slider = SubResource("StyleBoxFlat_3p3ci")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_o56uy")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_o56uy")
+value = 100.0
+
+[node name="Damage" type="Control" parent="Info/AudioSection"]
+anchors_preset = 0
+offset_left = 175.0
+offset_top = 449.0
+offset_right = 1118.0
+offset_bottom = 500.0
+
+[node name="Label" type="Label" parent="Info/AudioSection/Damage"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -11.5
+offset_right = 40.0
+offset_bottom = 11.5
+grow_vertical = 2
+text = "Enable damage"
+label_settings = SubResource("LabelSettings_l552e")
+
+[node name="DamageBox" type="CheckBox" parent="Info/AudioSection/Damage"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -59.0
+offset_top = -42.5
+offset_right = -35.0
+offset_bottom = -18.5
+grow_horizontal = 0
+grow_vertical = 2
+scale = Vector2(3.31, 3.31)
+theme_override_styles/normal = SubResource("StyleBoxFlat_enlrs")
+button_pressed = true
 
 [connection signal="button_down" from="Decoration/ArrowLeft/ButtonL" to="Decoration/ArrowLeft" method="_on_button_l_button_down"]
 [connection signal="button_up" from="Decoration/ArrowLeft/ButtonL" to="Decoration/PageNumber/CurrentPage" method="_on_button_l_button_up"]
@@ -404,3 +536,7 @@ theme_override_styles/grabber_area = SubResource("StyleBoxFlat_o56uy")
 [connection signal="button_down" from="Decoration/CloseButton/CloseButton" to="Decoration/CloseButton" method="_on_close_button_button_down"]
 [connection signal="button_up" from="Decoration/CloseButton/CloseButton" to="Decoration/CloseButton" method="_on_close_button_button_up"]
 [connection signal="pressed" from="Decoration/CloseButton/CloseButton" to="." method="_on_close_button_pressed"]
+[connection signal="value_changed" from="Info/AudioSection/Music/MusicSlider" to="." method="_on_music_slider_value_changed"]
+[connection signal="value_changed" from="Info/AudioSection/SFX/SFXSlider" to="." method="_on_sfx_slider_value_changed"]
+[connection signal="value_changed" from="Info/AudioSection/Master/MasterSlider" to="." method="_on_master_slider_value_changed"]
+[connection signal="toggled" from="Info/AudioSection/Damage/DamageBox" to="." method="_on_damage_box_toggled"]

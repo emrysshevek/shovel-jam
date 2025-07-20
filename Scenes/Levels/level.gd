@@ -16,6 +16,10 @@ func _ready() -> void:
 	friend.freed.connect(_on_friend_freed)
 	portal.exited.connect(_on_portal_entered)
 	
+func _process(delta: float) -> void:
+	if Input.is_action_just_pressed(&"pause"):
+		$CanvasLayer/Pause_UI.show()
+		get_tree().paused = true	
 
 func _on_friend_freed() -> void:
 	for grav_comp: Gravity in find_children("*", "Gravity"):

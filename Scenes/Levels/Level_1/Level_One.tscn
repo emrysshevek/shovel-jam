@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=4 uid="uid://c7jqkthesq0lc"]
+[gd_scene load_steps=14 format=4 uid="uid://c7jqkthesq0lc"]
 
 [ext_resource type="Script" uid="uid://boryfw5mwl0xv" path="res://Scenes/Levels/level.gd" id="1_ttiuf"]
 [ext_resource type="PackedScene" uid="uid://yowo6jwf5wvd" path="res://Entities/Player/Player.tscn" id="2_57ne3"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://c7hwmyapprw2q" path="res://Scenes/WorldCamera.tscn" id="9_4s46d"]
 [ext_resource type="PackedScene" uid="uid://cdn65jxiaupm6" path="res://Entities/Enemies/Ropibot/ropibot.tscn" id="10_4s46d"]
 [ext_resource type="PackedScene" uid="uid://8av8juttv6bs" path="res://Entities/Obstacles/Deadly/spike.tscn" id="10_l04bm"]
+[ext_resource type="PackedScene" uid="uid://cfuyy2yu6j6lp" path="res://Menus/Pause UI/Pause_ui.tscn" id="12_32lff"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l04bm"]
 size = Vector2(11967, 6333)
@@ -149,3 +150,8 @@ shape = SubResource("RectangleShape2D_l04bm")
 position = Vector2(6691, -3855)
 rooms = [NodePath("../Rooms/Room"), NodePath("../Rooms/Room2"), NodePath("../Rooms/Room3"), NodePath("../Rooms/Room4"), NodePath("../Rooms/Room5"), NodePath("../Rooms/Room6"), NodePath("../Rooms/Room7"), NodePath("../Rooms/Room8"), NodePath("../Rooms/Room9")]
 metadata/_edit_lock_ = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Pause_UI" parent="CanvasLayer" instance=ExtResource("12_32lff")]
+visible = false
