@@ -15,7 +15,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l04bm"]
 size = Vector2(11967, 6333)
 
-[node name="LevelOne" type="Node2D"]
+[node name="LevelOne2" type="Node2D"]
 script = ExtResource("1_ttiuf")
 music = ExtResource("2_svb3y")
 
