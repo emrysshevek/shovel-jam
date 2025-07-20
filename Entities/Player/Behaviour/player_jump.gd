@@ -8,6 +8,7 @@ var holding = true
 
 func enter(_previous_state_path: String, _data := {}) -> void:
 	MusicManager.play_sfx("res://Assets/Audio/SFX/jump.wav")
+	player.jump.emit()
 	player.velocity.y = -player.jump_velocity
 	if Input.is_action_pressed(&"run"):
 		player.velocity.y *= 1.2

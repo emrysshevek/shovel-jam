@@ -2,14 +2,14 @@ class_name Player
 extends Entity
 
 signal step()
+signal jump()
 
 @export var jump_height := 4000.0
 @export var jump_duration := .75
 @export var walk_animation_default_speed = 700
 
-@onready var default_collision: CollisionPolygon2D = $DefaultCollision
+@onready var default_collision: CollisionShape2D = $DefaultCollision
 @onready var floating_collision: CollisionShape2D = $FloatingCollision
-@onready var ap: AnimationPlayer = $PlayerSprite/AnimationPlayer
 
 func _ready() -> void:
 	# h = v^2 / 2g
@@ -26,6 +26,7 @@ func _ready() -> void:
 	jump_velocity = 4 * jump_height / jump_duration
 	max_fall_speed = jump_velocity
 	gravity.default = 2 * jump_velocity / jump_duration
+	Globals.gravity = gravity.default
 	
 func take_damage(amount: int):
 	MusicManager.play_sfx("res://Assets/Audio/SFX/hitHurt.wav")

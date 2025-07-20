@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://7xefsikrycob"]
+[gd_scene load_steps=10 format=3 uid="uid://7xefsikrycob"]
 
 [ext_resource type="Script" uid="uid://c8cblrve0vnf2" path="res://Scenes/Hub/overworld.gd" id="1_4wr4y"]
 [ext_resource type="AudioStream" uid="uid://1gs0ygkt6a71" path="res://Assets/Audio/Music/main_menu.wav" id="2_f6am2"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://bxhcxil1fa8hi" path="res://Scenes/Levels/Level_3/Level_Three.tscn" id="5_2ngsa"]
 [ext_resource type="PackedScene" uid="uid://cmco374svbi3e" path="res://Scenes/Levels/Level_4/Level_Four.tscn" id="6_auytq"]
 [ext_resource type="PackedScene" uid="uid://c04sllgueisy5" path="res://Entities/shelf.tscn" id="8_2ngsa"]
+[ext_resource type="PackedScene" uid="uid://cdn65jxiaupm6" path="res://Entities/Enemies/Ropibot/ropibot.tscn" id="9_f6am2"]
 
 [node name="Overworld" type="Node2D"]
 script = ExtResource("1_4wr4y")
@@ -22,18 +23,23 @@ position = Vector2(-4334, -1411)
 
 [node name="Globe2" parent="Levels" instance=ExtResource("3_i8gr5")]
 position = Vector2(-1491, -1415)
-level_scene = ExtResource("4_hf0oe")
 level = 1
+level_scene = ExtResource("4_hf0oe")
 
 [node name="Globe3" parent="Levels" instance=ExtResource("3_i8gr5")]
 position = Vector2(1413, -1426)
-level_scene = ExtResource("5_2ngsa")
 level = 2
+level_scene = ExtResource("5_2ngsa")
 
 [node name="Globe4" parent="Levels" instance=ExtResource("3_i8gr5")]
 position = Vector2(4259, -1426)
-level_scene = ExtResource("6_auytq")
 level = 3
+level_scene = ExtResource("6_auytq")
 
 [node name="Player" parent="." instance=ExtResource("4_s368d")]
 position = Vector2(-2951, -480)
+
+[node name="Ropibot" parent="." instance=ExtResource("9_f6am2")]
+position = Vector2(-5, -452)
+jump_velocity = 5000.0
+max_fall_speed = 5000.0

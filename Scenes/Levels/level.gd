@@ -11,6 +11,7 @@ signal completed(score: float)
 @onready var friend: Friend = get_tree().get_first_node_in_group("friend")
 @onready var portal: Portal = $Portal
 
+
 func _ready() -> void:
 	MusicManager.crossfade_to(music)
 	friend.freed.connect(_on_friend_freed)
