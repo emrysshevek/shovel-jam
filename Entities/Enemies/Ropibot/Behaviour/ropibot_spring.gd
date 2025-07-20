@@ -1,0 +1,2 @@
+extends RopibotState
+class_name RopibotSpring

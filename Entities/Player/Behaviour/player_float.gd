@@ -6,8 +6,10 @@ extends PlayerState
 var speed := 0.0
 
 func enter(_previous_state_path: String, _data := {}) -> void:
+	if _previous_state_path != JUMP:
+		player.velocity.y = 0
 	player.ap.play("Idle_2")
-	speed = abs(player.velocity.x)
+	speed = max(abs(player.velocity.x), player.max_speed)
 
 func physics_update(delta: float) -> void:
 	if player.is_on_floor():

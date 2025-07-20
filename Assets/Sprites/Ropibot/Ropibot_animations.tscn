@@ -140,6 +140,18 @@ tracks/3/keys = {
 "update": 0,
 "values": [0.0]
 }
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Character container:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.16, 0.26, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-212, 0), Vector2(-212, 28), Vector2(-212, 18), Vector2(-212, -143)]
+}
 
 [sub_resource type="Animation" id="Animation_xdm2t"]
 resource_name = "Land"
@@ -191,6 +203,18 @@ tracks/3/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [0.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Character container:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.13),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-212, -144), Vector2(-212, 0)]
 }
 
 [sub_resource type="Animation" id="Animation_3a5vi"]
@@ -387,6 +411,18 @@ tracks/15/keys = {
 "update": 0,
 "values": [0.0]
 }
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("Character container:position")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-212, 0)]
+}
 
 [sub_resource type="Animation" id="Animation_pngsr"]
 resource_name = "Rolling"
@@ -535,3 +571,6 @@ offset = Vector2(136, -135)
 libraries = {
 &"": SubResource("AnimationLibrary_vxj5p")
 }
+
+[node name="Node2D" type="Node2D" parent="."]
+position = Vector2(0, 414)
