@@ -3,4 +3,5 @@
 [ext_resource type="Script" uid="uid://caw3ugtm2tkgj" path="res://Components/Globals/globals.gd" id="1_1dkkh"]
 
 [node name="Globals" type="Node"]
+process_mode = 3
 script = ExtResource("1_1dkkh")

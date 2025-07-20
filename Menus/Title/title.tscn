@@ -1,7 +1,25 @@
-[gd_scene load_steps=3 format=3 uid="uid://cnm5m75aadmkh"]
+[gd_scene load_steps=7 format=3 uid="uid://cnm5m75aadmkh"]
 
 [ext_resource type="Script" uid="uid://cf6871t5by3yi" path="res://Menus/Title/title.gd" id="1_dc2yq"]
 [ext_resource type="PackedScene" uid="uid://bsypaeplmafae" path="res://Menus/sound_button.tscn" id="2_ccn5l"]
+
+[sub_resource type="SystemFont" id="SystemFont_fuirt"]
+font_names = PackedStringArray("Comic Sans MS")
+
+[sub_resource type="LabelSettings" id="LabelSettings_5lsho"]
+font = SubResource("SystemFont_fuirt")
+font_size = 101
+outline_size = 25
+outline_color = Color(0, 0.635294, 1, 1)
+
+[sub_resource type="SystemFont" id="SystemFont_ccn5l"]
+font_names = PackedStringArray("Comic Sans MS")
+
+[sub_resource type="LabelSettings" id="LabelSettings_fuirt"]
+font = SubResource("SystemFont_ccn5l")
+font_size = 41
+outline_size = 10
+outline_color = Color(0, 0.635294, 1, 1)
 
 [node name="Title2" type="Control"]
 layout_mode = 3
@@ -17,15 +35,17 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -38.5
-offset_top = 82.0
-offset_right = 38.5
-offset_bottom = 105.0
+offset_left = -403.0
+offset_top = 130.0
+offset_right = 403.0
+offset_bottom = 272.0
 grow_horizontal = 2
 theme_override_font_sizes/font_size = 91
-text = "TITLE TBD"
+text = "Snow Globe Shop"
+label_settings = SubResource("LabelSettings_5lsho")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -35,20 +55,38 @@ anchor_bottom = 0.5
 offset_left = -136.0
 offset_top = 38.0
 offset_right = 136.0
-offset_bottom = 277.0
+offset_bottom = 275.0
 grow_horizontal = 2
 grow_vertical = 2
 metadata/_edit_group_ = true
 
 [node name="StartButton" parent="VBoxContainer" instance=ExtResource("2_ccn5l")]
+visible = false
 layout_mode = 2
 text = "Start"
 flat = true
 
 [node name="QuitButton" parent="VBoxContainer" instance=ExtResource("2_ccn5l")]
+visible = false
 layout_mode = 2
 text = "Quit"
 flat = true
+
+[node name="StartLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -193.0
+offset_top = -243.0
+offset_right = 193.0
+offset_bottom = -185.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Press enter to start"
+label_settings = SubResource("LabelSettings_fuirt")
 
 [connection signal="pressed" from="VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]

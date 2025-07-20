@@ -21,6 +21,7 @@ script = ExtResource("1_kc167")
 level_scene = ExtResource("2_gpk4l")
 
 [node name="ColorRect" type="ColorRect" parent="."]
+visible = false
 material = SubResource("ShaderMaterial_kcucb")
 offset_left = -1161.0
 offset_top = -1179.0
@@ -35,6 +36,7 @@ texture_filter = 1
 texture = ExtResource("5_gjxdm")
 
 [node name="Interactable" parent="." instance=ExtResource("3_p15m1")]
+visible = false
 
 [node name="InteractionZone" parent="Interactable" index="0"]
 position = Vector2(4.5, 38)
@@ -47,8 +49,8 @@ offset_right = 27.0
 offset_bottom = 14.0
 text = "Locked"
 
-[connection signal="body_entered" from="Interactable" to="Interactable" method="_on_interaction_area_entered"]
-[connection signal="body_exited" from="Interactable" to="Interactable" method="_on_interaction_area_exited"]
+[connection signal="body_entered" from="Interactable" to="." method="_on_interactable_body_entered"]
+[connection signal="body_exited" from="Interactable" to="." method="_on_interactable_body_exited"]
 [connection signal="interaction_occured" from="Interactable" to="." method="_on_interactable_interaction_occured"]
 
 [editable path="Interactable"]

@@ -13,6 +13,7 @@
 [ext_resource type="AudioStream" uid="uid://bp8ql3hpx7gp5" path="res://Assets/Audio/SFX/pickupCoin.wav" id="9_cbhuf"]
 
 [node name="MusicManager" type="Node"]
+process_mode = 3
 script = ExtResource("1_50hcr")
 sfx_files = Array[AudioStream]([ExtResource("2_1ekd1"), ExtResource("3_qa3bn"), ExtResource("4_cbhuf"), ExtResource("7_vxgj0"), ExtResource("4_03g3l"), ExtResource("7_a6kui"), ExtResource("8_h76y2"), ExtResource("5_vxgj0"), ExtResource("9_cbhuf"), ExtResource("6_h76y2")])
 
