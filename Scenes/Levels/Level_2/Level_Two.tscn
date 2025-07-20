@@ -1,38 +1,151 @@
-[gd_scene load_steps=9 format=4 uid="uid://b7ge0bfibqvfc"]
+[gd_scene load_steps=13 format=4 uid="uid://ba331tej7sswa"]
 
-[ext_resource type="Script" uid="uid://boryfw5mwl0xv" path="res://Scenes/Levels/level.gd" id="1_lvtih"]
-[ext_resource type="AudioStream" uid="uid://c8mn5ul26bfbj" path="res://Assets/Audio/Music/level_1_whimsical_forest.wav" id="2_oh8qx"]
-[ext_resource type="TileSet" uid="uid://dcpwl4oxrmpln" path="res://Scenes/Levels/Level_1/level1_tileset.tres" id="3_wcq8r"]
-[ext_resource type="PackedScene" uid="uid://bdykr4g01j8gf" path="res://Entities/Portal/portal.tscn" id="4_uc2ig"]
-[ext_resource type="PackedScene" uid="uid://yowo6jwf5wvd" path="res://Entities/Player/Player.tscn" id="5_g1puw"]
-[ext_resource type="PackedScene" uid="uid://c13io57eh7jwi" path="res://Entities/Friend/friend.tscn" id="6_ufloh"]
-[ext_resource type="PackedScene" uid="uid://d2lg1k4rpl6i1" path="res://Entities/Obstacles/Accelerator/Accelerator.tscn" id="7_dvdwg"]
-[ext_resource type="PackedScene" uid="uid://b5voxyvgujcyo" path="res://Entities/Obstacles/Fragile/Breakable/breakable.tscn" id="8_aljg7"]
+[ext_resource type="Script" uid="uid://boryfw5mwl0xv" path="res://Scenes/Levels/level.gd" id="1_fmkn4"]
+[ext_resource type="AudioStream" uid="uid://c8mn5ul26bfbj" path="res://Assets/Audio/Music/level_1_whimsical_forest.wav" id="2_mgffg"]
+[ext_resource type="TileSet" uid="uid://dcpwl4oxrmpln" path="res://Scenes/Levels/Level_1/level1_tileset.tres" id="3_3t4bg"]
+[ext_resource type="PackedScene" uid="uid://bdykr4g01j8gf" path="res://Entities/Portal/portal.tscn" id="4_hunbg"]
+[ext_resource type="PackedScene" uid="uid://bavkg4sriujeg" path="res://Entities/Obstacles/Fragile/Falling_Platform/falling_platform.tscn" id="5_1kr5o"]
+[ext_resource type="PackedScene" uid="uid://8av8juttv6bs" path="res://Entities/Obstacles/Deadly/spike.tscn" id="6_gftue"]
+[ext_resource type="PackedScene" uid="uid://cdn65jxiaupm6" path="res://Entities/Enemies/Ropibot/ropibot.tscn" id="7_75wo7"]
+[ext_resource type="PackedScene" uid="uid://c13io57eh7jwi" path="res://Entities/Friend/friend.tscn" id="8_2fjj8"]
+[ext_resource type="PackedScene" uid="uid://yowo6jwf5wvd" path="res://Entities/Player/Player.tscn" id="9_xk76v"]
+[ext_resource type="PackedScene" uid="uid://dunu5dnsfjut" path="res://Scenes/room.tscn" id="10_lkch4"]
+[ext_resource type="PackedScene" uid="uid://c7hwmyapprw2q" path="res://Scenes/WorldCamera.tscn" id="11_evc3l"]
 
-[node name="LevelOne" type="Node2D"]
-script = ExtResource("1_lvtih")
-music = ExtResource("2_oh8qx")
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l04bm"]
+size = Vector2(11967, 6333)
 
-[node name="TileMapLayer" type="TileMapLayer" parent="."]
-tile_map_data = PackedByteArray("AAABAP//AAABAAAAAAACAP//AAABAAAAAAADAP//AAABAAAAAAAEAP//AAABAAAAAAAFAP//AAABAAEAAAAGAP//AAABAAEAAAAHAP//AAABAAAAAAAIAP//AAABAAAAAAAJAP//AAABAAEAAAAKAP//AAABAAEAAAALAP//AAABAAAAAAAMAP//AAABAAAAAAANAP//AAABAAAAAAAOAP//AAABAAAAAAAPAP//AAABAAAAAAAQAP//AAABAAAAAAAAAP//AAABAAEAAAAAAP7/AAAEAAEAAAAAAP3/AAAEAAEAAAAAAPz/AAAEAAEAAAAAAPv/AAAEAAEAAAAAAPr/AAAEAAEAAAAAAPn/AAAEAAEAAAAAAPj/AAAEAAEAAAAAAPf/AAAEAAEAAAAAAPb/AAAEAAEAAAAFAP7/AAABAAAAAAAGAP7/AAABAAAAAAAJAP7/AAABAAEAAAAJAP3/AAABAAAAAAAKAP3/AAABAAAAAAAKAP7/AAABAAEAAAARAP//AgAIAAAAAAASAP//AgAIAAAAAAARAAAAAgAIAAEAAAARAAEAAgAIAAEAAAARAAIAAgAIAAEAAAARAAMAAgAIAAEAAAARAAQAAgAIAAEAAAASAAAAAgAIAAEAAAASAAEAAgAIAAEAAAASAAIAAgAIAAEAAAASAAMAAgAIAAEAAAASAAQAAgAIAAEAAAATAAAAAgAIAAEAAAATAAEAAgAIAAEAAAATAAIAAgAIAAEAAAATAAMAAgAIAAEAAAATAAQAAgAIAAEAAAATAP//AgAIAAAAAAA=")
-tile_set = ExtResource("3_wcq8r")
+[node name="LevelTwo" type="Node2D"]
+script = ExtResource("1_fmkn4")
+music = ExtResource("2_mgffg")
 
-[node name="Portal" parent="." instance=ExtResource("4_uc2ig")]
+[node name="Environment" type="Node2D" parent="."]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="Environment"]
+tile_map_data = PackedByteArray("AAAAAP//AAABAAAAAAABAP//AAABAAAAAAACAP//AAABAAAAAAADAP//AAABAAAAAAAEAP//AAABAAAAAAAFAP//AAABAAAAAAAGAP//AAABAAAAAAAHAP//AAABAAAAAAAIAP//AAABAAAAAAAJAP//AAABAAAAAAAKAP//AAABAAAAAAAAAP7/AAABAAAAAAAAAP3/AAABAAAAAAAAAPz/AAABAAAAAAAAAPv/AAABAAAAAAAAAPr/AAABAAAAAAAAAPn/AAABAAAAAAAAAPj/AAABAAAAAAAAAPf/AAABAAAAAAAAAPb/AAABAAAAAAAAAPX/AAABAAAAAAASAPX/AAABAAAAAAASAP//AAABAAAAAAARAP//AAABAAAAAAAQAP//AAABAAAAAAAPAP//AAABAAAAAAAOAP//AAABAAAAAAANAP//AAABAAAAAAAMAP//AAABAAAAAAALAP//AAABAAAAAAAAAOv/AAABAAAAAAAAAOz/AAABAAAAAAAAAO3/AAABAAAAAAAAAO7/AAABAAAAAAAAAO//AAABAAAAAAAAAPD/AAABAAAAAAAAAPH/AAABAAAAAAAAAPL/AAABAAAAAAAAAPP/AAABAAAAAAAAAPT/AAABAAAAAAASAOv/AAABAAAAAAATAPX/AAABAAAAAAATAP//AAABAAAAAAAUAPX/AAABAAAAAAAUAP//AAABAAAAAAAVAPX/AAABAAAAAAAVAP//AAABAAAAAAAWAPX/AAABAAAAAAAWAP//AAABAAAAAAAXAPX/AAABAAAAAAAXAP//AAABAAAAAAAYAPX/AAABAAAAAAAYAP//AAABAAAAAAAZAPX/AAABAAAAAAAZAP//AAABAAAAAAAaAPX/AAABAAAAAAAaAP//AAABAAAAAAAbAPX/AAABAAAAAAAbAP//AAABAAAAAAAcAPX/AAABAAAAAAAcAP//AAABAAAAAAAdAPX/AAABAAAAAAAdAP//AAABAAAAAAAeAPX/AAABAAAAAAAeAP//AAABAAAAAAAfAPX/AAABAAAAAAAfAP//AAABAAAAAAAgAPX/AAABAAAAAAAgAP//AAABAAAAAAAhAPX/AAABAAAAAAAhAP//AAABAAAAAAAiAPX/AAABAAAAAAAiAP//AAABAAAAAAAjAPX/AAABAAAAAAAjAP//AAABAAAAAAAkAPX/AAABAAAAAAAkAP//AAABAAAAAAAkAOv/AAABAAAAAAAAAOH/AAABAAAAAAAAAOL/AAABAAAAAAAAAOP/AAABAAAAAAAAAOT/AAABAAAAAAAAAOX/AAABAAAAAAAAAOb/AAABAAAAAAAAAOf/AAABAAAAAAAAAOj/AAABAAAAAAAAAOn/AAABAAAAAAAAAOr/AAABAAAAAAABAOH/AAABAAAAAAACAOH/AAABAAAAAAADAOH/AAABAAAAAAAEAOH/AAABAAAAAAAFAOH/AAABAAAAAAAGAOH/AAABAAAAAAAHAOH/AAABAAAAAAAIAOH/AAABAAAAAAAJAOH/AAABAAAAAAAKAOH/AAABAAAAAAALAOH/AAABAAAAAAAMAOH/AAABAAAAAAANAOH/AAABAAAAAAAOAOH/AAABAAAAAAAPAOH/AAABAAAAAAAQAOH/AAABAAAAAAARAOH/AAABAAAAAAASAOH/AAABAAAAAAATAOH/AAABAAAAAAAUAOH/AAABAAAAAAAVAOH/AAABAAAAAAAWAOH/AAABAAAAAAAXAOH/AAABAAAAAAAYAOH/AAABAAAAAAAZAOH/AAABAAAAAAAaAOH/AAABAAAAAAAbAOH/AAABAAAAAAAcAOH/AAABAAAAAAAdAOH/AAABAAAAAAAeAOH/AAABAAAAAAAfAOH/AAABAAAAAAAgAOH/AAABAAAAAAAhAOH/AAABAAAAAAAiAOH/AAABAAAAAAAjAOH/AAABAAAAAAAkAOH/AAABAAAAAAAlAOH/AAABAAAAAAAmAOH/AAABAAAAAAAnAOH/AAABAAAAAAAoAOH/AAABAAAAAAApAOH/AAABAAAAAAAqAOH/AAABAAAAAAArAOH/AAABAAAAAAAsAOH/AAABAAAAAAAtAOH/AAABAAAAAAAuAOH/AAABAAAAAAAvAOH/AAABAAAAAAAwAOH/AAABAAAAAAAxAOH/AAABAAAAAAAyAOH/AAABAAAAAAAzAOH/AAABAAAAAAA0AOH/AAABAAAAAAA1AOH/AAABAAAAAAA2AOH/AAABAAAAAAA2AOL/AAABAAAAAAA2AOP/AAABAAAAAAA2AOT/AAABAAAAAAA2AOX/AAABAAAAAAA2AOb/AAABAAAAAAA2AOf/AAABAAAAAAA2AOj/AAABAAAAAAA2AOn/AAABAAAAAAA2AOr/AAABAAAAAAA2AOv/AAABAAAAAAA2AOz/AAABAAAAAAA2AO3/AAABAAAAAAA2AO7/AAABAAAAAAA2AO//AAABAAAAAAA2APD/AAABAAAAAAA2APH/AAABAAAAAAA2APL/AAABAAAAAAA2APP/AAABAAAAAAA2APT/AAABAAAAAAA2APX/AAABAAAAAAAlAP//AAABAAAAAAAmAP//AAABAAAAAAAnAP//AAABAAAAAAAoAP//AAABAAAAAAApAP//AAABAAAAAAAqAP//AAABAAAAAAArAP//AAABAAAAAAAsAP//AAABAAAAAAAtAP//AAABAAAAAAAuAP//AAABAAAAAAAvAP//AAABAAAAAAAwAP//AAABAAAAAAAxAP//AAABAAAAAAAyAP//AAABAAAAAAAzAP//AAABAAAAAAA0AP//AAABAAAAAAA1AP//AAABAAAAAAA2APb/AAABAAAAAAA2APf/AAABAAAAAAA2APj/AAABAAAAAAA2APn/AAABAAAAAAA2APr/AAABAAAAAAA2APv/AAABAAAAAAA2APz/AAABAAAAAAA2AP3/AAABAAAAAAA2AP7/AAABAAAAAAA2AP//AAABAAAAAAAJAP7/AAABAAAAAAAKAP7/AAABAAAAAAANAP7/AAABAAAAAAAOAP7/AAABAAAAAAAOAP3/AAABAAAAAAANAP3/AAABAAAAAAARAP7/AAABAAAAAAARAP3/AAABAAAAAAARAPz/AAABAAAAAAASAPz/AAABAAAAAAASAP3/AAABAAAAAAASAP7/AAABAAAAAAAlAPX/AAABAAAAAAAmAPX/AAABAAAAAAAnAPX/AAABAAAAAAAoAPX/AAABAAAAAAApAPX/AAABAAAAAAAqAPX/AAABAAAAAAArAPX/AAABAAAAAAAsAPX/AAABAAAAAAAtAPX/AAABAAAAAAAuAPX/AAABAAAAAAAvAPX/AAABAAAAAAAwAPX/AAABAAAAAAAxAPX/AAABAAAAAAAyAPX/AAABAAAAAAAzAPX/AAABAAAAAAA0APX/AAABAAAAAAA1APX/AAABAAAAAAASAOz/AAABAAAAAAASAO3/AAABAAAAAAASAO7/AAABAAAAAAASAO//AAABAAAAAAASAPD/AAABAAAAAAASAPH/AAABAAAAAAASAPL/AAABAAAAAAASAPP/AAABAAAAAAASAPT/AAABAAAAAAAkAOL/AAABAAAAAAAkAOP/AAABAAAAAAAkAOT/AAABAAAAAAAkAOX/AAABAAAAAAAkAOb/AAABAAAAAAAkAOf/AAABAAAAAAAkAOj/AAABAAAAAAAkAOn/AAABAAAAAAAkAOr/AAABAAAAAAAsAOf/AAABAAAAAAAtAOf/AAABAAAAAAAuAOf/AAABAAAAAAAkAPz/AAABAAAAAAAkAP3/AAABAAAAAAAkAP7/AAABAAAAAAAlAPz/AAABAAAAAAAlAP3/AAABAAAAAAAlAP7/AAABAAAAAAATAPz/AAABAAAAAAATAP3/AAABAAAAAAATAP7/AAABAAAAAAAUAP7/AAABAAAAAAAUAP3/AAABAAAAAAAVAP7/AAABAAAAAAApAP7/AAABAAAAAAApAP3/AAABAAAAAAAtAP3/AAABAAAAAAAtAP7/AAABAAAAAAAxAP3/AAABAAAAAAAxAP7/AAABAAAAAAA=")
+tile_set = ExtResource("3_3t4bg")
+
+[node name="Portal" parent="Environment" instance=ExtResource("4_hunbg")]
 position = Vector2(1476, -1428)
 scale = Vector2(37.705, 37.705)
 
-[node name="Player" parent="." instance=ExtResource("5_g1puw")]
-position = Vector2(1527, -750)
-air_acceleration = 5000.0
+[node name="FallingPlatform" parent="Environment" instance=ExtResource("5_1kr5o")]
+position = Vector2(15136, -3855)
 
-[node name="Friend" parent="." instance=ExtResource("6_ufloh")]
-position = Vector2(11475, -711)
+[node name="FallingPlatform2" parent="Environment" instance=ExtResource("5_1kr5o")]
+position = Vector2(15840, -3855)
+
+[node name="FallingPlatform3" parent="Environment" instance=ExtResource("5_1kr5o")]
+position = Vector2(17246, -3855)
+
+[node name="FallingPlatform4" parent="Environment" instance=ExtResource("5_1kr5o")]
+position = Vector2(17950, -3855)
+
+[node name="FallingPlatform5" parent="Environment" instance=ExtResource("5_1kr5o")]
+position = Vector2(20059, -3855)
+
+[node name="FallingPlatform6" parent="Environment" instance=ExtResource("5_1kr5o")]
+position = Vector2(20763, -3855)
+
+[node name="FallingPlatform7" parent="Environment" instance=ExtResource("5_1kr5o")]
+position = Vector2(23587, -3855)
+
+[node name="FallingPlatform8" parent="Environment" instance=ExtResource("5_1kr5o")]
+position = Vector2(24291, -3855)
+
+[node name="Spike" parent="Environment" instance=ExtResource("6_gftue")]
+position = Vector2(17246, -1042)
+
+[node name="Spike2" parent="Environment" instance=ExtResource("6_gftue")]
+position = Vector2(19367, -1050)
+
+[node name="Spike3" parent="Environment" instance=ExtResource("6_gftue")]
+position = Vector2(21472, -1054)
+
+[node name="Spike4" parent="Environment" instance=ExtResource("6_gftue")]
+position = Vector2(23590, -1054)
+
+[node name="Entities" type="Node2D" parent="."]
+
+[node name="Ropibot" parent="Entities" instance=ExtResource("7_75wo7")]
+position = Vector2(32030, -2331)
+
+[node name="Friend" parent="Entities" instance=ExtResource("8_2fjj8")]
+position = Vector2(32030, -17597)
 scale = Vector2(40.77, 40.77)
 
-[node name="Accelerator" parent="." instance=ExtResource("7_dvdwg")]
-position = Vector2(6148, -866.001)
-scale = Vector2(1, 1)
-acceleration_amount = 100.0
+[node name="Player" parent="." instance=ExtResource("9_xk76v")]
+position = Vector2(1476, -825)
 
-[node name="Breakable" parent="." instance=ExtResource("8_aljg7")]
-position = Vector2(8240, -1032)
+[node name="Rooms" type="Node2D" parent="."]
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
+
+[node name="Room" parent="Rooms" instance=ExtResource("10_lkch4")]
+position = Vector2(6691, -3855)
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Rooms/Room"]
+shape = SubResource("RectangleShape2D_l04bm")
+
+[node name="Room2" parent="Rooms" instance=ExtResource("10_lkch4")]
+position = Vector2(19374, -3855)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Rooms/Room2"]
+shape = SubResource("RectangleShape2D_l04bm")
+
+[node name="Room3" parent="Rooms" instance=ExtResource("10_lkch4")]
+position = Vector2(32030, -3855)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Rooms/Room3"]
+shape = SubResource("RectangleShape2D_l04bm")
+
+[node name="Room4" parent="Rooms" instance=ExtResource("10_lkch4")]
+position = Vector2(32030, -10872)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Rooms/Room4"]
+shape = SubResource("RectangleShape2D_l04bm")
+
+[node name="Room5" parent="Rooms" instance=ExtResource("10_lkch4")]
+position = Vector2(19374, -10872)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Rooms/Room5"]
+shape = SubResource("RectangleShape2D_l04bm")
+
+[node name="Room6" parent="Rooms" instance=ExtResource("10_lkch4")]
+position = Vector2(6691, -10872)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Rooms/Room6"]
+shape = SubResource("RectangleShape2D_l04bm")
+
+[node name="Room7" parent="Rooms" instance=ExtResource("10_lkch4")]
+position = Vector2(6691, -17920)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Rooms/Room7"]
+shape = SubResource("RectangleShape2D_l04bm")
+
+[node name="Room8" parent="Rooms" instance=ExtResource("10_lkch4")]
+position = Vector2(19374, -17920)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Rooms/Room8"]
+shape = SubResource("RectangleShape2D_l04bm")
+
+[node name="Room9" parent="Rooms" instance=ExtResource("10_lkch4")]
+position = Vector2(32030, -17920)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Rooms/Room9"]
+shape = SubResource("RectangleShape2D_l04bm")
+
+[node name="WorldCamera" parent="." node_paths=PackedStringArray("rooms") instance=ExtResource("11_evc3l")]
+position = Vector2(6691, -3855)
+rooms = [NodePath("../Rooms/Room"), NodePath("../Rooms/Room2"), NodePath("../Rooms/Room3"), NodePath("../Rooms/Room4"), NodePath("../Rooms/Room5"), NodePath("../Rooms/Room6"), NodePath("../Rooms/Room7"), NodePath("../Rooms/Room8"), NodePath("../Rooms/Room9")]
+metadata/_edit_lock_ = true
