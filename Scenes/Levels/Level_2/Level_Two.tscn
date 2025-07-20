@@ -1,18 +1,38 @@
-[gd_scene load_steps=5 format=4 uid="uid://6dl1k3tjs8t7"]
+[gd_scene load_steps=9 format=4 uid="uid://b7ge0bfibqvfc"]
 
-[ext_resource type="PackedScene" uid="uid://bwh5gr7v566n0" path="res://Scenes/Tilemaps/world_tile_map_layer.tscn" id="1_751rn"]
-[ext_resource type="Script" uid="uid://boryfw5mwl0xv" path="res://Scenes/Levels/level.gd" id="1_em3v0"]
-[ext_resource type="PackedScene" uid="uid://yowo6jwf5wvd" path="res://Entities/Player/Player.tscn" id="2_r6i3q"]
-[ext_resource type="PackedScene" uid="uid://c13io57eh7jwi" path="res://Entities/Friend/friend.tscn" id="4_5l4r5"]
+[ext_resource type="Script" uid="uid://boryfw5mwl0xv" path="res://Scenes/Levels/level.gd" id="1_lvtih"]
+[ext_resource type="AudioStream" uid="uid://c8mn5ul26bfbj" path="res://Assets/Audio/Music/level_1_whimsical_forest.wav" id="2_oh8qx"]
+[ext_resource type="TileSet" uid="uid://dcpwl4oxrmpln" path="res://Scenes/Levels/Level_1/level1_tileset.tres" id="3_wcq8r"]
+[ext_resource type="PackedScene" uid="uid://bdykr4g01j8gf" path="res://Entities/Portal/portal.tscn" id="4_uc2ig"]
+[ext_resource type="PackedScene" uid="uid://yowo6jwf5wvd" path="res://Entities/Player/Player.tscn" id="5_g1puw"]
+[ext_resource type="PackedScene" uid="uid://c13io57eh7jwi" path="res://Entities/Friend/friend.tscn" id="6_ufloh"]
+[ext_resource type="PackedScene" uid="uid://d2lg1k4rpl6i1" path="res://Entities/Obstacles/Accelerator/Accelerator.tscn" id="7_dvdwg"]
+[ext_resource type="PackedScene" uid="uid://b5voxyvgujcyo" path="res://Entities/Obstacles/Fragile/Breakable/breakable.tscn" id="8_aljg7"]
 
 [node name="LevelOne" type="Node2D"]
-script = ExtResource("1_em3v0")
+script = ExtResource("1_lvtih")
+music = ExtResource("2_oh8qx")
 
-[node name="TileMap" parent="." instance=ExtResource("1_751rn")]
-tile_map_data = PackedByteArray("AAABAAQAAQAAAAAAAAACAAQAAQAAAAAAAAADAAQAAQAAAAAAAAAEAAQAAQAAAAAAAAAFAAQAAQAAAAAAAAAGAAQAAQAAAAAAAAAHAAQAAQAAAAAAAAAIAAQAAQAAAAAAAAAJAAQAAQAAAAAAAAAKAAQAAQAAAAAAAAAAACEAAQAAAAAAAAABACEAAQAAAAAAAAACACEAAQAAAAAAAAADACEAAQAAAAAAAAAEACEAAQAAAAAAAAAFACEAAQAAAAAAAAAGACEAAQAAAAAAAAAHACIAAQAAAAAAAAAIACIAAQAAAAAAAAAJACIAAQAAAAAAAAAKACIAAQAAAAAAAAALACIAAQAAAAAAAAAMACIAAQAAAAAAAAANACIAAQAAAAAAAAAOACIAAQAAAAAAAAAPACIAAQAAAAAAAAAQACIAAQAAAAAAAAARACIAAQAAAAAAAAASACIAAQAAAAAAAAATACIAAQAAAAAAAAAUACIAAQAAAAAAAAAVACIAAQAAAAAAAAAWACIAAQAAAAAAAAAXACIAAQAAAAAAAAAYACIAAQAAAAAAAAAZACIAAQAAAAAAAAAaACIAAQAAAAAAAAAbACIAAQAAAAAAAAAcACIAAQAAAAAAAAAdACIAAQAAAAAAAAAeACEAAQAAAAAAAAAfACEAAQAAAAAAAAAgACEAAQAAAAAAAAAhACEAAQAAAAAAAAAiACEAAQAAAAAAAAAjACEAAQAAAAAAAAAkACEAAQAAAAAAAAAlACEAAQAAAAAAAAAmACEAAQAAAAAAAAAnACIAAQAAAAAAAAAoACIAAQAAAAAAAAApACIAAQAAAAAAAAAqACIAAQAAAAAAAAArACIAAQAAAAAAAAAsACIAAQAAAAAAAAAtACIAAQAAAAAAAAAuACIAAQAAAAAAAAAvACIAAQAAAAAAAAAwACIAAQAAAAAAAAAxACIAAQAAAAAAAAAyACIAAQAAAAAAAAAzACIAAQAAAAAAAAA0ACIAAQAAAAAAAAA1ACIAAQAAAAAAAAA2ACIAAQAAAAAAAAA3ACIAAQAAAAAAAAA4ACIAAQAAAAAAAAA5ACIAAQAAAAAAAAA6ACIAAQAAAAAAAAA7ACIAAQAAAAAAAAA8ACEAAQAAAAAAAAA9ACEAAQAAAAAAAAA+ACEAAQAAAAAAAAA/ACEAAQAAAAAAAAA/ACAAAQAAAAAAAABAACAAAQAAAAAAAABBACAAAQAAAAAAAABCACAAAQAAAAAAAABDACAAAQAAAAAAAABEACAAAQAAAAAAAABFACAAAQAAAAAAAABGACAAAQAAAAAAAAA=")
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray("AAABAP//AAABAAAAAAACAP//AAABAAAAAAADAP//AAABAAAAAAAEAP//AAABAAAAAAAFAP//AAABAAEAAAAGAP//AAABAAEAAAAHAP//AAABAAAAAAAIAP//AAABAAAAAAAJAP//AAABAAEAAAAKAP//AAABAAEAAAALAP//AAABAAAAAAAMAP//AAABAAAAAAANAP//AAABAAAAAAAOAP//AAABAAAAAAAPAP//AAABAAAAAAAQAP//AAABAAAAAAAAAP//AAABAAEAAAAAAP7/AAAEAAEAAAAAAP3/AAAEAAEAAAAAAPz/AAAEAAEAAAAAAPv/AAAEAAEAAAAAAPr/AAAEAAEAAAAAAPn/AAAEAAEAAAAAAPj/AAAEAAEAAAAAAPf/AAAEAAEAAAAAAPb/AAAEAAEAAAAFAP7/AAABAAAAAAAGAP7/AAABAAAAAAAJAP7/AAABAAEAAAAJAP3/AAABAAAAAAAKAP3/AAABAAAAAAAKAP7/AAABAAEAAAARAP//AgAIAAAAAAASAP//AgAIAAAAAAARAAAAAgAIAAEAAAARAAEAAgAIAAEAAAARAAIAAgAIAAEAAAARAAMAAgAIAAEAAAARAAQAAgAIAAEAAAASAAAAAgAIAAEAAAASAAEAAgAIAAEAAAASAAIAAgAIAAEAAAASAAMAAgAIAAEAAAASAAQAAgAIAAEAAAATAAAAAgAIAAEAAAATAAEAAgAIAAEAAAATAAIAAgAIAAEAAAATAAMAAgAIAAEAAAATAAQAAgAIAAEAAAATAP//AgAIAAAAAAA=")
+tile_set = ExtResource("3_wcq8r")
 
-[node name="Player" parent="." instance=ExtResource("2_r6i3q")]
-position = Vector2(60, 43)
+[node name="Portal" parent="." instance=ExtResource("4_uc2ig")]
+position = Vector2(1476, -1428)
+scale = Vector2(37.705, 37.705)
 
-[node name="Friend" parent="." instance=ExtResource("4_5l4r5")]
-position = Vector2(1051, 508)
+[node name="Player" parent="." instance=ExtResource("5_g1puw")]
+position = Vector2(1527, -750)
+air_acceleration = 5000.0
+
+[node name="Friend" parent="." instance=ExtResource("6_ufloh")]
+position = Vector2(11475, -711)
+scale = Vector2(40.77, 40.77)
+
+[node name="Accelerator" parent="." instance=ExtResource("7_dvdwg")]
+position = Vector2(6148, -866.001)
+scale = Vector2(1, 1)
+acceleration_amount = 100.0
+
+[node name="Breakable" parent="." instance=ExtResource("8_aljg7")]
+position = Vector2(8240, -1032)
