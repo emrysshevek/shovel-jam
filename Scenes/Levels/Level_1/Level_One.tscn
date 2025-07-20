@@ -146,5 +146,6 @@ metadata/_edit_group_ = true
 shape = SubResource("RectangleShape2D_l04bm")
 
 [node name="WorldCamera" parent="." node_paths=PackedStringArray("rooms") instance=ExtResource("9_4s46d")]
+position = Vector2(6691, -3855)
 rooms = [NodePath("../Rooms/Room"), NodePath("../Rooms/Room2"), NodePath("../Rooms/Room3"), NodePath("../Rooms/Room4"), NodePath("../Rooms/Room5"), NodePath("../Rooms/Room6"), NodePath("../Rooms/Room7"), NodePath("../Rooms/Room8"), NodePath("../Rooms/Room9")]
 metadata/_edit_lock_ = true
