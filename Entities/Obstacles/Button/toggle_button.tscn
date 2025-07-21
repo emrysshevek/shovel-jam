@@ -1,0 +1,19 @@
+[gd_scene load_steps=5 format=3 uid="uid://dy2chemsgla4e"]
+
+[ext_resource type="Texture2D" uid="uid://cslh5uy0eoc1c" path="res://Assets/Sprites/Objects/Sugar_tile (green).png" id="1_32gtt"]
+[ext_resource type="Script" uid="uid://b4fenpe1kvqqt" path="res://Entities/Obstacles/Button/toggle_button.gd" id="2_g7rdw"]
+[ext_resource type="PackedScene" uid="uid://cgdiok6brispc" path="res://Components/Interactable/interactable.tscn" id="2_oyxpi"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g7rdw"]
+size = Vector2(696, 700)
+
+[node name="ToggleButton" type="Sprite2D"]
+texture = ExtResource("1_32gtt")
+script = ExtResource("2_g7rdw")
+
+[node name="Interactable" parent="." instance=ExtResource("2_oyxpi")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interactable"]
+shape = SubResource("RectangleShape2D_g7rdw")
+
+[connection signal="interaction_occured" from="Interactable" to="." method="_on_interactable_interaction_occured"]

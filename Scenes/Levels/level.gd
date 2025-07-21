@@ -13,17 +13,14 @@ signal completed(score: float)
 
 func _ready() -> void:
 	MusicManager.crossfade_to(music)
-	friend.freed.connect(_on_friend_freed)
 	portal.exited.connect(_on_portal_entered)
+	get_tree().get_first_node_in_group(&"toggle").toggle()
 	
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed(&"pause"):
 		$CanvasLayer/Pause_UI.show()
-		get_tree().paused = true	
-
-func _on_friend_freed() -> void:
-	for grav_comp: Gravity in find_children("*", "Gravity"):
-		grav_comp.enabled = false
+		get_tree().paused = true
+	
 
 func _on_portal_entered() -> void:
 	Globals.complete_level(level, 1000)

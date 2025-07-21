@@ -24,19 +24,20 @@ size = Vector2(410, 414)
 size = Vector2(340, 336)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_5ubga"]
-radius = 3975.01
+radius = 7500.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_af0d7"]
-radius = 2697.33
+radius = 5000.0
 
 [node name="Ropibot" type="CharacterBody2D"]
 collision_layer = 32
+collision_mask = 33
 motion_mode = 1
 slide_on_ceiling = false
 script = ExtResource("1_2qdxe")
 max_speed = 600.0
 jump_velocity = 4000.0
-max_fall_speed = 4000.0
+max_fall_speed = 8000.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_wd8jo")
@@ -89,6 +90,7 @@ debug_color = Color(0, 0.6, 0.701961, 0)
 position = Vector2(0, -211)
 
 [node name="ForwardRay" type="RayCast2D" parent="."]
+visible = false
 modulate = Color(1, 0, 0, 1)
 scale = Vector2(50, 50)
 target_position = Vector2(0, 2768)
@@ -96,6 +98,7 @@ collide_with_areas = true
 collide_with_bodies = false
 
 [node name="DownRay" type="RayCast2D" parent="."]
+visible = false
 position = Vector2(0, 211)
 target_position = Vector2(0, 30)
 

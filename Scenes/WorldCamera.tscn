@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cmir1oe80vkxv" path="res://Scenes/world_camera.gd" id="1_rmnhu"]
 
-[node name="WorldCamera" type="Camera2D"]
+[node name="WorldCamera" type="Camera2D" groups=["camera"]]
 process_mode = 3
 zoom = Vector2(0.1, 0.1)
 script = ExtResource("1_rmnhu")

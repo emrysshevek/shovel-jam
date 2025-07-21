@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://dpphs6wijhe1l"]
 
-[ext_resource type="Texture2D" uid="uid://ccdd4mnb07qhv" path="res://Interactive_tiles_Tilset/Tileset_Interactive_tiles.png" id="1_d2tcf"]
-[ext_resource type="Script" uid="uid://cojcu0ovi8ur5" path="res://Interactive_tiles_Tilset/toggle_tile_block_states.gd" id="4_ny62x"]
+[ext_resource type="Texture2D" uid="uid://cn2xbgtm4ippa" path="res://Scenes/Tilemaps/Interactive tiles/Tileset_Interactive_tiles.png" id="1_d2tcf"]
+[ext_resource type="Script" uid="uid://dsxyfhfedmvvn" path="res://Scenes/Tilemaps/Interactive tiles/toggle_tile_block_states.gd" id="4_ny62x"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3iy6d"]
 texture = ExtResource("1_d2tcf")
@@ -30,6 +30,6 @@ tile_size = Vector2i(704, 704)
 physics_layer_0/collision_layer = 1
 sources/1 = SubResource("TileSetAtlasSource_3iy6d")
 
-[node name="InteractiveTileset" type="TileMapLayer"]
+[node name="InteractiveTileset" type="TileMapLayer" groups=["toggle"]]
 tile_set = SubResource("TileSet_e60ok")
 script = ExtResource("4_ny62x")

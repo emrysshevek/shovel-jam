@@ -10,6 +10,7 @@ texture_region_size = Vector2i(704, 704)
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-352, 352, -352, -352, 352, -352, 352, 352)
 1:0/0 = 0
+1:0/0/terrain_set = 0
 1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-352, -352, 352, -352, 352, 352, -352, 352)
 2:0/0 = 0
 2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-352, -352, 352, -352, 352, 352, -352, 352)
@@ -89,6 +90,7 @@ texture_region_size = Vector2i(704, 704)
 [resource]
 tile_size = Vector2i(704, 704)
 physics_layer_0/collision_layer = 1
+terrain_set_0/mode = 2
 navigation_layer_0/layers = 1
 sources/0 = SubResource("TileSetAtlasSource_f051m")
 sources/1 = SubResource("TileSetAtlasSource_rw3wh")

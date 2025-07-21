@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://b3xnahgbyyf0j"]
+[gd_scene load_steps=11 format=3 uid="uid://b3xnahgbyyf0j"]
 
 [ext_resource type="Script" uid="uid://8hrai0ih02vj" path="res://Scenes/Hub/globe.gd" id="1_kc167"]
 [ext_resource type="PackedScene" uid="uid://c7jqkthesq0lc" path="res://Scenes/Levels/Level_1/Level_One.tscn" id="2_gpk4l"]
@@ -15,6 +15,13 @@ shader_parameter/height = 0.003
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vcagg"]
 size = Vector2(1815, 2268)
+
+[sub_resource type="SystemFont" id="SystemFont_fmvc7"]
+font_names = PackedStringArray("Comic Sans MS")
+
+[sub_resource type="LabelSettings" id="LabelSettings_kfnsq"]
+font = SubResource("SystemFont_fmvc7")
+font_size = 451
 
 [node name="Globe" type="Node2D"]
 script = ExtResource("1_kc167")
@@ -43,11 +50,12 @@ position = Vector2(4.5, 38)
 shape = SubResource("RectangleShape2D_vcagg")
 
 [node name="Label" type="Label" parent="."]
-offset_left = -28.0
-offset_top = -9.0
-offset_right = 27.0
-offset_bottom = 14.0
+offset_left = -746.0
+offset_top = -393.0
+offset_right = 727.0
+offset_bottom = 237.0
 text = "Locked"
+label_settings = SubResource("LabelSettings_kfnsq")
 
 [connection signal="body_entered" from="Interactable" to="." method="_on_interactable_body_entered"]
 [connection signal="body_exited" from="Interactable" to="." method="_on_interactable_body_exited"]

@@ -1,6 +1,6 @@
 extends Node2D
 
-@export var hits_to_break := 3
+@export var hits_to_break := 1
 @onready var detection_area := $Hitbox/Area/Detection_Area
 
 var colliding_with_player: bool 

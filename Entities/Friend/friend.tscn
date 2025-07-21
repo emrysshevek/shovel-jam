@@ -1,8 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://c13io57eh7jwi"]
+[gd_scene load_steps=5 format=3 uid="uid://c13io57eh7jwi"]
 
 [ext_resource type="Script" uid="uid://2g4ceiiicgw2" path="res://Entities/Friend/friend.gd" id="1_2t0wk"]
 [ext_resource type="PackedScene" uid="uid://cgdiok6brispc" path="res://Components/Interactable/interactable.tscn" id="2_m6avk"]
-[ext_resource type="Texture2D" uid="uid://c7dwhlkq3i5gq" path="res://World/Layout/world_tileset.png" id="3_yapia"]
+[ext_resource type="PackedScene" uid="uid://7s7hwhu5vgl2" path="res://Assets/Sprites/Werewolf_Side_Cut_parts/Werewolf_animation__Side.tscn" id="3_2t0wk"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2t0wk"]
+radius = 766.03
 
 [node name="Friend" type="Node2D" groups=["friend"]]
 script = ExtResource("1_2t0wk")
@@ -11,13 +14,11 @@ script = ExtResource("1_2t0wk")
 
 [node name="InteractionZone" parent="Interactable" index="0"]
 position = Vector2(0, -11)
+shape = SubResource("CircleShape2D_2t0wk")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture_filter = 1
-position = Vector2(0, -8)
-texture = ExtResource("3_yapia")
-region_enabled = true
-region_rect = Rect2(63.192, 128.845, 16.7649, 16.144)
+[node name="Animations" parent="." instance=ExtResource("3_2t0wk")]
+position = Vector2(289, -742)
+scale = Vector2(-1, 1)
 
 [connection signal="interaction_occured" from="Interactable" to="." method="_on_interactable_interaction_occured"]
 

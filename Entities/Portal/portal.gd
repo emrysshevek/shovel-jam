@@ -7,8 +7,8 @@ signal exited()
 
 var locked := true
 
-func _ready() -> void:
-	friend.freed.connect(_on_friend_freed)
+#func _ready() -> void:
+	#friend.freed.connect(_on_friend_freed)
 	
 func _on_friend_freed() -> void:
 	locked = false
