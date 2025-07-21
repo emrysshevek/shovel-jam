@@ -1,0 +1,139 @@
+[gd_scene load_steps=16 format=3 uid="uid://cfuyy2yu6j6lp"]
+
+[ext_resource type="Texture2D" uid="uid://dl66wp72o5060" path="res://UI/Pause/UI_test.png" id="1_f3pj1"]
+[ext_resource type="Texture2D" uid="uid://csssce6vnosut" path="res://UI/Pause/Background.png" id="2_3p770"]
+[ext_resource type="Texture2D" uid="uid://f7cb2n4snrop" path="res://UI/Pause/ArrowLeft.png" id="2_kee6w"]
+[ext_resource type="Texture2D" uid="uid://c8tudyc5hxfj7" path="res://UI/Pause/InfoLine.png" id="3_7020t"]
+[ext_resource type="Texture2D" uid="uid://bxuuqf2g1u5ih" path="res://UI/Pause/PageNumber.png" id="3_uhss5"]
+[ext_resource type="Script" uid="uid://df7a6i0wmdsm1" path="res://UI/Pause/current_page.gd" id="4_d6y3p"]
+[ext_resource type="Texture2D" uid="uid://dp30jubhjbuem" path="res://UI/Pause/CloseButton.png" id="4_m8moj"]
+[ext_resource type="Texture2D" uid="uid://dg586jfjvkjvv" path="res://UI/Pause/QuitButton.png" id="5_v7d62"]
+[ext_resource type="Script" uid="uid://yggexau11mtf" path="res://UI/Pause/arrow_left.gd" id="6_l7cax"]
+[ext_resource type="Script" uid="uid://vflhc18ihmkc" path="res://UI/Pause/arrow_right.gd" id="7_gdfvn"]
+[ext_resource type="Script" uid="uid://3a5n8mrtw7ew" path="res://UI/Pause/quit_button.gd" id="7_yleqo"]
+[ext_resource type="Texture2D" uid="uid://dtg6rygupkuem" path="res://UI/Pause/ContectualMenu.png" id="8_4tpd5"]
+[ext_resource type="Script" uid="uid://decrjs2hsouam" path="res://UI/Pause/close_button.gd" id="8_y1qy4"]
+
+[sub_resource type="SystemFont" id="SystemFont_gdfvn"]
+font_names = PackedStringArray("Comic Sans MS")
+
+[sub_resource type="LabelSettings" id="LabelSettings_gdfvn"]
+font = SubResource("SystemFont_gdfvn")
+font_size = 133
+font_color = Color(0, 0, 0, 1)
+
+[node name="Pause_UI" type="Node2D"]
+
+[node name="UiTest" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(1656, 931)
+texture = ExtResource("1_f3pj1")
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(1656, 931)
+texture = ExtResource("2_3p770")
+
+[node name="PageNumber" type="Sprite2D" parent="."]
+position = Vector2(1656, 1703)
+texture = ExtResource("3_uhss5")
+
+[node name="CurrentPage" type="Label" parent="PageNumber"]
+offset_left = -188.0
+offset_top = -136.0
+offset_right = 188.0
+offset_bottom = 127.0
+text = "4/4"
+label_settings = SubResource("LabelSettings_gdfvn")
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("4_d6y3p")
+
+[node name="Lines" type="Node2D" parent="."]
+
+[node name="InfoLine1" type="Sprite2D" parent="Lines"]
+position = Vector2(1656, 529)
+texture = ExtResource("3_7020t")
+
+[node name="InfoLine2" type="Sprite2D" parent="Lines"]
+position = Vector2(1656, 749)
+texture = ExtResource("3_7020t")
+
+[node name="InfoLine3" type="Sprite2D" parent="Lines"]
+position = Vector2(1656, 969)
+texture = ExtResource("3_7020t")
+
+[node name="InfoLine4" type="Sprite2D" parent="Lines"]
+position = Vector2(1656, 1189)
+texture = ExtResource("3_7020t")
+
+[node name="InfoLine5" type="Sprite2D" parent="Lines"]
+position = Vector2(1656, 1409)
+texture = ExtResource("3_7020t")
+
+[node name="ArrowLeft" type="Sprite2D" parent="."]
+position = Vector2(171, 872)
+texture = ExtResource("2_kee6w")
+script = ExtResource("6_l7cax")
+
+[node name="ButtonL" type="Button" parent="ArrowLeft"]
+modulate = Color(1, 1, 1, 0)
+offset_left = -63.0
+offset_top = -96.0
+offset_right = 64.0
+offset_bottom = 96.0
+
+[node name="ArrowRight" type="Sprite2D" parent="."]
+position = Vector2(3141, 872)
+texture = ExtResource("2_kee6w")
+flip_h = true
+script = ExtResource("7_gdfvn")
+
+[node name="ButtonR" type="Button" parent="ArrowRight"]
+modulate = Color(1, 1, 1, 0)
+offset_left = -63.0
+offset_top = -96.0
+offset_right = 64.0
+offset_bottom = 96.0
+
+[node name="QuitButton" type="Sprite2D" parent="."]
+position = Vector2(352, 1671)
+texture = ExtResource("5_v7d62")
+script = ExtResource("7_yleqo")
+
+[node name="QuitButton" type="Button" parent="QuitButton"]
+modulate = Color(1, 1, 1, 0)
+offset_left = -352.0
+offset_top = -191.0
+offset_right = 352.0
+offset_bottom = 192.0
+
+[node name="CloseButton" type="Sprite2D" parent="."]
+position = Vector2(2960, 1671)
+texture = ExtResource("4_m8moj")
+script = ExtResource("8_y1qy4")
+
+[node name="CloseButton" type="Button" parent="CloseButton"]
+modulate = Color(1, 1, 1, 0)
+offset_left = -352.0
+offset_top = -191.0
+offset_right = 352.0
+offset_bottom = 192.0
+
+[node name="ContectualMenu" type="Sprite2D" parent="."]
+position = Vector2(1656, 147)
+texture = ExtResource("8_4tpd5")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(1656, 931)
+zoom = Vector2(0.348, 0.348)
+
+[connection signal="button_down" from="ArrowLeft/ButtonL" to="ArrowLeft" method="_on_button_l_button_down"]
+[connection signal="button_up" from="ArrowLeft/ButtonL" to="ArrowLeft" method="_on_button_l_button_up"]
+[connection signal="button_up" from="ArrowLeft/ButtonL" to="PageNumber/CurrentPage" method="_on_button_l_button_up"]
+[connection signal="button_down" from="ArrowRight/ButtonR" to="ArrowRight" method="_on_button_r_button_down"]
+[connection signal="button_up" from="ArrowRight/ButtonR" to="ArrowRight" method="_on_button_r_button_up"]
+[connection signal="button_up" from="ArrowRight/ButtonR" to="PageNumber/CurrentPage" method="_on_button_r_button_up"]
+[connection signal="button_down" from="QuitButton/QuitButton" to="QuitButton" method="_on_quit_button_button_down"]
+[connection signal="button_up" from="QuitButton/QuitButton" to="QuitButton" method="_on_quit_button_button_up"]
+[connection signal="button_down" from="CloseButton/CloseButton" to="CloseButton" method="_on_close_button_button_down"]
+[connection signal="button_up" from="CloseButton/CloseButton" to="CloseButton" method="_on_close_button_button_up"]

@@ -1,0 +1,202 @@
+[gd_scene load_steps=15 format=3 uid="uid://dctrv4x37msk"]
+
+[ext_resource type="Texture2D" uid="uid://7elfmmq2hdlh" path="res://hub_assets/Real wood wall.jpg" id="1_2ju24"]
+[ext_resource type="Texture2D" uid="uid://djwnmw5mkq8cd" path="res://hub_assets/Shelf_border_L.png" id="2_xn0c7"]
+[ext_resource type="Texture2D" uid="uid://ckf8sis017ci1" path="res://hub_assets/Globe.png" id="3_msp50"]
+[ext_resource type="Texture2D" uid="uid://q2a5bl8l4yu7" path="res://hub_assets/Shelf_borderless.png" id="3_wx5yd"]
+[ext_resource type="Shader" uid="uid://dxhdum2hy2ret" path="res://RippleEffect.gdshader" id="4_jyp61"]
+[ext_resource type="Texture2D" uid="uid://debdmfaotsljj" path="res://hub_assets/Globe_Bases/Base_A.png" id="6_hhrit"]
+[ext_resource type="PackedScene" uid="uid://crodo7jogkq5r" path="res://Protagonist_animation__Side.tscn" id="6_y0ptc"]
+[ext_resource type="Texture2D" uid="uid://ddmhwtq502e1d" path="res://hub_assets/Globe_Bases/Base_B.png" id="7_bl1ql"]
+[ext_resource type="Texture2D" uid="uid://bryqnd8g5mxmo" path="res://hub_assets/Globe_Bases/Base_C.png" id="8_1klym"]
+[ext_resource type="Texture2D" uid="uid://dt841hvmpwgqt" path="res://hub_assets/Globe_Bases/Base_D.png" id="9_1klym"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_jyp61"]
+shader = ExtResource("4_jyp61")
+shader_parameter/wave_count = 20.0
+shader_parameter/speed = 6.3
+shader_parameter/height = 0.021
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wx5yd"]
+size = Vector2(1852, 1182)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_y0ptc"]
+radius = 1171.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wx5yd"]
+radius = 244.0
+height = 11790.0
+
+[node name="Hub" type="Node2D"]
+
+[node name="RealWoodWall" type="Sprite2D" parent="."]
+position = Vector2(7618.8, 5067.25)
+scale = Vector2(24.898, 24.898)
+texture = ExtResource("1_2ju24")
+
+[node name="Shelf" type="Node2D" parent="."]
+
+[node name="ShelfBorderL" type="Sprite2D" parent="Shelf"]
+position = Vector2(1760, 5690)
+texture = ExtResource("2_xn0c7")
+
+[node name="ShelfBorderless1" type="Sprite2D" parent="Shelf"]
+position = Vector2(3234, 5481)
+texture = ExtResource("3_wx5yd")
+
+[node name="ShelfBorderless2" type="Sprite2D" parent="Shelf"]
+position = Vector2(4708, 5481)
+texture = ExtResource("3_wx5yd")
+
+[node name="ShelfBorderless3" type="Sprite2D" parent="Shelf"]
+position = Vector2(6182, 5481)
+texture = ExtResource("3_wx5yd")
+
+[node name="ShelfBorderless4" type="Sprite2D" parent="Shelf"]
+position = Vector2(7656, 5481.5)
+texture = ExtResource("3_wx5yd")
+
+[node name="ShelfBorderless5" type="Sprite2D" parent="Shelf"]
+position = Vector2(9130, 5481.5)
+texture = ExtResource("3_wx5yd")
+
+[node name="ShelfBorderless6" type="Sprite2D" parent="Shelf"]
+position = Vector2(10604, 5481.5)
+texture = ExtResource("3_wx5yd")
+
+[node name="ShelfBorderR" type="Sprite2D" parent="Shelf"]
+position = Vector2(12078, 5690)
+texture = ExtResource("2_xn0c7")
+flip_h = true
+
+[node name="Globes" type="Node2D" parent="."]
+position = Vector2(2497, 4066)
+
+[node name="GlobeA" type="Sprite2D" parent="Globes"]
+texture = ExtResource("3_msp50")
+
+[node name="Ripple effect" type="ColorRect" parent="Globes/GlobeA"]
+visible = false
+material = SubResource("ShaderMaterial_jyp61")
+offset_left = -721.0
+offset_top = -738.0
+offset_right = 719.0
+offset_bottom = 702.0
+color = Color(1, 1, 1, 0)
+
+[node name="BaseA" type="Sprite2D" parent="Globes/GlobeA"]
+texture = ExtResource("6_hhrit")
+
+[node name="LevelA_SpawnPoint" type="Marker2D" parent="Globes/GlobeA"]
+position = Vector2(-292, -571)
+
+[node name="LevelA Hitbox" type="StaticBody2D" parent="Globes/GlobeA"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Globes/GlobeA/LevelA Hitbox"]
+position = Vector2(0, 581)
+shape = SubResource("RectangleShape2D_wx5yd")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Globes/GlobeA/LevelA Hitbox"]
+position = Vector2(0, -19)
+shape = SubResource("CircleShape2D_y0ptc")
+
+[node name="GlobeB" type="Sprite2D" parent="Globes"]
+position = Vector2(2948, 0)
+texture = ExtResource("3_msp50")
+
+[node name="Ripple effect" type="ColorRect" parent="Globes/GlobeB"]
+visible = false
+material = SubResource("ShaderMaterial_jyp61")
+offset_left = -721.0
+offset_top = -738.0
+offset_right = 719.0
+offset_bottom = 702.0
+color = Color(1, 1, 1, 0)
+
+[node name="BaseB" type="Sprite2D" parent="Globes/GlobeB"]
+texture = ExtResource("7_bl1ql")
+
+[node name="LevelB_SpawnPoint" type="Marker2D" parent="Globes/GlobeB"]
+position = Vector2(-292, -571)
+
+[node name="LevelB Hitbox" type="StaticBody2D" parent="Globes/GlobeB"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Globes/GlobeB/LevelB Hitbox"]
+position = Vector2(0, 581)
+shape = SubResource("RectangleShape2D_wx5yd")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Globes/GlobeB/LevelB Hitbox"]
+position = Vector2(0, -19)
+shape = SubResource("CircleShape2D_y0ptc")
+
+[node name="GlobeC" type="Sprite2D" parent="Globes"]
+position = Vector2(5896, 0.5)
+texture = ExtResource("3_msp50")
+
+[node name="Ripple effect" type="ColorRect" parent="Globes/GlobeC"]
+visible = false
+material = SubResource("ShaderMaterial_jyp61")
+offset_left = -721.0
+offset_top = -738.0
+offset_right = 719.0
+offset_bottom = 702.0
+color = Color(1, 1, 1, 0)
+
+[node name="BaseC" type="Sprite2D" parent="Globes/GlobeC"]
+texture = ExtResource("8_1klym")
+
+[node name="LevelC_SpawnPoint" type="Marker2D" parent="Globes/GlobeC"]
+position = Vector2(-292, -571)
+
+[node name="LevelC Hitbox" type="StaticBody2D" parent="Globes/GlobeC"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Globes/GlobeC/LevelC Hitbox"]
+position = Vector2(0, 581)
+shape = SubResource("RectangleShape2D_wx5yd")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Globes/GlobeC/LevelC Hitbox"]
+position = Vector2(0, -19)
+shape = SubResource("CircleShape2D_y0ptc")
+
+[node name="GlobeD" type="Sprite2D" parent="Globes"]
+position = Vector2(8844, 0.5)
+texture = ExtResource("3_msp50")
+
+[node name="Ripple effect" type="ColorRect" parent="Globes/GlobeD"]
+visible = false
+material = SubResource("ShaderMaterial_jyp61")
+offset_left = -721.0
+offset_top = -738.0
+offset_right = 719.0
+offset_bottom = 702.0
+color = Color(1, 1, 1, 0)
+
+[node name="BaseD" type="Sprite2D" parent="Globes/GlobeD"]
+texture = ExtResource("9_1klym")
+
+[node name="LevelD_SpawnPoint" type="Marker2D" parent="Globes/GlobeD"]
+position = Vector2(-292, -571)
+
+[node name="LevelD Hitbox" type="StaticBody2D" parent="Globes/GlobeD"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Globes/GlobeD/LevelD Hitbox"]
+position = Vector2(0, 581)
+shape = SubResource("RectangleShape2D_wx5yd")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Globes/GlobeD/LevelD Hitbox"]
+position = Vector2(0, -19)
+shape = SubResource("CircleShape2D_y0ptc")
+
+[node name="Shelf static hitbox" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Shelf static hitbox"]
+position = Vector2(6919, 5481)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_wx5yd")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(4284, 4066)
+zoom = Vector2(0.17, 0.17)
+
+[node name="Protagonist" parent="." instance=ExtResource("6_y0ptc")]
+position = Vector2(2205, 3495)
