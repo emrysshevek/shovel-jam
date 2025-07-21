@@ -42,7 +42,7 @@ tile_set = ExtResource("2_ten4b")
 metadata/_edit_lock_ = true
 
 [node name="InteractiveTileset" parent="." instance=ExtResource("4_tctiu")]
-tile_map_data = PackedByteArray("AAASAOj/AQABAAEAAAASAOn/AQABAAEAAAASAOr/AQABAAEAAAAkAOz/AQABAAEAAAAkAO3/AQABAAEAAAAkAO7/AQABAAEAAAAkAO//AQABAAEAAAAkAPD/AQABAAEAAAAkAPH/AQABAAEAAAAkAPL/AQABAAEAAAAkAPP/AQABAAEAAAAkAPT/AQABAAEAAAArAPX/AQABAAAAAAA1APX/AQABAAAAAAA1APH/AQABAAAAAAAwAPX/AQABAAEAAAA0APP/AQABAAEAAAAxAPD/AQABAAEAAAAsAPD/AQABAAAAAAAbAOz/AQABAAAAAAAZAOr/AQABAAAAAAAXAOj/AQABAAAAAAAVAOb/AQABAAAAAAAUAOb/AQABAAAAAAATAOb/AQABAAAAAAAHAOj/AQABAAAAAAAHAOn/AQABAAAAAAAHAOr/AQABAAAAAAA=")
+tile_map_data = PackedByteArray("AAASAOj/AQABAAEAAAASAOn/AQABAAEAAAASAOr/AQABAAEAAAAkAOz/AQABAAEAAAAkAO3/AQABAAEAAAAkAO7/AQABAAEAAAAkAO//AQABAAEAAAAkAPD/AQABAAEAAAAkAPH/AQABAAEAAAAkAPL/AQABAAEAAAAkAPP/AQABAAEAAAAkAPT/AQABAAEAAAArAPX/AQABAAAAAAA1APX/AQABAAAAAAA1APH/AQABAAAAAAAwAPX/AQABAAEAAAA0APP/AQABAAEAAAAxAPD/AQABAAEAAAAsAPD/AQABAAAAAAAbAOz/AQABAAAAAAAZAOr/AQABAAAAAAAXAOj/AQABAAAAAAAVAOb/AQABAAAAAAAUAOb/AQABAAAAAAATAOb/AQABAAAAAAAHAOj/AQABAAAAAAAHAOn/AQABAAAAAAAHAOr/AQABAAAAAAASAPL/AQABAAAAAAASAPP/AQABAAAAAAASAPT/AQABAAAAAAAiAPT/AQABAAAAAAAfAPT/AQABAAAAAAAiAPP/AQABAAAAAAAhAPL/AQABAAAAAAAgAPL/AQABAAAAAAAfAPP/AQABAAAAAAA=")
 
 [node name="Environment" type="Node2D" parent="."]
 
@@ -266,7 +266,7 @@ rooms = [NodePath("../Rooms/Room"), NodePath("../Rooms/Room2"), NodePath("../Roo
 metadata/_edit_lock_ = true
 
 [node name="Player" parent="." instance=ExtResource("2_57ne3")]
-position = Vector2(34277, -19195)
+position = Vector2(31399, -11731)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -293,6 +293,20 @@ position = Vector2(32399, -9076)
 
 [node name="ToggleButton8" parent="." instance=ExtResource("16_70d0o")]
 position = Vector2(36976, -10194)
+
+[node name="SpawnButton" parent="." instance=ExtResource("13_1n6qr")]
+position = Vector2(28917, -12820)
+spawn_scene = ExtResource("10_4s46d")
+
+[node name="Marker2D" type="Marker2D" parent="SpawnButton"]
+position = Vector2(-11317, 3568)
+
+[node name="SpawnButton2" parent="." instance=ExtResource("13_1n6qr")]
+position = Vector2(23211, -8373)
+spawn_scene = ExtResource("10_4s46d")
+
+[node name="Marker2D" type="Marker2D" parent="SpawnButton2"]
+position = Vector2(-3123, -798)
 
 [editable path="Environment/SpawnButton2"]
 [editable path="Environment/SpawnButton3"]

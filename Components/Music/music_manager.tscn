@@ -1,7 +1,9 @@
-[gd_scene load_steps=12 format=3 uid="uid://c0ntqyy5mr7cc"]
+[gd_scene load_steps=28 format=3 uid="uid://c0ntqyy5mr7cc"]
 
 [ext_resource type="Script" uid="uid://bjsnst7mlk6kx" path="res://Components/Music/music_manager.gd" id="1_50hcr"]
 [ext_resource type="AudioStream" uid="uid://cy4f56w1cj7cs" path="res://Assets/Audio/SFX/ability_sfx.wav" id="2_1ekd1"]
+[ext_resource type="AudioStream" uid="uid://cg6jyb7at2lbp" path="res://Assets/Audio/SFX/ability sfx 2.wav" id="2_bea14"]
+[ext_resource type="AudioStream" uid="uid://cu477ux445tk1" path="res://Assets/Audio/SFX/ability sfx.wav" id="3_evp5v"]
 [ext_resource type="AudioStream" uid="uid://8gos61byoxt2" path="res://Assets/Audio/SFX/ability_sfx_2.wav" id="3_qa3bn"]
 [ext_resource type="AudioStream" uid="uid://b4y2li87ltucj" path="res://Assets/Audio/SFX/crash_restart_level_sfx.wav" id="4_03g3l"]
 [ext_resource type="AudioStream" uid="uid://cgqxk3af74svw" path="res://Assets/Audio/SFX/blipSelect.wav" id="4_cbhuf"]
@@ -10,12 +12,26 @@
 [ext_resource type="AudioStream" uid="uid://b6xhsckpoo8bs" path="res://Assets/Audio/SFX/hitHurt.wav" id="7_a6kui"]
 [ext_resource type="AudioStream" uid="uid://be6i618hqvfim" path="res://Assets/Audio/SFX/click.wav" id="7_vxgj0"]
 [ext_resource type="AudioStream" uid="uid://bme87fdsi77sh" path="res://Assets/Audio/SFX/jump.wav" id="8_h76y2"]
+[ext_resource type="AudioStream" uid="uid://rj3fgnb7n1vj" path="res://Assets/Audio/SFX/crash-restart level sfx version 2.wav" id="8_hkhrs"]
 [ext_resource type="AudioStream" uid="uid://bp8ql3hpx7gp5" path="res://Assets/Audio/SFX/pickupCoin.wav" id="9_cbhuf"]
+[ext_resource type="AudioStream" uid="uid://cedlogvt6pqsh" path="res://Assets/Audio/SFX/crash-restart level sfx.wav" id="9_p6mxk"]
+[ext_resource type="AudioStream" uid="uid://bg4ulk86vcf7y" path="res://Assets/Audio/SFX/enter game-enter level.wav" id="11_ykmej"]
+[ext_resource type="AudioStream" uid="uid://uyd1pysvu2fk" path="res://Assets/Audio/SFX/footstep sfx.wav" id="12_8lsuh"]
+[ext_resource type="AudioStream" uid="uid://cv8bjq2q2dv82" path="res://Assets/Audio/SFX/jump up sfx.wav" id="14_vqq6f"]
+[ext_resource type="AudioStream" uid="uid://bsd1sfidl86iv" path="res://Assets/Audio/SFX/land jump sfx.wav" id="16_k4ila"]
+[ext_resource type="AudioStream" uid="uid://b06bauanilun8" path="res://Assets/Audio/SFX/menu button hover.wav" id="17_d7gng"]
+[ext_resource type="AudioStream" uid="uid://d1iss7vksmuv" path="res://Assets/Audio/SFX/menu select sfx.wav" id="18_hlonc"]
+[ext_resource type="AudioStream" uid="uid://d0ra3grv3eu8k" path="res://Assets/Audio/SFX/pause game.wav" id="20_trya6"]
+[ext_resource type="AudioStream" uid="uid://cv4aodrfj48m0" path="res://Assets/Audio/SFX/retrieve friend sfx.wav" id="22_m2y4j"]
+[ext_resource type="AudioStream" uid="uid://oacflo06nqhy" path="res://Assets/Audio/SFX/robot landing.wav" id="24_ir3q4"]
+[ext_resource type="AudioStream" uid="uid://ceytbk5bv07k0" path="res://Assets/Audio/SFX/robot rolling.wav" id="25_wk4or"]
+[ext_resource type="AudioStream" uid="uid://cbawinj72e1yc" path="res://Assets/Audio/SFX/robot spring.wav" id="26_rcrox"]
+[ext_resource type="AudioStream" uid="uid://qjj5mu3rt273" path="res://Assets/Audio/SFX/taking damage.wav" id="27_plwrt"]
 
 [node name="MusicManager" type="Node"]
 process_mode = 3
 script = ExtResource("1_50hcr")
-sfx_files = Array[AudioStream]([ExtResource("2_1ekd1"), ExtResource("3_qa3bn"), ExtResource("4_cbhuf"), ExtResource("7_vxgj0"), ExtResource("4_03g3l"), ExtResource("7_a6kui"), ExtResource("8_h76y2"), ExtResource("5_vxgj0"), ExtResource("9_cbhuf"), ExtResource("6_h76y2")])
+sfx_files = Array[AudioStream]([ExtResource("2_bea14"), ExtResource("3_evp5v"), ExtResource("2_1ekd1"), ExtResource("3_qa3bn"), ExtResource("4_cbhuf"), ExtResource("7_vxgj0"), ExtResource("8_hkhrs"), ExtResource("9_p6mxk"), ExtResource("4_03g3l"), ExtResource("11_ykmej"), ExtResource("12_8lsuh"), ExtResource("7_a6kui"), ExtResource("14_vqq6f"), ExtResource("8_h76y2"), ExtResource("16_k4ila"), ExtResource("17_d7gng"), ExtResource("18_hlonc"), ExtResource("5_vxgj0"), ExtResource("20_trya6"), ExtResource("9_cbhuf"), ExtResource("22_m2y4j"), ExtResource("6_h76y2"), ExtResource("24_ir3q4"), ExtResource("25_wk4or"), ExtResource("26_rcrox"), ExtResource("27_plwrt")])
 
 [node name="Track1" type="AudioStreamPlayer" parent="."]
 bus = &"Music"

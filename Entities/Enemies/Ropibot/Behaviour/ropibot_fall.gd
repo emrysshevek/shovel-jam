@@ -29,6 +29,7 @@ func physics_update(delta: float) -> void:
 		return
 				
 func _on_landed() -> void:
+	MusicManager.play_sfx("res://Assets/Audio/SFX/robot landing.wav")
 	if stuck_the_landing:
 		if ropibot.global_position.distance_to(player.global_position) <= ropibot.outer_vision_range.shape.radius:
 			finished.emit(PURSUE)

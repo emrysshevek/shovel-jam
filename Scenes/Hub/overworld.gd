@@ -13,9 +13,11 @@ func _ready() -> void:
 	
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed(&"pause"):
+		MusicManager.play_sfx("res://Assets/Audio/SFX/pause game.wav")
 		$CanvasLayer2/Pause_UI.show()
 		get_tree().paused = true
-	if event.is_action_pressed(&'start'):
+	if not started and event.is_action_pressed(&'start'):
+		MusicManager.play_sfx("res://Assets/Audio/SFX/enter game-enter level.wav")
 		$AnimationPlayer.play("start")
 		started = true
 		for globe in $Stuff/Layout/Levels.get_children():

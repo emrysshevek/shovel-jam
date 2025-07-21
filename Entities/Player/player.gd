@@ -31,14 +31,14 @@ func _ready() -> void:
 	Globals.gravity = gravity.default
 	
 func take_damage(amount: int):
-	if not Globals.damage_enabled or  invincible:
+	if not Globals.damage_enabled or invincible:
 		return
-	MusicManager.play_sfx("res://Assets/Audio/SFX/hitHurt.wav")
+	MusicManager.play_sfx("res://Assets/Audio/SFX/taking damage.wav")
 	current_hearts -= amount
 	print("The player took %d damage!" %[amount])
 	print("Current Health: %d" % current_hearts)
 	if current_hearts <= 0:
-		MusicManager.play_sfx("res://Assets/Audio/SFX/crash_restart_level_sfx.wav")
+		MusicManager.play_sfx("res://Assets/Audio/SFX/crash-restart level sfx version 2.wav")
 		get_tree().change_scene_to_file.call_deferred("res://Scenes/Hub/overworld.tscn")
 	else:
 		invincible = true

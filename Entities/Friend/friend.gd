@@ -26,7 +26,7 @@ func _float(val: float) -> void:
 
 func _on_interactable_interaction_occured() -> void:
 	print("friend was interacted")
-	MusicManager.play_sfx("res://Assets/Audio/SFX/retrieve_friend_sfx.wav")
+	MusicManager.play_sfx("res://Assets/Audio/SFX/retrieve friend sfx.wav")
 	free = true
 	freed.emit()
 	

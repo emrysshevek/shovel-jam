@@ -1,16 +1,17 @@
 extends Control
 
 
-@export var sfx_max = -17.0
+@export var sfx_max = -10.0
 @export var music_max = 0.0
 @export var master_max = 0.0
-@export var sound_min = -40.0
+@export var sound_min = -30.0
 
 func _on_quit_button_pressed() -> void:
 	get_tree().quit()
 
 
 func _on_close_button_pressed() -> void:
+	MusicManager.play_sfx("res://Assets/Audio/SFX/pause game.wav")
 	hide()
 	get_tree().paused = false
 

@@ -53,7 +53,7 @@ func play_music(audio_stream: AudioStream):
 	_track_1.stream = audio_stream
 	_track_1.play()
 
-func play_sfx(file: String, pitch=1, volume=0.0):
+func play_sfx(file: String, pitch=1, volume=0.0) -> AudioStreamPlayer:
 	if available.is_empty():
 		var player: AudioStreamPlayer = used.pop_front()
 		player.stop()
@@ -62,12 +62,14 @@ func play_sfx(file: String, pitch=1, volume=0.0):
 		available.append(player)
 	
 	var stream = sfx_tracks[file]
-	var player = available.pop_front()
+	var player: AudioStreamPlayer = available.pop_front()
 	player.stream = stream
 	player.pitch_scale = pitch
 	player.volume_db = volume
 	player.play()
 	used.append(player)
+	
+	return player
 		
 func _on_sfx_finished(player: AudioStreamPlayer) -> void:
 	used.erase(player)

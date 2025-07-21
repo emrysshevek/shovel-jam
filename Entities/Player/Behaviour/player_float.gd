@@ -13,6 +13,7 @@ func enter(_previous_state_path: String, _data := {}) -> void:
 
 func physics_update(delta: float) -> void:
 	if player.is_on_floor():
+		MusicManager.play_sfx("res://Assets/Audio/SFX/land jump sfx.wav")
 		finished.emit(IDLE)
 		return
 		

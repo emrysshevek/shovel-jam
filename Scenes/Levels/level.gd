@@ -18,6 +18,7 @@ func _ready() -> void:
 	
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed(&"pause"):
+		MusicManager.play_sfx("res://Assets/Audio/SFX/pause game.wav")
 		$CanvasLayer/Pause_UI.show()
 		get_tree().paused = true
 	

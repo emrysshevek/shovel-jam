@@ -34,4 +34,4 @@ func _on_sprite_step() -> void:
 	var pitch = clamp(scale, .9, 1.1)
 	pitch = randf_range(pitch * .9, pitch * 1.1)
 	var volume = randf_range(-3, 1)
-	MusicManager.play_sfx("res://Assets/Audio/SFX/click.wav", pitch, volume)
+	MusicManager.play_sfx("res://Assets/Audio/SFX/footstep sfx.wav", pitch, volume)

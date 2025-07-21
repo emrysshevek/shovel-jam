@@ -8,7 +8,7 @@ func enter(_previous_state_path: String, _data := {}) -> void:
 	ropibot.ap.speed_scale = 3
 	
 func spring_player() -> void:
-	print("springing player")
+	MusicManager.play_sfx("res://Assets/Audio/SFX/robot spring.wav")
 	var player: Player = get_tree().get_first_node_in_group(&"player")
 	player.velocity.y = -10000
 	ropibot.ap.play("Launch")

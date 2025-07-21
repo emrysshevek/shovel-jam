@@ -1955,22 +1955,19 @@ metadata/_edit_group_ = true
 [node name="Arm_L" type="Node2D" parent="Character container/Body"]
 
 [node name="Arm_L" type="Sprite2D" parent="Character container/Body/Arm_L"]
-position = Vector2(279, 712.155)
-rotation = -0.214934
+position = Vector2(279, 667)
 scale = Vector2(0.999999, 0.999999)
 texture = ExtResource("5_dpkdn")
 offset = Vector2(23, 45)
 
 [node name="Forearm_L" type="Sprite2D" parent="Character container/Body/Arm_L"]
-position = Vector2(307.367, 842.094)
-rotation = -0.3224
+position = Vector2(279, 800)
 scale = Vector2(0.999999, 0.999999)
 texture = ExtResource("6_7eunu")
 offset = Vector2(23, -88)
 
 [node name="Hand_L" type="Sprite2D" parent="Character container/Body/Arm_L"]
-position = Vector2(359.329, 997.644)
-rotation = -0.3224
+position = Vector2(279, 964)
 scale = Vector2(0.999999, 0.999999)
 texture = ExtResource("7_805am")
 offset = Vector2(23, -252)
@@ -1987,8 +1984,7 @@ shape = SubResource("RectangleShape2D_s7w0y")
 [node name="Leg_L" type="Node2D" parent="Character container/Body"]
 
 [node name="Thigh_L" type="Sprite2D" parent="Character container/Body/Leg_L"]
-position = Vector2(272, 943.154)
-rotation = 0.112302
+position = Vector2(265, 905)
 scale = Vector2(0.999998, 0.999998)
 texture = ExtResource("13_pref4")
 offset = Vector2(37, -193)
@@ -2001,8 +1997,7 @@ position = Vector2(5.86694, 181.543)
 shape = SubResource("RectangleShape2D_fjoly")
 
 [node name="Calf_L" type="Sprite2D" parent="Character container/Body/Leg_L"]
-position = Vector2(239.009, 1159.5)
-rotation = 1.13162
+position = Vector2(282, 1151)
 scale = Vector2(0.999997, 0.999997)
 texture = ExtResource("13_dn08s")
 offset = Vector2(20, -439)
@@ -2015,8 +2010,7 @@ position = Vector2(-1.70425, 90.0305)
 shape = SubResource("RectangleShape2D_vaj8v")
 
 [node name="Foot_L" type="Sprite2D" parent="Character container/Body/Leg_L"]
-position = Vector2(95.9343, 1227.98)
-rotation = 1.5225
+position = Vector2(269, 1328)
 scale = Vector2(0.999997, 0.999997)
 texture = ExtResource("14_pref4")
 offset = Vector2(33, -616)
@@ -2031,7 +2025,7 @@ rotation = 1.5708
 shape = SubResource("CapsuleShape2D_fjoly")
 
 [node name="Torso" type="Sprite2D" parent="Character container/Body"]
-position = Vector2(275, 931.154)
+position = Vector2(275, 886)
 scale = Vector2(0.999999, 0.999999)
 texture = ExtResource("4_dfmkv")
 offset = Vector2(27, -174)
@@ -2044,14 +2038,13 @@ position = Vector2(-5.00001, -79.0001)
 shape = SubResource("CapsuleShape2D_s7w0y")
 
 [node name="Neck" type="Sprite2D" parent="Character container/Body"]
-position = Vector2(275, 683.155)
+position = Vector2(275, 638)
 scale = Vector2(0.999999, 0.999999)
 texture = ExtResource("1_epwxf")
 offset = Vector2(27, 74)
 
 [node name="Head" type="Sprite2D" parent="Character container/Body"]
-position = Vector2(275, 604.155)
-rotation = -0.0516681
+position = Vector2(275, 559)
 scale = Vector2(0.999999, 0.999999)
 texture = ExtResource("2_11sss")
 offset = Vector2(27, 153)
@@ -2082,15 +2075,13 @@ shape = SubResource("CircleShape2D_s7w0y")
 metadata/_edit_group_ = true
 
 [node name="Hair_back" type="Sprite2D" parent="Character container/Body"]
-position = Vector2(93.8145, 358.005)
-rotation = -0.0980563
+position = Vector2(107, 305.001)
 scale = Vector2(0.999999, 0.999999)
 texture = ExtResource("9_yey1n")
 offset = Vector2(195, 407)
 
 [node name="Bangs" type="Sprite2D" parent="Character container/Body"]
-position = Vector2(374.054, 167.688)
-rotation = -0.0362161
+position = Vector2(400, 130.001)
 scale = Vector2(0.999998, 0.999998)
 texture = ExtResource("10_l74hn")
 offset = Vector2(-98, 582)
@@ -2098,8 +2089,8 @@ offset = Vector2(-98, 582)
 [node name="Leg_R" type="Node2D" parent="Character container/Body"]
 
 [node name="Thigh_R" type="Sprite2D" parent="Character container/Body/Leg_R"]
-position = Vector2(262.948, 948.923)
-rotation = -0.39304
+position = Vector2(265, 905)
+rotation = -0.000730339
 scale = Vector2(0.999962, 0.999962)
 texture = ExtResource("13_pref4")
 offset = Vector2(37, -193)
@@ -2112,8 +2103,8 @@ position = Vector2(5.86694, 181.543)
 shape = SubResource("RectangleShape2D_fjoly")
 
 [node name="Calf_R" type="Sprite2D" parent="Character container/Body/Leg_R"]
-position = Vector2(354.854, 1162.21)
-rotation = 0.113944
+position = Vector2(282.183, 1151)
+rotation = -0.000730339
 scale = Vector2(0.999961, 0.999961)
 texture = ExtResource("13_dn08s")
 offset = Vector2(20, -439)
@@ -2126,8 +2117,8 @@ position = Vector2(-1.70425, 90.0306)
 shape = SubResource("RectangleShape2D_vaj8v")
 
 [node name="Foot_R" type="Sprite2D" parent="Character container/Body/Leg_R"]
-position = Vector2(321.815, 1336.57)
-rotation = 0.00189657
+position = Vector2(269.313, 1328.01)
+rotation = -0.000730339
 scale = Vector2(0.999961, 0.999961)
 texture = ExtResource("14_pref4")
 offset = Vector2(33, -616)
@@ -2143,22 +2134,19 @@ shape = SubResource("CapsuleShape2D_fjoly")
 [node name="Arm_R" type="Node2D" parent="Character container/Body"]
 
 [node name="Arm_R" type="Sprite2D" parent="Character container/Body/Arm_R"]
-position = Vector2(279, 712.155)
-rotation = 0.3224
+position = Vector2(279, 667)
 scale = Vector2(0.999997, 0.999997)
 texture = ExtResource("5_dpkdn")
 offset = Vector2(23, 45)
 
 [node name="Forearm_R" type="Sprite2D" parent="Character container/Body/Arm_R"]
-position = Vector2(235.913, 840.218)
-rotation = 0.107467
+position = Vector2(279, 800)
 scale = Vector2(0.999997, 0.999997)
 texture = ExtResource("6_7eunu")
 offset = Vector2(23, -88)
 
 [node name="Hand_R" type="Sprite2D" parent="Character container/Body/Arm_R"]
-position = Vector2(218.322, 1003.27)
-rotation = 0.107467
+position = Vector2(279, 963.999)
 scale = Vector2(0.999997, 0.999997)
 texture = ExtResource("7_805am")
 offset = Vector2(23, -252)
@@ -2226,7 +2214,6 @@ remote_path = NodePath("../../../../../Body/Arm_L/Arm_L")
 
 [node name="Forearm_L" type="Bone2D" parent="Character container/Bones/Skeleton2D/Hip/Arm_L"]
 position = Vector2(0, 133)
-scale = Vector2(1, 1)
 rest = Transform2D(1, 0, 0, 1, 0, 133)
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="Character container/Bones/Skeleton2D/Hip/Arm_L/Forearm_L"]
@@ -2261,7 +2248,6 @@ remote_path = NodePath("../../../../../../Body/Leg_R/Calf_R")
 
 [node name="Foot_R" type="Bone2D" parent="Character container/Bones/Skeleton2D/Hip/Thigh_R/Calf_R"]
 position = Vector2(-13, 177)
-scale = Vector2(1, 1)
 rest = Transform2D(1, 0, 0, 1, -13, 177)
 auto_calculate_length_and_angle = false
 length = 169.0
@@ -2322,7 +2308,6 @@ remote_path = NodePath("../../../../../../../Body/Bangs")
 
 [node name="Hair_back" type="Bone2D" parent="Character container/Bones/Skeleton2D/Hip/Neck/Head"]
 position = Vector2(-168, -254)
-scale = Vector2(1, 1)
 rest = Transform2D(1, 0, 0, 1, -168, -254)
 auto_calculate_length_and_angle = false
 length = 388.0

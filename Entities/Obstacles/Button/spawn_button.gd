@@ -34,7 +34,7 @@ func _on_interactable_interaction_occured() -> void:
 	tween.set_ease(Tween.EASE_IN_OUT)
 	tween.set_trans(Tween.TRANS_CIRC)
 	tween.tween_property(camera, "global_position", marker.global_position, .5)
-	tween.tween_callback(add_child.bind(spawned_item)).set_delay(.5)
+	tween.tween_callback(get_parent().add_child.bind(spawned_item)).set_delay(.5)
 	tween.tween_property(camera, "global_position", camera.global_position, .5).set_delay(.5)
 	
 	hide()
