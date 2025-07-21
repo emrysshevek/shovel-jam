@@ -9,9 +9,9 @@ var holding = true
 func enter(_previous_state_path: String, _data := {}) -> void:
 	MusicManager.play_sfx("res://Assets/Audio/SFX/jump up sfx.wav")
 	player.jump.emit()
-	player.velocity.y = -player.jump_velocity
-	if Input.is_action_pressed(&"run"):
-		player.velocity.y *= 1.2
+	player.velocity.y = -player.jump_velocity * 1.2
+	#if Input.is_action_pressed(&"run"):
+		#player.velocity.y *= 1.2
 	in_jump = true
 	elapsed = 0
 	holding = Input.is_action_pressed(&"jump")

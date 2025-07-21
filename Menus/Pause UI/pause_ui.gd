@@ -5,6 +5,12 @@ extends Control
 @export var music_max = 0.0
 @export var master_max = 0.0
 @export var sound_min = -30.0
+@export var songs: Array[AudioStream]
+
+@onready var menu: MenuButton = $Info/AudioSection/Song/SongChoice
+
+func _ready() -> void:
+	menu.get_popup().id_pressed.connect(set_song)
 
 func _on_quit_button_pressed() -> void:
 	get_tree().quit()
@@ -58,3 +64,13 @@ func _on_master_slider_value_changed(value: float) -> void:
 
 func _on_damage_box_toggled(toggled_on: bool) -> void:
 	Globals.damage_enabled = toggled_on
+
+func set_song(id) -> void:
+	MusicManager.crossfade_to(songs[id])
+	match id:
+		0:
+			menu.text = "Whimsical Forest"
+		1:
+			menu.text = "Volcanic Ash"
+		2:
+			menu.text = "Hall of Illusions"

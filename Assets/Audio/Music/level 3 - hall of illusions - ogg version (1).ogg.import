@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dxssip7r6ax6h"
+path="res://.godot/imported/level 3 - hall of illusions - ogg version (1).ogg-b7b8c63e43d7f0230158cf0cc50ee028.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/Audio/Music/level 3 - hall of illusions - ogg version (1).ogg"
+dest_files=["res://.godot/imported/level 3 - hall of illusions - ogg version (1).ogg-b7b8c63e43d7f0230158cf0cc50ee028.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

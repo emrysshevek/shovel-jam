@@ -12,7 +12,8 @@ signal completed(score: float)
 @onready var portal: Portal = $Environment/Portal
 
 func _ready() -> void:
-	MusicManager.crossfade_to(music)
+	if MusicManager._track_1.stream.resource_path == "res://Assets/Audio/Music/main_menu.wav":
+		MusicManager.crossfade_to(music)
 	portal.exited.connect(_on_portal_entered)
 	get_tree().get_first_node_in_group(&"toggle").toggle()
 	

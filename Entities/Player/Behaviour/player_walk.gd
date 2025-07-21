@@ -24,8 +24,8 @@ func physics_update(delta: float) -> void:
 		
 	var dir = Input.get_axis(&"move_left", &"move_right")
 	var speed = player.max_speed
-	if Input.is_action_pressed(&"run"):
-		speed *= 2
+	#if Input.is_action_pressed(&"run"):
+		#speed *= 2
 	player.velocity.x = move_toward(player.velocity.x, speed * dir, player.ground_acceleration * delta)
 	player.ap.speed_scale = abs(player.velocity.x) / player.walk_animation_default_speed
 

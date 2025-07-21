@@ -1,12 +1,15 @@
-[gd_scene load_steps=23 format=3 uid="uid://cfuyy2yu6j6lp"]
+[gd_scene load_steps=26 format=3 uid="uid://cfuyy2yu6j6lp"]
 
 [ext_resource type="Script" uid="uid://8dkvi7hkrnwv" path="res://Menus/Pause UI/pause_ui.gd" id="1_jl541"]
 [ext_resource type="Texture2D" uid="uid://b4hga1vitv474" path="res://Menus/Pause UI/Background.png" id="2_3p770"]
 [ext_resource type="Texture2D" uid="uid://b2ncvcq8dcbkd" path="res://Menus/Pause UI/ArrowLeft.png" id="2_kee6w"]
+[ext_resource type="AudioStream" uid="uid://dqk7jlym1r4j3" path="res://Assets/Audio/Music/level 1 - whimsical forest - ogg version.ogg" id="2_l552e"]
 [ext_resource type="Texture2D" uid="uid://cr8uvurihq262" path="res://Menus/Pause UI/InfoLine.png" id="3_7020t"]
+[ext_resource type="AudioStream" uid="uid://bp5j84dvlw1nv" path="res://Assets/Audio/Music/level 2 - volcanic ash - ogg version (1).ogg" id="3_og0vd"]
 [ext_resource type="Texture2D" uid="uid://b4lc8obo41hrs" path="res://Menus/Pause UI/PageNumber.png" id="3_uhss5"]
 [ext_resource type="Script" uid="uid://bmjww61w35s1" path="res://Menus/Pause UI/current_page.gd" id="4_d6y3p"]
 [ext_resource type="Texture2D" uid="uid://dlf64qan11muy" path="res://Menus/Pause UI/CloseButton.png" id="4_m8moj"]
+[ext_resource type="AudioStream" uid="uid://dxssip7r6ax6h" path="res://Assets/Audio/Music/level 3 - hall of illusions - ogg version (1).ogg" id="4_o56uy"]
 [ext_resource type="Texture2D" uid="uid://rnyh4atvg1rk" path="res://Menus/Pause UI/QuitButton.png" id="5_v7d62"]
 [ext_resource type="LabelSettings" uid="uid://ciee6sultpoi3" path="res://Menus/Pause UI/labelSettings.tres" id="6_3p3ci"]
 [ext_resource type="Script" uid="uid://b2fw4028vwtle" path="res://Menus/Pause UI/arrow_left.gd" id="6_l7cax"]
@@ -17,6 +20,7 @@
 
 [sub_resource type="SystemFont" id="SystemFont_gdfvn"]
 font_names = PackedStringArray("Comic Sans MS")
+subpixel_positioning = 0
 
 [sub_resource type="LabelSettings" id="LabelSettings_enlrs"]
 font = SubResource("SystemFont_gdfvn")
@@ -67,7 +71,7 @@ corner_radius_bottom_right = 30
 corner_radius_bottom_left = 30
 
 [node name="Pause_UI" type="Control"]
-process_mode = 2
+process_mode = 3
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -75,6 +79,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_jl541")
+songs = Array[AudioStream]([ExtResource("2_l552e"), ExtResource("3_og0vd"), ExtResource("4_o56uy")])
 
 [node name="Decoration" type="Control" parent="."]
 layout_mode = 1
@@ -487,6 +492,50 @@ theme_override_styles/slider = SubResource("StyleBoxFlat_3p3ci")
 theme_override_styles/grabber_area = SubResource("StyleBoxFlat_o56uy")
 theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_o56uy")
 value = 100.0
+
+[node name="Song" type="Control" parent="Info/AudioSection"]
+anchors_preset = 0
+offset_left = 175.0
+offset_top = 375.0
+offset_right = 1118.0
+offset_bottom = 426.0
+metadata/_edit_group_ = true
+
+[node name="Label" type="Label" parent="Info/AudioSection/Song"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -11.5
+offset_right = 40.0
+offset_bottom = 11.5
+grow_vertical = 2
+text = "Now Playing"
+label_settings = SubResource("LabelSettings_l552e")
+
+[node name="SongChoice" type="MenuButton" parent="Info/AudioSection/Song"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -440.0
+offset_top = -32.5
+offset_bottom = 26.5
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_fonts/font = SubResource("SystemFont_gdfvn")
+theme_override_font_sizes/font_size = 36
+text = "Whimsical Forest"
+flat = false
+item_count = 3
+popup/item_0/text = "Whimsical Forest"
+popup/item_0/id = 0
+popup/item_1/text = "Volcanic Ash"
+popup/item_1/id = 1
+popup/item_2/text = "Hall of Illusions"
+popup/item_2/id = 2
 
 [node name="Damage" type="Control" parent="Info/AudioSection"]
 anchors_preset = 0

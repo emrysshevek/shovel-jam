@@ -163,20 +163,32 @@ collision_mask = 0
 position = Vector2(-4334, -1411)
 level_scene = null
 
+[node name="Label" parent="Stuff/Decorative/Node2D2/Levels/Globe" index="4"]
+visible = false
+
 [node name="Globe2" parent="Stuff/Decorative/Node2D2/Levels" instance=ExtResource("3_i8gr5")]
 position = Vector2(-1491, -1415)
 level = 1
 level_scene = null
+
+[node name="Label" parent="Stuff/Decorative/Node2D2/Levels/Globe2" index="4"]
+visible = false
 
 [node name="Globe3" parent="Stuff/Decorative/Node2D2/Levels" instance=ExtResource("3_i8gr5")]
 position = Vector2(1413, -1426)
 level = 2
 level_scene = null
 
+[node name="Label" parent="Stuff/Decorative/Node2D2/Levels/Globe3" index="4"]
+visible = false
+
 [node name="Globe4" parent="Stuff/Decorative/Node2D2/Levels" instance=ExtResource("3_i8gr5")]
 position = Vector2(4259, -1426)
 level = 3
 level_scene = null
+
+[node name="Label" parent="Stuff/Decorative/Node2D2/Levels/Globe4" index="4"]
+visible = false
 
 [node name="Node2D3" type="Node2D" parent="Stuff/Decorative"]
 position = Vector2(0, -4374)
@@ -192,20 +204,32 @@ collision_mask = 0
 position = Vector2(-4334, -1411)
 level_scene = null
 
+[node name="Label" parent="Stuff/Decorative/Node2D3/Levels/Globe" index="4"]
+visible = false
+
 [node name="Globe2" parent="Stuff/Decorative/Node2D3/Levels" instance=ExtResource("3_i8gr5")]
 position = Vector2(-1491, -1415)
 level = 1
 level_scene = null
+
+[node name="Label" parent="Stuff/Decorative/Node2D3/Levels/Globe2" index="4"]
+visible = false
 
 [node name="Globe3" parent="Stuff/Decorative/Node2D3/Levels" instance=ExtResource("3_i8gr5")]
 position = Vector2(1413, -1426)
 level = 2
 level_scene = null
 
+[node name="Label" parent="Stuff/Decorative/Node2D3/Levels/Globe3" index="4"]
+visible = false
+
 [node name="Globe4" parent="Stuff/Decorative/Node2D3/Levels" instance=ExtResource("3_i8gr5")]
 position = Vector2(4259, -1426)
 level = 3
 level_scene = null
+
+[node name="Label" parent="Stuff/Decorative/Node2D3/Levels/Globe4" index="4"]
+visible = false
 
 [node name="PlayerSpawn" type="Marker2D" parent="Stuff"]
 position = Vector2(0, -8056)
@@ -361,3 +385,20 @@ libraries = {
 }
 
 [connection signal="body_entered" from="Stuff/BottomArea" to="." method="_on_bottom_area_body_entered"]
+
+[editable path="Stuff/Decorative/Node2D2/Levels/Globe"]
+[editable path="Stuff/Decorative/Node2D2/Levels/Globe/Interactable"]
+[editable path="Stuff/Decorative/Node2D2/Levels/Globe2"]
+[editable path="Stuff/Decorative/Node2D2/Levels/Globe2/Interactable"]
+[editable path="Stuff/Decorative/Node2D2/Levels/Globe3"]
+[editable path="Stuff/Decorative/Node2D2/Levels/Globe3/Interactable"]
+[editable path="Stuff/Decorative/Node2D2/Levels/Globe4"]
+[editable path="Stuff/Decorative/Node2D2/Levels/Globe4/Interactable"]
+[editable path="Stuff/Decorative/Node2D3/Levels/Globe"]
+[editable path="Stuff/Decorative/Node2D3/Levels/Globe/Interactable"]
+[editable path="Stuff/Decorative/Node2D3/Levels/Globe2"]
+[editable path="Stuff/Decorative/Node2D3/Levels/Globe2/Interactable"]
+[editable path="Stuff/Decorative/Node2D3/Levels/Globe3"]
+[editable path="Stuff/Decorative/Node2D3/Levels/Globe3/Interactable"]
+[editable path="Stuff/Decorative/Node2D3/Levels/Globe4"]
+[editable path="Stuff/Decorative/Node2D3/Levels/Globe4/Interactable"]

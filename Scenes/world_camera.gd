@@ -11,5 +11,5 @@ func transition_to_room(room: Room) -> void:
 	get_tree().paused = true
 	var tween = create_tween()
 	tween.tween_property(self, ^"global_position", room.global_position, .25)
-	tween.tween_callback(get_tree().set_deferred.bind("paused", false))
+	tween.finished.connect(get_tree().set_deferred.bind("paused", false))
 	
